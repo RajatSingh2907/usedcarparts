@@ -60,17 +60,18 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
+                style={{ color: "#ffffff" }}
                 className={[
                   "relative px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200",
-                  "hover:text-white hover:bg-white/8",
+                  "hover:text-white hover:bg-white/10",
                   isActive
-                    ? "text-cyan-400"
-                    : "text-slate-300",
+                    ? "text-white bg-white/10"
+                    : "text-white",
                 ].join(" ")}
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-5 rounded-full bg-gradient-to-r from-cyan-400 to-cyan-600" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-5 rounded-full bg-white" />
                 )}
               </Link>
             );

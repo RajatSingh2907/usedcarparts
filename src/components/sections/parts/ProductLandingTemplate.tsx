@@ -61,7 +61,7 @@ export default function ProductLandingTemplate({
             </div>
 
             <div id="vehicle-selector" className="rounded-3xl border border-white/10 bg-slate-950/85 p-6 shadow-2xl shadow-black/40 sm:p-8">
-              <VehicleSelectorForm />
+              <VehicleSelectorForm theme="dark" />
             </div>
           </div>
         </Container>

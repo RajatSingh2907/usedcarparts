@@ -55,6 +55,7 @@ export default function QualityParts() {
             title="Quality Used Auto Parts"
             description="Hand-picked, inspected OEM components with fast shipping and transparent pricing."
             align="center"
+            theme="dark"
           />
         </Reveal>
 
