@@ -16,9 +16,9 @@ const services = [
   },
   {
     title: "Free Shipping",
-    description: "Quick, reliable shipping across the continental U.S. so your replacement part arrives when you need it.",
+    description: "Quick, reliable shipping across the continental U.S. so your replacement part always arrives when you need it.",
     bullets: [
-      "We ship used auto and truck parts anywhere in the U.S.",
+      "We ship used auto and truck parts anywhere in the U.S.,",
       "Free shipping within the contiguous 48 US states.",
     ],
     icon: Truck,
