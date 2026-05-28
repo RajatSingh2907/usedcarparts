@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import ThemeToggle from "@/components/ui/ThemeToggle";
+
 type MobileMenuProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -52,16 +54,19 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-white/8">
           <span className="text-sm font-semibold tracking-widest uppercase text-slate-400">Navigation</span>
-          <button
-            type="button"
-            onClick={onClose}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white transition-all duration-200 hover:bg-white/12 hover:border-white/20"
-            aria-label="Close navigation menu"
-          >
-            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              type="button"
+              onClick={onClose}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white transition-all duration-200 hover:bg-white/12 hover:border-white/20"
+              aria-label="Close navigation menu"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Nav Links */}

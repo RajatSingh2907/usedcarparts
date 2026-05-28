@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 
 import Container from "@/components/ui/Container";
 import MobileMenu from "@/components/layout/MobileMenu";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -80,15 +81,23 @@ export default function Navbar() {
 
         {/* CTA + Hamburger */}
         <div className="flex items-center gap-3">
+          <div className="hidden lg:block">
+            <ThemeToggle />
+          </div>
+
           <a
             href="tel:7705984665"
-            className="hidden lg:inline-flex items-center gap-2 h-10 px-5 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 text-white text-sm font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/45 hover:-translate-y-0.5 transition-all duration-200 active:scale-[0.98]"
+            className="hidden lg:inline-flex items-center gap-2 h-10 px-5 rounded-xl bg-gradient-to-br from-emerald-400 to-green-500 text-slate-950 text-sm font-semibold shadow-lg shadow-green-500/30 hover:shadow-green-500/50 hover:-translate-y-0.5 transition-all duration-200 active:scale-[0.98]"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
             (770) 598-4665
           </a>
+
+          <div className="lg:hidden">
+            <ThemeToggle />
+          </div>
 
           <button
             type="button"
