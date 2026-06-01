@@ -48,8 +48,8 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-24 border-t border-white/8">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.1),transparent_40%)]" />
+    <section className="relative overflow-hidden border-t border-slate-200 bg-slate-50 py-24 dark:border-white/8 dark:bg-slate-950">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.08),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.08),transparent_40%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.1),transparent_40%)]" />
 
       <Container className="relative">
         <Reveal>
@@ -58,7 +58,6 @@ export default function Services() {
             title="Benefits Built for Speed, Trust, and Fitment Confidence"
             description="Everything from sourcing to delivery is designed to reduce uncertainty and move your repair forward faster."
             align="center"
-            theme="dark"
             className="max-w-4xl"
           />
         </Reveal>
@@ -68,9 +67,9 @@ export default function Services() {
             const Icon = service.icon;
             return (
               <Reveal key={service.title} delay={i * 0.07}>
-                <article className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/12 bg-slate-900/80 p-7 transition-all duration-300 hover:-translate-y-1 ${service.border} hover:shadow-2xl`}>
+                <article className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 dark:border-white/12 dark:bg-slate-900/80 ${service.border} hover:shadow-2xl`}>
                   <div className="mb-6 flex items-start justify-between gap-3">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/12 bg-slate-800 text-slate-200">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700 dark:border-white/12 dark:bg-slate-800 dark:text-slate-200">
                       <Icon size={22} />
                     </div>
                     <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold ${service.badgeColor}`}>
@@ -78,12 +77,12 @@ export default function Services() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">{service.description}</p>
+                  <h3 className="text-xl font-bold text-slate-950 dark:text-white">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{service.description}</p>
 
                   <ul className="mt-6 space-y-2.5">
                     {service.bullets.map((bullet) => (
-                      <li key={bullet} className="flex items-start gap-2.5 text-sm text-slate-300">
+                      <li key={bullet} className="flex items-start gap-2.5 text-sm text-slate-600 dark:text-slate-300">
                         <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
