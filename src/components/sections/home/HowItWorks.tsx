@@ -5,40 +5,88 @@ const steps = [
   {
     number: "01",
     title: "Share Vehicle Details",
-    description: "Tell us your year, make, model, and the exact part you need using our quick form.",
+    description:
+      "Tell us your year, make, model, and the exact part you need using our quick form.",
     icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      <svg
+        className="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+        />
       </svg>
     ),
   },
   {
     number: "02",
     title: "Get an Exact Match",
-    description: "We verify our inventory and source the right OEM replacement for your vehicle.",
+    description:
+      "We verify our inventory and source the right OEM replacement for your vehicle.",
     icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+      <svg
+        className="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+        />
       </svg>
     ),
   },
   {
     number: "03",
     title: "Approve Your Quote",
-    description: "Receive transparent pricing and a delivery estimate before you commit to anything.",
+    description:
+      "Receive transparent pricing and a delivery estimate before you commit to anything.",
     icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg
+        className="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
       </svg>
     ),
   },
   {
     number: "04",
     title: "Fast Delivery",
-    description: "Your part ships quickly with nationwide coverage and expert support along the way.",
+    description:
+      "Your part ships quickly with nationwide coverage and expert support along the way.",
     icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+      <svg
+        className="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+        />
       </svg>
     ),
   },
@@ -52,22 +100,28 @@ export default function HowItWorks() {
         className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-5"
         style={{ backgroundImage: "url('/websiteImages/bg-6.jpg')" }}
       />
+
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/70 dark:from-slate-950/50 dark:to-slate-950/50" />
 
       {/* Ambient glow */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-cyan-600/5 blur-[120px] pointer-events-none" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-600/5 blur-[120px]" />
 
       <Container className="relative z-10">
         <Reveal>
-          <div className="text-center mb-14">
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
-              How It Works
-            </span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
+          <div className="mb-14 text-center">
+            <div className="mb-4 flex justify-center">
+              <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
+                How It Works
+              </span>
+            </div>
+
+            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
               A Simple 4-Step Process
             </h2>
+
             <p className="mx-auto mt-4 max-w-xl text-base text-slate-600 dark:text-slate-400">
-              From request to delivery — we keep everything transparent and hassle-free.
+              From request to delivery — we keep everything transparent and
+              hassle-free.
             </p>
           </div>
         </Reveal>
@@ -76,7 +130,6 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <Reveal key={step.number} delay={i * 0.08}>
               <article className="group relative flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/25 hover:bg-slate-50 hover:shadow-xl hover:shadow-cyan-500/8 dark:border-white/8 dark:bg-slate-800/50 dark:hover:bg-slate-800/80">
-
                 {/* Connector line (desktop only) */}
                 {i < steps.length - 1 && (
                   <div className="absolute -right-2.5 top-10 z-10 hidden h-px w-5 bg-gradient-to-r from-slate-300 to-transparent dark:from-white/20 lg:block" />
@@ -87,6 +140,7 @@ export default function HowItWorks() {
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 text-sm font-extrabold text-white shadow-lg shadow-cyan-500/25">
                     {step.number}
                   </div>
+
                   <div className="h-px flex-1 bg-slate-200 dark:bg-white/8" />
                 </div>
 
@@ -95,8 +149,13 @@ export default function HowItWorks() {
                   {step.icon}
                 </div>
 
-                <h3 className="mb-2 text-base font-bold text-slate-950 dark:text-white">{step.title}</h3>
-                <p className="text-sm leading-7 text-slate-600 dark:text-slate-400">{step.description}</p>
+                <h3 className="mb-2 text-base font-bold text-slate-950 dark:text-white">
+                  {step.title}
+                </h3>
+
+                <p className="text-sm leading-7 text-slate-600 dark:text-slate-400">
+                  {step.description}
+                </p>
               </article>
             </Reveal>
           ))}

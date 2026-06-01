@@ -15,12 +15,11 @@ function SplitChars({ text }: { text: string }) {
       {text.split("").map((ch, i) => (
         <motion.span
           key={`${ch}-${i}`}
-          initial={{ opacity: 0, y: 18, rotateX: -70 }}
-          animate={{ opacity: 1, y: 0, rotateX: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
             delay: i * 0.018,
             duration: 0.45,
-            ease: [0.2, 1, 0.3, 1],
           }}
           className="inline-block"
         >
@@ -40,7 +39,8 @@ export default function Hero() {
   });
 
   const yImage = useTransform(scrollYProgress, [0, 1], [0, 120]);
-  const yCopy = useTransform(scrollYProgress, [0, 1], [0, -40]);
+  const yContent = useTransform(scrollYProgress, [0, 1], [0, -40]);
+
   const heroActions = (
     <>
       <MagneticButton
@@ -50,11 +50,22 @@ export default function Hero() {
 
       <a
         href="tel:7705984665"
-        className="inline-flex h-13 items-center justify-center gap-2.5 rounded-xl border border-primary/20 bg-primary/10 px-8 text-base font-bold text-primary shadow-xl shadow-primary/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/15 active:scale-[0.98] dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100 dark:shadow-cyan-950/30 dark:hover:bg-cyan-300/15"
+        className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border border-primary/20 bg-primary/10 px-7 text-sm font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary/15"
       >
-        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        <svg
+          className="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          />
         </svg>
+
         Call (770) 598-4665
       </a>
     </>
@@ -63,63 +74,110 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-[720px] overflow-hidden bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-white"
+      className="relative overflow-hidden bg-slate-50 dark:bg-slate-950"
     >
+      {/* Background Image */}
       <motion.div
         style={{ y: yImage }}
-        className="pointer-events-none absolute inset-0"
+        className="absolute inset-0"
       >
         <Image
           src="/websiteImages/bg-4.jpg"
-          alt="Premium used auto parts"
+          alt="OEM Used Auto Parts"
           fill
-          className="object-cover opacity-15 dark:opacity-30"
-          sizes="100vw"
           priority
+          sizes="100vw"
+          className="object-cover opacity-10 dark:opacity-25"
         />
       </motion.div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(248,250,252,0.96),rgba(241,245,249,0.9),rgba(245,158,11,0.10))] dark:bg-[linear-gradient(110deg,rgba(2,6,23,0.95),rgba(2,6,23,0.85),rgba(14,165,233,0.18))]" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/95 to-cyan-50/60 dark:from-slate-950 dark:via-slate-950/95 dark:to-cyan-950/30" />
 
-      <Container className="relative py-16 sm:py-24 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      {/* Glow */}
+      <div className="pointer-events-none absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[160px]" />
+
+      <Container className="relative z-10 py-16 sm:py-24 lg:py-28">
+        <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          {/* Left Side */}
           <motion.div
-            style={{ y: yCopy }}
-            className="max-w-2xl"
+            style={{ y: yContent }}
+            className="max-w-3xl"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary dark:text-cyan-300">
-              Premium Used OEM Parts
-            </p>
+            {/* Trust Badge */}
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-300">
+              <span className="h-2 w-2 rounded-full bg-cyan-500" />
+              Premium OEM Auto Parts
+            </div>
 
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
+            {/* Heading */}
+            <h1 className="text-4xl font-black leading-[1.05] text-slate-950 sm:text-5xl lg:text-7xl dark:text-white">
               <SplitChars text={heading} />
             </h1>
 
-            <p className="mt-6 text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-200">
-              Quality-tested, perfectly matched used parts for every major make
-              and model, with fast shipping and a dedicated support team.
+            {/* Description */}
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+              Quality-tested OEM engines, transmissions, headlights,
+              radiators and more. Fast nationwide shipping,
+              transparent pricing and expert support.
             </p>
 
-            <div className="mt-9 hidden flex-col gap-4 sm:flex-row lg:flex lg:translate-x-6">
+            {/* Trust Stats */}
+            <div className="mt-8 flex flex-wrap gap-6">
+              <div>
+                <div className="text-2xl font-black text-slate-950 dark:text-white">
+                  50K+
+                </div>
+                <div className="text-sm text-slate-500">
+                  Parts Available
+                </div>
+              </div>
+
+              <div>
+                <div className="text-2xl font-black text-slate-950 dark:text-white">
+                  60-Day
+                </div>
+                <div className="text-sm text-slate-500">
+                  Warranty
+                </div>
+              </div>
+
+              <div>
+                <div className="text-2xl font-black text-slate-950 dark:text-white">
+                  Fast
+                </div>
+                <div className="text-sm text-slate-500">
+                  Nationwide Delivery
+                </div>
+              </div>
+            </div>
+
+            {/* Buttons */}
+            <div className="mt-10 hidden flex-wrap gap-4 lg:flex">
               {heroActions}
             </div>
           </motion.div>
 
+          {/* Right Side Form */}
           <motion.div
             id="vehicle-selector"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.65,
-              ease: [0.2, 1, 0.3, 1],
-              delay: 0.25,
+              duration: 0.7,
+              delay: 0.2,
             }}
-            className="relative -top-10 lg:-top-20"
+            className="relative"
           >
-            <VehicleSelectorForm theme="dark" />
+            <div className="absolute inset-0 rounded-[32px] bg-cyan-500/20 blur-3xl" />
+
+            <div className="relative">
+              <VehicleSelectorForm theme="dark" />
+            </div>
           </motion.div>
 
-          <div className="-mt-8 flex flex-col gap-4 sm:flex-row lg:hidden">
+          {/* Mobile Buttons */}
+          <div className="flex flex-col gap-4 lg:hidden">
             {heroActions}
           </div>
         </div>
