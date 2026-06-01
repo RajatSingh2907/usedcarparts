@@ -94,7 +94,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative overflow-hidden border-t border-slate-200 bg-white py-24 dark:border-white/5 dark:bg-slate-900">
+    <section className="relative overflow-hidden border-t border-slate-200 bg-slate-50 py-24 dark:border-white/5 dark:bg-slate-900">
       {/* Background texture */}
       <div
         className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-5"
