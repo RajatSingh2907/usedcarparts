@@ -21,11 +21,11 @@ const baseClasses =
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-primary text-white shadow-lg shadow-primary/20 hover:bg-primary-dark hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] after:absolute after:inset-0 after:rounded-xl after:ring-1 after:ring-inset after:ring-white/15",
+    "bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 text-white shadow-lg shadow-cyan-500/25 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] after:absolute after:inset-0 after:rounded-xl after:ring-1 after:ring-inset after:ring-white/20",
   secondary:
-    "bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 hover:border-slate-600 shadow-md shadow-slate-900/40 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
+    "border border-primary/20 bg-primary/10 text-primary shadow-sm shadow-primary/10 hover:border-primary/30 hover:bg-primary/15 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100 dark:hover:bg-cyan-300/15",
   outline:
-    "border border-white/25 bg-white/8 text-white backdrop-blur-sm hover:bg-white/15 hover:border-white/40 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
+    "border border-slate-300 bg-white/70 text-slate-900 backdrop-blur-sm hover:border-slate-400 hover:bg-white hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] dark:border-white/25 dark:bg-white/8 dark:text-white dark:hover:border-white/40 dark:hover:bg-white/15",
   ghost:
     "text-primary hover:text-primary-dark hover:bg-primary/10 active:scale-[0.98]",
 };

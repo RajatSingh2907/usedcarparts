@@ -82,7 +82,7 @@ export default function CustomerStories() {
                 Customer Stories
               </span>
 
-              <h2 className="max-w-lg text-3xl font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
+              <h2 className="max-w-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
                 Trusted by Thousands of Car Owners
               </h2>
 

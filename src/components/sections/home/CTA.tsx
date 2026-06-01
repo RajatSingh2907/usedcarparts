@@ -46,7 +46,7 @@ export default function CTA() {
                 {/* CALL BUTTON */}
                 <a
                   href="tel:7705984665"
-                  className="inline-flex h-14 items-center justify-center rounded-xl bg-cyan-500 px-8 font-bold text-slate-950 transition hover:bg-cyan-400"
+                  className="inline-flex h-14 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-8 font-bold text-white shadow-lg shadow-cyan-500/25 transition hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800"
                 >
                   Call (770) 598-4665
                 </a>

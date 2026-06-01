@@ -53,15 +53,10 @@ export default function Trust() {
           <SectionHeading
             eyebrow="Why Drivers Choose Us"
             title={
-              <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
                 Trusted Source for Reliable Used OEM Parts
               </span>
             }
-//             eyebrow={
-//   <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
-//     Why Drivers Choose Us
-//   </span>
-// }
             description="Built for value, precision, and post-purchase confidence at every stage of your repair journey."
             align="center"
             className="max-w-4xl"

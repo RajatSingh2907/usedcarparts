@@ -32,7 +32,7 @@ export default function FaqCTA() {
               </a>
               <a
                 href="mailto:delpaenterprise@gmail.com"
-                className="inline-flex h-13 items-center justify-center gap-2.5 rounded-xl border border-primary/30 bg-primary px-8 text-base font-bold text-white shadow-lg shadow-primary/25 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary-dark hover:bg-primary-dark hover:shadow-xl active:scale-[0.98] dark:border-cyan-300/20 dark:bg-primary dark:text-white"
+                className="inline-flex h-13 items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-8 text-base font-bold text-white shadow-lg shadow-cyan-500/25 transition-all duration-200 hover:-translate-y-0.5 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 hover:shadow-xl active:scale-[0.98]"
               >
                 <Mail size={18} />
                 Email Us

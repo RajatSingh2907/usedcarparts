@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 type SubmitStatus = "idle" | "sending" | "success" | "error";
 type Theme = "dark" | "light";
 
-const years = ["Select Year", ...Array.from({ length: 64 }, (_, index) => String(2024 - index))];
+const years = ["Select Year", ...Array.from({ length: 66 }, (_, index) => String(new Date().getFullYear() - index))];
 const makes = [
   "Select Make", "AMC", "Acura", "Alfa", "Aston Martin", "Audi", "Bentley", "BMW", "Buick", "Cadillac", "Chevy", "Chrysler", "Citroen",
   "Daewoo", "Daihatsu", "Dodge", "Eagle", "Ferrari", "Fiat", "Ford", "Freightliner", "GMC", "Genesis", "Geo", "Honda", "Hummer", "Hyundai",
@@ -45,7 +45,7 @@ function SelectField({ label, name, options, value, onChange, theme }: { label: 
             "h-10 w-full appearance-none rounded-lg border px-3 pr-8 text-sm outline-none transition-all duration-200",
             isDark
               ? "border-white/10 bg-slate-800/70 text-white focus:border-cyan-500/60 focus:ring-2 focus:ring-cyan-500/20"
-              : "border-slate-300 bg-white text-slate-900 focus:border-red-500 focus:ring-2 focus:ring-red-100",
+              : "border-slate-300 bg-white text-slate-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100",
           )}
           name={name}
           onChange={(event) => onChange?.(event.target.value)}
@@ -69,7 +69,7 @@ function TextField({ label, name, placeholder, type = "text", theme }: { label: 
           "h-10 w-full rounded-lg border px-3 text-sm outline-none transition-all duration-200",
           isDark
             ? "border-white/10 bg-slate-800/70 text-white placeholder:text-slate-500 focus:border-cyan-500/60 focus:ring-2 focus:ring-cyan-500/20"
-            : "border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-red-500 focus:ring-2 focus:ring-red-100",
+            : "border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100",
         )}
         name={name}
         placeholder={placeholder}
@@ -175,7 +175,7 @@ function VehicleFormInner({ theme }: { theme: Theme }) {
       <button
         type="submit"
         disabled={isSending}
-        className="mt-6 flex h-14 w-full items-center justify-center rounded-xl bg-cyan-500 text-base font-bold text-white hover:bg-cyan-950 shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-400 disabled:opacity-50"
+        className="mt-6 flex h-14 w-full items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 text-base font-bold text-white shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-1 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 disabled:opacity-50"
       >
         {isSending ? "Sending..." : "Find My Part"}
       </button>
