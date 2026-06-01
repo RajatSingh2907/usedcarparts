@@ -27,14 +27,14 @@ export default function PolicyPage({
   return (
     <>
       <section className="relative overflow-hidden bg-white text-slate-900">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(239,68,68,0.12),transparent_40%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.10),transparent_40%)]" />
         <div className="absolute bottom-0 right-0 h-44 w-44 border-l border-t border-slate-200 sm:h-72 sm:w-72" />
         <Container className="relative py-16 sm:py-20 lg:py-24">
           <Reveal>
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-slate-100 text-red-600">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
               <FileText size={24} />
             </div>
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-red-600">
+            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
               {eyebrow}
             </p>
             <h1 className="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-6xl">

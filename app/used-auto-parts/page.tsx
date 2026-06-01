@@ -47,6 +47,7 @@ export default function UsedAutoPartsPage() {
       sectionLead="Whether you're replacing damaged components, repairing collision damage, or restoring vehicle performance, Parts Central helps you source dependable OEM auto parts with confidence and transparent pricing."
       features={features}
       partLabel="used auto parts"
+      heroFormClassName="-mt-60 lg:-mt-80"
       showBrandImages
     />
   );

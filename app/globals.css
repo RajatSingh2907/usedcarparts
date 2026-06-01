@@ -144,8 +144,8 @@ a {
 }
 
 ::selection {
-  background: #fee2e2;
-  color: #7f1d1d;
+  background: rgba(14, 165, 233, 0.18);
+  color: #004260;
 }
 
 .animate-rise {

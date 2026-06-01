@@ -28,12 +28,14 @@ export default function MagneticButton({ href, label, variant = "primary" }: Mag
 
   const classes =
     variant === "primary"
-      ? "inline-flex h-14 items-center justify-center rounded-xl bg-primary px-9 text-base font-semibold uppercase tracking-[0.08em] text-white shadow-xl shadow-primary/25 transition-transform duration-150 hover:bg-primary-dark"
-      : "inline-flex h-14 items-center justify-center rounded-xl border border-white/25 bg-white/10 px-9 text-base font-semibold uppercase tracking-[0.08em] text-white backdrop-blur-sm transition-transform duration-150";
+      ? "inline-flex h-14 items-center justify-center rounded-xl bg-primary px-9 text-base font-semibold uppercase tracking-[0.08em] text-white shadow-[0_18px_36px_-14px_rgba(0,66,96,0.65)] ring-1 ring-white/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-[0_22px_44px_-16px_rgba(0,66,96,0.78)] active:scale-[0.98]"
+      : "inline-flex h-14 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 px-9 text-base font-semibold uppercase tracking-[0.08em] text-primary shadow-[0_16px_34px_-18px_rgba(0,66,96,0.58)] backdrop-blur-sm transition-transform duration-150 hover:border-primary/30 hover:bg-primary/15 hover:shadow-[0_20px_40px_-18px_rgba(0,66,96,0.68)] dark:border-white/25 dark:bg-white/10 dark:text-white dark:shadow-[0_18px_36px_-18px_rgba(14,165,233,0.42)]";
 
   return (
     <Link href={href} onMouseMove={onMove} onMouseLeave={onLeave} className={classes}>
-      <span ref={inner}>{label}</span>
+      <span ref={inner} className={variant === "primary" ? "text-white" : undefined}>
+        {label}
+      </span>
     </Link>
   );
 }

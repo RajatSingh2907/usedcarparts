@@ -40,6 +40,7 @@ export default function UsedTransmissionsPage() {
       sectionLead="We combine fitment guidance, tested inventory, and transparent pricing so you can get back on the road faster."
       features={features}
       partLabel="used transmissions"
+      heroFormClassName="-mt-60 lg:-mt-80"
       showBrandImages
     />
   );

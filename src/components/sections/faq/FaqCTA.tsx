@@ -11,7 +11,7 @@ export default function FaqCTA() {
         <Reveal>
           <div className="grid gap-8 rounded-lg border border-border bg-white p-7 text-slate-950 shadow-xl shadow-slate-900/10 dark:bg-slate-900 dark:text-white dark:shadow-slate-900/15 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-red-600 dark:text-red-300">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary dark:text-cyan-300">
                 Still Need Help?
               </p>
               <h2 className="mt-3 max-w-2xl text-3xl font-bold leading-tight sm:text-4xl">

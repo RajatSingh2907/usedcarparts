@@ -132,7 +132,7 @@ export default function QualityParts() {
           <div className="mx-auto max-w-5xl text-center">
             
             {/* TOP BADGE */}
-            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-50 px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-red-600 backdrop-blur-xl dark:border-cyan-300/20 dark:bg-white/5">
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-50 px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-primary backdrop-blur-xl dark:border-cyan-300/20 dark:bg-white/5 dark:text-cyan-300">
               <span className="h-2 w-2 rounded-full bg-green-600 shadow-[0_0_25px_rgba(125,249,255,1)]" />
               Premium OEM Components
             </div>

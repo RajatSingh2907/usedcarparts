@@ -27,7 +27,7 @@ export default function CustomCursor() {
       const interactive = target.closest("a,button,[role='button']");
       ring.style.width = interactive ? "56px" : "34px";
       ring.style.height = interactive ? "56px" : "34px";
-      ring.style.borderColor = interactive ? "rgba(239,68,68,0.9)" : "rgba(255,255,255,0.55)";
+      ring.style.borderColor = interactive ? "rgba(14,165,233,0.9)" : "rgba(255,255,255,0.55)";
     };
 
     const tick = () => {
