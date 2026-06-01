@@ -40,7 +40,6 @@ export default function UsedEnginesPage() {
     <ProductLandingTemplate
       eyebrow="Used OEM Engines"
       title="Quality Tested Used Engines With Warranty & Nationwide Shipping"
-      highlightedTitle="Warranty & Nationwide Shipping"
       subtitle="Find dependable OEM engine replacements for cars, trucks, and SUVs. Every engine is inspected for quality, verified for compatibility, and backed by expert support to help get your vehicle back on the road quickly."
       heroImage="/websiteImages/bg-3.jpg"
       heroImageAlt="Used OEM engine inventory"
