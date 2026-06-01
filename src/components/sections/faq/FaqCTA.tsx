@@ -1,6 +1,5 @@
 import { Mail, PhoneCall } from "lucide-react";
 
-import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 
@@ -24,19 +23,20 @@ export default function FaqCTA() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <Button href="tel:7705984665" size="lg" className="gap-2">
+              <a
+                href="tel:7705984665"
+                className="inline-flex h-13 items-center justify-center gap-2.5 rounded-xl border border-primary/20 bg-primary/10 px-8 text-base font-bold text-primary shadow-xl shadow-primary/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/15 active:scale-[0.98] dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100 dark:shadow-cyan-950/30 dark:hover:bg-cyan-300/15"
+              >
                 <PhoneCall size={18} />
                 Call Now
-              </Button>
-              <Button
+              </a>
+              <a
                 href="mailto:delpaenterprise@gmail.com"
-                variant="outline"
-                size="lg"
-                className="gap-2 border-slate-300 bg-white text-slate-900 hover:bg-slate-100"
+                className="inline-flex h-13 items-center justify-center gap-2.5 rounded-xl border border-primary/30 bg-primary px-8 text-base font-bold text-white shadow-lg shadow-primary/25 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary-dark hover:bg-primary-dark hover:shadow-xl active:scale-[0.98] dark:border-cyan-300/20 dark:bg-primary dark:text-white"
               >
                 <Mail size={18} />
                 Email Us
-              </Button>
+              </a>
             </div>
           </div>
         </Reveal>
