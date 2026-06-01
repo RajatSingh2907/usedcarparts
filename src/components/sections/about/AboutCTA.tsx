@@ -11,11 +11,11 @@ const secondaryCtaClass =
 export default function AboutCTA() {
   return (
     <section className="relative overflow-hidden bg-white py-18 text-slate-900 sm:py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(239,68,68,0.12),transparent_40%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.10),transparent_40%)]" />
       <Container>
         <Reveal className="relative">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-red-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
               Ready To Find Your Part?
             </p>
             <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">

@@ -48,11 +48,15 @@ export default function Hero() {
         label="Find A Part Now"
       />
 
-      <MagneticButton
+      <a
         href="tel:7705984665"
-        label="Call (770) 598-4665"
-        variant="outline"
-      />
+        className="inline-flex h-13 items-center justify-center gap-2.5 rounded-xl border border-primary/20 bg-primary/10 px-8 text-base font-bold text-primary shadow-xl shadow-primary/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/15 active:scale-[0.98] dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100 dark:shadow-cyan-950/30 dark:hover:bg-cyan-300/15"
+      >
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        Call (770) 598-4665
+      </a>
     </>
   );
 
@@ -75,7 +79,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(248,250,252,0.96),rgba(241,245,249,0.9),rgba(239,68,68,0.12))] dark:bg-[linear-gradient(110deg,rgba(2,6,23,0.95),rgba(2,6,23,0.85),rgba(239,68,68,0.2))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(248,250,252,0.96),rgba(241,245,249,0.9),rgba(245,158,11,0.10))] dark:bg-[linear-gradient(110deg,rgba(2,6,23,0.95),rgba(2,6,23,0.85),rgba(14,165,233,0.18))]" />
 
       <Container className="relative py-16 sm:py-24 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -83,7 +87,7 @@ export default function Hero() {
             style={{ y: yCopy }}
             className="max-w-2xl"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-red-600 dark:text-red-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary dark:text-cyan-300">
               Premium Used OEM Parts
             </p>
 

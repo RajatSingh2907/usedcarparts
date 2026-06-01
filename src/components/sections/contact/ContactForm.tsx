@@ -10,10 +10,10 @@ import SectionHeading from "@/components/ui/SectionHeading";
 type Status = "idle" | "ready";
 
 const inputClass =
-  "h-12 w-full rounded-md border border-border bg-white px-4 text-sm text-secondary outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-red-100";
+  "h-12 w-full rounded-md border border-border bg-white px-4 text-sm text-secondary outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/15";
 
 const textareaClass =
-  "min-h-36 w-full rounded-md border border-border bg-white px-4 py-3 text-sm text-secondary outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-red-100";
+  "min-h-36 w-full rounded-md border border-border bg-white px-4 py-3 text-sm text-secondary outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/15";
 
 const sendButtonClass =
   "mt-5 inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-xl bg-primary px-9 text-base font-semibold uppercase tracking-[0.08em] text-white shadow-lg shadow-primary/20 transition duration-150 hover:-translate-y-0.5 hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:w-auto";
@@ -59,14 +59,14 @@ export default function ContactForm() {
             <div className="mt-8 space-y-4">
               <a
                 href="tel:7705984665"
-                className="flex items-center gap-4 rounded-lg border border-border bg-white p-5 shadow-sm transition hover:border-primary/30 hover:shadow-md"
+                className="flex items-center gap-4 rounded-lg border border-primary/20 bg-primary/10 p-5 text-primary shadow-sm shadow-primary/10 transition hover:border-primary/30 hover:bg-primary/15 hover:shadow-md dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100 dark:shadow-cyan-950/30 dark:hover:bg-cyan-300/15"
               >
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary/15 text-primary">
                   <PhoneCall size={20} />
                 </span>
                 <span>
-                  <span className="block text-sm text-muted">Call now</span>
-                  <span className="block text-base font-bold text-secondary">(770) 598-4665</span>
+                  <span className="block text-sm text-primary/75 dark:text-cyan-100/75">Call now</span>
+                  <span className="block text-base font-bold text-primary dark:text-cyan-100">(770) 598-4665</span>
                 </span>
               </a>
               <a

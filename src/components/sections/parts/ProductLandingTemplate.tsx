@@ -33,6 +33,7 @@ type ProductLandingTemplateProps = {
   features: FeatureBlock[];
   partLabel: string;
   heroContentClassName?: string;
+  heroFormClassName?: string;
   showBrandImages?: boolean;
 };
 
@@ -84,6 +85,7 @@ export default function ProductLandingTemplate({
   features,
   partLabel,
   heroContentClassName = "",
+  heroFormClassName = "",
   showBrandImages = false,
 }: ProductLandingTemplateProps) {
   const heroActions = (
@@ -184,7 +186,7 @@ export default function ProductLandingTemplate({
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative"
+              className={`relative ${heroFormClassName}`}
             >
               <VehicleSelectorForm theme="dark" />
             </motion.div>

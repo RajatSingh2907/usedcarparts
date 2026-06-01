@@ -51,7 +51,7 @@ export default function AboutHero() {
               const Icon = item.icon;
               return (
                 <div key={item.label} className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm font-semibold text-slate-800">
-                  <Icon size={17} className="text-red-600" />
+                  <Icon size={17} className="text-primary" />
                   {item.label}
                 </div>
               );
