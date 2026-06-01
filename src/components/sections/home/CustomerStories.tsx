@@ -76,14 +76,16 @@ export default function CustomerStories() {
     <section className="border-t border-slate-200 bg-slate-50 py-24 dark:border-white/5 dark:bg-slate-950">
       <Container>
         <Reveal>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
                 Customer Stories
               </span>
-              <h2 className="max-w-lg text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
+
+              <h2 className="max-w-lg text-3xl font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
                 Trusted by Thousands of Car Owners
               </h2>
+
               <p className="mt-3 max-w-md text-base text-slate-600 dark:text-slate-400">
                 Real feedback from customers who found exactly what they needed.
               </p>
@@ -94,6 +96,7 @@ export default function CustomerStories() {
               <span className="text-sm text-slate-500 dark:text-slate-500">
                 {currentIndex + 1} / {total}
               </span>
+
               <button
                 type="button"
                 aria-label="Previous testimonial"
@@ -102,6 +105,7 @@ export default function CustomerStories() {
               >
                 <ArrowLeft size={16} />
               </button>
+
               <button
                 type="button"
                 aria-label="Next testimonial"

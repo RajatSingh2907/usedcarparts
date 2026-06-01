@@ -68,12 +68,15 @@ export default function Brands() {
       <Container>
         <Reveal>
           <div className="text-center mb-12">
-              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
-                Search by Brand
-              </span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
+              Search by Brand
+            </span>
+            <h2
+              className="text-3xl font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent"
+            >
               OEM Parts for Every Major Make
             </h2>
+            {/* className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent"> */}
             <p className="mx-auto mt-3 max-w-xl text-base text-slate-600 dark:text-slate-400">
               Domestic and foreign vehicles covered. Click any brand to find parts instantly.
             </p>

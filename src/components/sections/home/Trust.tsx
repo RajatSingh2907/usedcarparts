@@ -7,7 +7,8 @@ import SectionHeading from "@/components/ui/SectionHeading";
 const trustItems = [
   {
     title: "Quality-Tested Components",
-    description: "Every OEM part is inspected for fitment integrity, condition quality, and dependable performance.",
+    description:
+      "Every OEM part is inspected for fitment integrity, condition quality, and dependable performance.",
     icon: ShieldCheck,
     accent: "from-cyan-400/25 to-cyan-500/5",
     iconColor: "text-cyan-300",
@@ -15,7 +16,8 @@ const trustItems = [
   },
   {
     title: "Warranty-Backed Confidence",
-    description: "Drive with peace of mind using clear warranty coverage and transparent support expectations.",
+    description:
+      "Drive with peace of mind using clear warranty coverage and transparent support expectations.",
     icon: Wrench,
     accent: "from-amber-400/25 to-amber-500/5",
     iconColor: "text-amber-300",
@@ -23,7 +25,8 @@ const trustItems = [
   },
   {
     title: "Fast Nationwide Shipping",
-    description: "Quick dispatch and trusted logistics support your repair timeline across the U.S.",
+    description:
+      "Quick dispatch and trusted logistics support your repair timeline across the U.S.",
     icon: Truck,
     accent: "from-emerald-400/25 to-emerald-500/5",
     iconColor: "text-emerald-300",
@@ -31,7 +34,8 @@ const trustItems = [
   },
   {
     title: "Expert Parts Support",
-    description: "Specialists help verify exact OEM match details before order approval to avoid mistakes.",
+    description:
+      "Specialists help verify exact OEM match details before order approval to avoid mistakes.",
     icon: Headset,
     accent: "from-violet-400/25 to-violet-500/5",
     iconColor: "text-violet-300",
@@ -48,7 +52,16 @@ export default function Trust() {
         <Reveal>
           <SectionHeading
             eyebrow="Why Drivers Choose Us"
-            title="Trusted Source for Reliable Used OEM Parts"
+            title={
+              <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
+                Trusted Source for Reliable Used OEM Parts
+              </span>
+            }
+//             eyebrow={
+//   <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
+//     Why Drivers Choose Us
+//   </span>
+// }
             description="Built for value, precision, and post-purchase confidence at every stage of your repair journey."
             align="center"
             className="max-w-4xl"
@@ -58,16 +71,28 @@ export default function Trust() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {trustItems.map((item, i) => {
             const Icon = item.icon;
+
             return (
               <Reveal key={item.title} delay={i * 0.05}>
-                <article className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 dark:border-white/12 dark:bg-slate-900/80 ${item.border} hover:shadow-2xl`}>
-                  <div className={`pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-br ${item.accent}`} />
+                <article
+                  className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 dark:border-white/12 dark:bg-slate-900/80 ${item.border} hover:shadow-2xl`}
+                >
+                  <div
+                    className={`pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-br ${item.accent}`}
+                  />
+
                   <div className="relative">
                     <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 dark:border-white/10 dark:bg-slate-800">
                       <Icon size={22} className={item.iconColor} />
                     </div>
-                    <h3 className="text-base font-bold text-slate-950 dark:text-white">{item.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{item.description}</p>
+
+                    <h3 className="text-base font-bold text-slate-950 dark:text-white">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                      {item.description}
+                    </p>
                   </div>
                 </article>
               </Reveal>

@@ -55,7 +55,11 @@ export default function Services() {
         <Reveal>
           <SectionHeading
             eyebrow="Our Services"
-            title="Benefits Built for Speed, Trust, and Fitment Confidence"
+            title={
+              <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
+                Benefits Built for Speed, Trust, and Fitment Confidence
+              </span>
+            }
             description="Everything from sourcing to delivery is designed to reduce uncertainty and move your repair forward faster."
             align="center"
             className="max-w-4xl"

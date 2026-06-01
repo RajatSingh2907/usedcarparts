@@ -142,7 +142,7 @@ export default function QualityParts() {
                 <>
                   Reliable Used Auto Parts,
                   <br />
-                  <span className="bg-gradient-to-r from-cyan-200 via-green-400 to-red-700 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
                     engineered for performance.
                   </span>
                 </>
