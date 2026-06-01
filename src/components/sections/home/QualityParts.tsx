@@ -111,7 +111,7 @@ const cardStyles = [
 export default function QualityParts() {
   return (
     <section className="relative overflow-hidden bg-white py-24 text-slate-950 dark:bg-slate-950 dark:text-white sm:py-32">
-      
+
       {/* PREMIUM BACKGROUND */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-[-10%] top-[-10%] h-[500px] w-[500px] rounded-full bg-cyan-500/15 blur-[140px]" />
@@ -126,11 +126,11 @@ export default function QualityParts() {
       </div>
 
       <Container className="relative z-10">
-        
+
         {/* HEADER */}
         <Reveal>
           <div className="mx-auto max-w-5xl text-center">
-            
+
             {/* TOP BADGE */}
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-50 px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-primary backdrop-blur-xl dark:border-cyan-300/20 dark:bg-white/5 dark:text-cyan-300">
               <span className="h-2 w-2 rounded-full bg-green-600 shadow-[0_0_25px_rgba(125,249,255,1)]" />
@@ -156,7 +156,7 @@ export default function QualityParts() {
 
         {/* GRID */}
         <div className="mt-20 grid auto-rows-[minmax(220px,auto)] gap-6 md:grid-cols-2 xl:grid-cols-4">
-          
+
           {parts.map((part, index) => {
             const style = cardStyles[index];
 
@@ -170,13 +170,13 @@ export default function QualityParts() {
                   href={part.href}
                   className="group relative block h-full overflow-hidden rounded-[34px]"
                 >
-                  
+
                   {/* OUTER GLOW */}
                   <div className="absolute -inset-[1px] rounded-[34px] bg-gradient-to-br from-cyan-400/30 via-white/5 to-transparent opacity-0 blur-xl transition-all duration-700 group-hover:opacity-100" />
 
                   {/* CARD */}
                   <article className="relative flex h-full flex-col overflow-hidden rounded-[34px] border border-slate-200 bg-white p-5 shadow-xl shadow-slate-900/8 backdrop-blur-2xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-3 group-hover:border-cyan-300/60 group-hover:bg-slate-50 dark:border-white/10 dark:bg-white/[0.06] dark:shadow-none dark:group-hover:border-cyan-300/30 dark:group-hover:bg-white/[0.08]">
-                    
+
                     {/* LIGHT SWEEP */}
                     <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
                       <div className="absolute inset-y-0 left-[-120%] w-[120%] rotate-12 bg-gradient-to-r from-transparent via-white/10 to-transparent transition-all duration-1000 group-hover:left-[120%]" />
@@ -189,8 +189,8 @@ export default function QualityParts() {
 
                     {/* TOP BAR */}
                     <div className="relative z-10 flex items-start justify-between">
-                      
-                      <div className="inline-flex rounded-full border border-cyan-300/15 bg-cyan-400/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.24em] text-cyan-100">
+
+                      <div className="inline-flex rounded-full border border-cyan-300/30 bg-cyan-100 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.24em] text-cyan-800 dark:border-cyan-300/15 dark:bg-cyan-400/10 dark:text-cyan-100">
                         {part.badge}
                       </div>
 
@@ -203,7 +203,7 @@ export default function QualityParts() {
                     <div
                       className={`relative mt-6 overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 ${style.image}`}
                     >
-                      
+
                       {/* IMAGE LIGHTING */}
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(125,249,255,0.22),transparent_40%),radial-gradient(circle_at_bottom,rgba(0,0,0,0.55),transparent_50%)]" />
 
@@ -223,7 +223,7 @@ export default function QualityParts() {
 
                     {/* CONTENT */}
                     <div className="relative z-10 mt-6 flex flex-1 flex-col">
-                      
+
                       {/* TAGS */}
                       <div className="mb-4 flex flex-wrap gap-2">
                         {part.specs.map((spec) => (
@@ -251,7 +251,7 @@ export default function QualityParts() {
                       {/* FOOTER */}
                       <div className="mt-auto pt-8">
                         <div className="flex items-center justify-between">
-                          
+
                           <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-cyan-700 transition-all duration-300 group-hover:gap-4 group-hover:text-slate-950 dark:text-cyan-200 dark:group-hover:text-white">
                             View Details
                             <span className="transition-transform duration-300 group-hover:translate-x-2">
@@ -279,7 +279,7 @@ export default function QualityParts() {
             href="/used-auto-parts"
             variant="primary"
             size="xl"
-            className="group relative overflow-hidden rounded-full border border-white/15 bg-primary px-10 py-5 text-sm font-black uppercase tracking-[0.2em] text-white shadow-xl shadow-primary/25 transition-all duration-500 hover:scale-105 hover:bg-primary-dark"
+            className="group relative overflow-hidden rounded-full border border-white/15 bg-sky-500 px-10 py-5 text-sm font-black uppercase tracking-[0.2em] !text-white shadow-xl shadow-primary/25 transition-all duration-500 hover:scale-105 hover:bg-primary-dark"
           >
             <span className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent)] opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100" />
             <span className="relative z-10">Explore More Parts</span>
