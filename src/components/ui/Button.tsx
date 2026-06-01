@@ -47,6 +47,8 @@ export default function Button(props: ButtonProps) {
 
   if ("href" in props && props.href) {
     const { href, variant: _v, size: _s, ...linkProps } = props;
+    void _v;
+    void _s;
     return (
       <Link href={href} className={classNames} {...linkProps}>
         {children}
@@ -55,6 +57,8 @@ export default function Button(props: ButtonProps) {
   }
 
   const { variant: _v, size: _s, ...buttonProps } = props as ButtonAsButton;
+  void _v;
+  void _s;
 
   return (
     <button type="button" className={classNames} {...buttonProps}>

@@ -46,13 +46,13 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative overflow-hidden bg-slate-900 py-24 border-t border-white/5">
+    <section className="relative overflow-hidden border-t border-slate-200 bg-white py-24 dark:border-white/5 dark:bg-slate-900">
       {/* Background texture */}
       <div
         className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-5"
         style={{ backgroundImage: "url('/websiteImages/bg-6.jpg')" }}
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950/50" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/70 dark:from-slate-950/50 dark:to-slate-950/50" />
 
       {/* Ambient glow */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-cyan-600/5 blur-[120px] pointer-events-none" />
@@ -60,13 +60,13 @@ export default function HowItWorks() {
       <Container className="relative z-10">
         <Reveal>
           <div className="text-center mb-14">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-300 mb-4">
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
               How It Works
             </span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
               A Simple 4-Step Process
             </h2>
-            <p className="mt-4 text-base text-slate-400 max-w-xl mx-auto">
+            <p className="mx-auto mt-4 max-w-xl text-base text-slate-600 dark:text-slate-400">
               From request to delivery — we keep everything transparent and hassle-free.
             </p>
           </div>
@@ -75,11 +75,11 @@ export default function HowItWorks() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
             <Reveal key={step.number} delay={i * 0.08}>
-              <article className="group relative flex flex-col h-full rounded-2xl border border-white/8 bg-slate-800/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/25 hover:bg-slate-800/80 hover:shadow-xl hover:shadow-cyan-500/8">
+              <article className="group relative flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/25 hover:bg-slate-50 hover:shadow-xl hover:shadow-cyan-500/8 dark:border-white/8 dark:bg-slate-800/50 dark:hover:bg-slate-800/80">
 
                 {/* Connector line (desktop only) */}
                 {i < steps.length - 1 && (
-                  <div className="absolute -right-2.5 top-10 hidden h-px w-5 bg-gradient-to-r from-white/20 to-transparent lg:block z-10" />
+                  <div className="absolute -right-2.5 top-10 z-10 hidden h-px w-5 bg-gradient-to-r from-slate-300 to-transparent dark:from-white/20 lg:block" />
                 )}
 
                 {/* Number badge */}
@@ -87,16 +87,16 @@ export default function HowItWorks() {
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 text-sm font-extrabold text-white shadow-lg shadow-cyan-500/25">
                     {step.number}
                   </div>
-                  <div className="h-px flex-1 bg-white/8" />
+                  <div className="h-px flex-1 bg-slate-200 dark:bg-white/8" />
                 </div>
 
                 {/* Icon */}
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/8 bg-slate-700/50 text-slate-300 transition-colors duration-300 group-hover:border-cyan-500/25 group-hover:text-cyan-400">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-600 transition-colors duration-300 group-hover:border-cyan-500/25 group-hover:text-cyan-500 dark:border-white/8 dark:bg-slate-700/50 dark:text-slate-300 dark:group-hover:text-cyan-400">
                   {step.icon}
                 </div>
 
-                <h3 className="text-base font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-sm leading-7 text-slate-400">{step.description}</p>
+                <h3 className="mb-2 text-base font-bold text-slate-950 dark:text-white">{step.title}</h3>
+                <p className="text-sm leading-7 text-slate-600 dark:text-slate-400">{step.description}</p>
               </article>
             </Reveal>
           ))}

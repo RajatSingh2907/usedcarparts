@@ -91,13 +91,6 @@ function VehicleFormInner({ theme }: { theme: Theme }) {
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
   const [submitMessage, setSubmitMessage] = useState("");
 
-  useEffect(() => {
-    if (initialMake !== "Select Make") {
-      setSelectedMake(initialMake);
-      setSelectedModel("Select Model");
-    }
-  }, [initialMake]);
-
   const normalizedKey = normalizeMakeKey(selectedMake);
   const models = modelsByMake[normalizedKey] ?? modelsByMake[selectedMake] ?? [];
   const modelOptions = selectedMake === "Select Make" ? ["Select make first"] : ["Select Model", ...models];

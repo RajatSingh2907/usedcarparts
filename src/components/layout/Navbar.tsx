@@ -36,8 +36,8 @@ export default function Navbar() {
       className={[
         "sticky top-0 z-40 transition-all duration-300",
         isScrolled
-          ? "bg-slate-950/90 backdrop-blur-xl shadow-2xl shadow-black/40 border-b border-white/5"
-          : "bg-slate-950 border-b border-white/8",
+          ? "border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-900/10 backdrop-blur-xl dark:border-white/5 dark:bg-slate-950/90 dark:shadow-2xl dark:shadow-black/40"
+          : "border-b border-slate-200 bg-white dark:border-white/8 dark:bg-slate-950",
       ].join(" ")}
     >
       <Container className="flex h-[72px] items-center justify-between gap-8">
@@ -63,15 +63,15 @@ export default function Navbar() {
                 href={item.href}
                 className={[
                   "relative px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200",
-                  "hover:text-white hover:bg-white/10",
+                  "hover:bg-slate-100 hover:text-slate-950 dark:hover:bg-white/10 dark:hover:text-white",
                   isActive
-                    ? "text-white bg-white/10"
-                    : "text-white",
+                    ? "bg-slate-100 text-slate-950 dark:bg-white/10 dark:text-white"
+                    : "text-slate-700 dark:text-white",
                 ].join(" ")}
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-5 rounded-full bg-white" />
+                  <span className="absolute bottom-0 left-1/2 h-0.5 w-5 -translate-x-1/2 rounded-full bg-slate-950 dark:bg-white" />
                 )}
               </Link>
             );
@@ -100,7 +100,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-all duration-200 hover:bg-white/12 hover:border-white/20 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-900 transition-all duration-200 hover:border-slate-300 hover:bg-slate-100 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:border-white/20 dark:hover:bg-white/12 lg:hidden"
             onClick={() => setIsOpen(true)}
             aria-label="Open navigation menu"
           >
