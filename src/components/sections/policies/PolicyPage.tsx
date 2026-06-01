@@ -26,7 +26,7 @@ export default function PolicyPage({
 }: PolicyPageProps) {
   return (
     <>
-      <section className="relative overflow-hidden bg-white text-slate-900">
+      <section className="relative overflow-hidden bg-white text-slate-900 dark:bg-slate-950 dark:text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.10),transparent_40%)]" />
         <div className="absolute bottom-0 right-0 h-44 w-44 border-l border-t border-slate-200 sm:h-72 sm:w-72" />
         <Container className="relative py-16 sm:py-20 lg:py-24">
@@ -37,10 +37,10 @@ export default function PolicyPage({
             <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
               {eyebrow}
             </p>
-            <h1 className="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-3xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-4xl font-extrabold leading-[1.08] text-transparent sm:text-5xl lg:text-6xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
               {title}
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
               {description}
             </p>
             {lastUpdated ? (
@@ -92,7 +92,7 @@ export default function PolicyPage({
                 <div className="mt-5 space-y-3">
                   <a
                     href="tel:7705984665"
-                    className="flex h-11 items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition hover:bg-primary-dark"
+                    className="flex h-11 items-center justify-center gap-2 rounded-md bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-4 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800"
                   >
                     <PhoneCall size={17} />
                     Call Support

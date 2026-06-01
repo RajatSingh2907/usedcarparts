@@ -115,7 +115,7 @@ export default function HowItWorks() {
               </span>
             </div>
 
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
+            <h2 className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
               A Simple 4-Step Process
             </h2>
 

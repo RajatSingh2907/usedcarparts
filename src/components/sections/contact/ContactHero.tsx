@@ -13,7 +13,7 @@ const primaryCtaClass =
   "h-14 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-primary shadow-xl shadow-primary/10 transition-all duration-200 after:rounded-xl hover:-translate-y-0.5 hover:bg-primary/15 active:scale-[0.98] dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100 dark:shadow-cyan-950/30 dark:hover:bg-cyan-300/15";
 
 const secondaryCtaClass =
-  "h-14 items-center justify-center rounded-xl border border-primary bg-primary px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-white shadow-lg shadow-primary/20 transition-transform duration-150 hover:border-primary-dark hover:bg-primary-dark dark:text-white";
+  "h-14 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-white shadow-lg shadow-cyan-500/25 transition-transform duration-150 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800";
 
 export default function ContactHero() {
   return (

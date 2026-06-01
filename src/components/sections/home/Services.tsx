@@ -56,7 +56,7 @@ export default function Services() {
           <SectionHeading
             eyebrow="Our Services"
             title={
-              <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
                 Benefits Built for Speed, Trust, and Fitment Confidence
               </span>
             }

@@ -16,7 +16,7 @@ const textareaClass =
   "min-h-36 w-full rounded-md border border-border bg-white px-4 py-3 text-sm text-secondary outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/15";
 
 const sendButtonClass =
-  "mt-5 inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-xl bg-primary px-9 text-base font-semibold uppercase tracking-[0.08em] text-white shadow-lg shadow-primary/20 transition duration-150 hover:-translate-y-0.5 hover:bg-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:w-auto";
+  "mt-5 inline-flex h-14 w-full items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-9 text-base font-semibold uppercase tracking-[0.08em] text-white shadow-lg shadow-cyan-500/25 transition duration-150 hover:-translate-y-0.5 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 sm:w-auto";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");

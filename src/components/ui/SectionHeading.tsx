@@ -46,8 +46,8 @@ export default function SectionHeading({
 
       <h2
         className={cx(
-          "text-2xl font-bold leading-tight sm:text-3xl md:text-4xl",
-          isDark ? "text-white" : "text-secondary"
+          "bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-2xl font-bold leading-tight text-transparent sm:text-3xl md:text-4xl",
+          isDark ? "dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500" : undefined
         )}
       >
         {title}

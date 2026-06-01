@@ -11,10 +11,10 @@ const highlights = [
 ];
 
 const primaryCtaClass =
-  "h-14 items-center justify-center rounded-xl bg-primary px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-white shadow-xl shadow-primary/25 transition-transform duration-150 after:rounded-xl hover:bg-primary-dark";
+  "h-14 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-white shadow-xl shadow-cyan-500/25 transition-transform duration-150 after:rounded-xl hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800";
 
 const secondaryCtaClass =
-  "h-14 items-center justify-center rounded-xl border border-primary bg-primary px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-white shadow-lg shadow-primary/20 transition-transform duration-150 hover:border-primary-dark hover:bg-primary-dark";
+  "h-14 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-primary shadow-lg shadow-primary/10 transition-transform duration-150 hover:border-primary/30 hover:bg-primary/15 dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100";
 
 export default function AboutHero() {
   return (

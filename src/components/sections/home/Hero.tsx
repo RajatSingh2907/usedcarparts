@@ -46,7 +46,6 @@ export default function Hero() {
       <MagneticButton
         href="#vehicle-selector"
         label="Find A Part Now"
-        className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 shadow-[0_18px_36px_-14px_rgba(14,165,233,0.68)] hover:from-cyan-200 hover:via-blue-400 hover:to-sky-800 hover:shadow-[0_22px_44px_-16px_rgba(14,165,233,0.78)]"
       />
 
       <a

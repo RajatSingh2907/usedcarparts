@@ -42,13 +42,16 @@ export default function Navbar() {
     >
       <Container className="flex h-[72px] items-center justify-between gap-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center shrink-0 group">
+        <Link
+          href="/"
+          className="group flex h-14 shrink-0 items-center overflow-hidden rounded-xl bg-slate-950 px-3 shadow-sm shadow-slate-900/15 transition-all duration-200 hover:shadow-md dark:bg-transparent dark:px-0 dark:shadow-none"
+        >
           <Image
             src="/navlogo%20(1).png"
             alt="Parts Central logo"
             width={200}
             height={44}
-            className="object-contain transition-opacity duration-200 group-hover:opacity-90"
+            className="h-10 w-auto object-contain transition-opacity duration-200 group-hover:opacity-90"
             priority
           />
         </Link>

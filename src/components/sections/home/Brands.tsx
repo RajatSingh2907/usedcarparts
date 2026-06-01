@@ -72,11 +72,10 @@ export default function Brands() {
               Search by Brand
             </span>
             <h2
-              className="text-3xl font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500"
             >
               OEM Parts for Every Major Make
             </h2>
-            {/* className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent"> */}
             <p className="mx-auto mt-3 max-w-xl text-base text-slate-600 dark:text-slate-400">
               Domestic and foreign vehicles covered. Click any brand to find parts instantly.
             </p>

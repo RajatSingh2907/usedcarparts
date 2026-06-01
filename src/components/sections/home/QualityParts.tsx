@@ -142,7 +142,7 @@ export default function QualityParts() {
                 <>
                   Reliable Used Auto Parts,
                   <br />
-                  <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
                     engineered for performance.
                   </span>
                 </>
@@ -279,7 +279,7 @@ export default function QualityParts() {
             href="/used-auto-parts"
             variant="primary"
             size="xl"
-            className="group relative overflow-hidden rounded-full border border-white/15 bg-sky-500 px-10 py-5 text-sm font-black uppercase tracking-[0.2em] !text-white shadow-xl shadow-primary/25 transition-all duration-500 hover:scale-105 hover:bg-primary-dark"
+            className="group relative overflow-hidden rounded-full border border-white/15 bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-10 py-5 text-sm font-black uppercase tracking-[0.2em] !text-white shadow-xl shadow-cyan-500/25 transition-all duration-500 hover:scale-105 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800"
           >
             <span className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent)] opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100" />
             <span className="relative z-10">Explore More Parts</span>

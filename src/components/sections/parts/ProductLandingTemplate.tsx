@@ -93,7 +93,6 @@ export default function ProductLandingTemplate({
       <MagneticButton
         href="#vehicle-selector"
         label="Find A Part Now"
-        className="bg-gradient-to-r from-cyan-300 via-blue-400 to-sky-700 shadow-[0_18px_36px_-14px_rgba(14,165,233,0.68)] hover:from-cyan-200 hover:via-blue-400 hover:to-sky-800 hover:shadow-[0_22px_44px_-16px_rgba(14,165,233,0.78)]"
       />
 
       <MagneticButton
@@ -140,7 +139,7 @@ export default function ProductLandingTemplate({
                 {eyebrow}
               </p>
 
-              <h1 className="max-w-3xl text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+              <h1 className="max-w-3xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-5xl lg:text-6xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
                 {title}
               </h1>
 
@@ -209,7 +208,7 @@ export default function ProductLandingTemplate({
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">
+            <h2 className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
               {sectionTitle}
             </h2>
 
@@ -245,7 +244,7 @@ export default function ProductLandingTemplate({
       <section className="bg-white py-16 dark:bg-slate-950">
         <Container>
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">
+            <h2 className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
               Why Customers Trust Us
             </h2>
 
@@ -302,7 +301,7 @@ export default function ProductLandingTemplate({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-extrabold">
+            <h2 className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-4xl font-extrabold text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
               Ready To Find Your Perfect Part?
             </h2>
 
