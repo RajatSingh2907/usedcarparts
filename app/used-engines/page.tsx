@@ -44,7 +44,25 @@ export default function UsedEnginesPage() {
       subtitle="Find dependable OEM engine replacements for cars, trucks, and SUVs. Every engine is inspected for quality, verified for compatibility, and backed by expert support to help get your vehicle back on the road quickly."
       heroImage="/websiteImages/bg-3.jpg"
       heroImageAlt="Used OEM engine inventory"
-      heroTintClass="bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.92)_25%,rgba(255,255,255,0.75)_50%,rgba(255,255,255,0.20)_75%,rgba(255,255,255,0)_100%)]"
+
+      /* ✅ FIXED: LIGHT + DARK MODE SAFE OVERLAY */
+      heroTintClass="
+        bg-[linear-gradient(
+          90deg,
+          rgba(255,255,255,0.96)_0%,
+          rgba(255,255,255,0.90)_25%,
+          rgba(255,255,255,0.70)_50%,
+          rgba(15,23,42,0.25)_80%,
+          rgba(15,23,42,0.70)_100%
+        )]
+        dark:bg-[linear-gradient(
+          120deg,
+          rgba(2,6,23,0.95),
+          rgba(15,23,42,0.88),
+          rgba(249,115,22,0.18)
+        )]
+      "
+
       sectionTitle="OEM Engine Replacements Without Dealership Pricing"
       sectionLead="Whether you're replacing a failed engine, rebuilding a vehicle, or looking for a cost-effective alternative to a new powertrain, Parts Central helps you source quality-tested OEM engines backed by warranty coverage and expert compatibility verification."
       features={features}
