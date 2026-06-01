@@ -59,7 +59,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-[720px] overflow-hidden bg-slate-950 text-white"
+      className="relative min-h-[720px] overflow-hidden bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-white"
     >
       <motion.div
         style={{ y: yImage }}
@@ -69,13 +69,13 @@ export default function Hero() {
           src="/websiteImages/bg-4.jpg"
           alt="Premium used auto parts"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-15 dark:opacity-30"
           sizes="100vw"
           priority
         />
       </motion.div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(2,6,23,0.95),rgba(2,6,23,0.85),rgba(239,68,68,0.2))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(248,250,252,0.96),rgba(241,245,249,0.9),rgba(239,68,68,0.12))] dark:bg-[linear-gradient(110deg,rgba(2,6,23,0.95),rgba(2,6,23,0.85),rgba(239,68,68,0.2))]" />
 
       <Container className="relative py-16 sm:py-24 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -83,7 +83,7 @@ export default function Hero() {
             style={{ y: yCopy }}
             className="max-w-2xl"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-red-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-red-600 dark:text-red-300">
               Premium Used OEM Parts
             </p>
 
@@ -91,7 +91,7 @@ export default function Hero() {
               <SplitChars text={heading} />
             </h1>
 
-            <p className="mt-6 text-base leading-8 text-slate-200 sm:text-lg">
+            <p className="mt-6 text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-200">
               Quality-tested, perfectly matched used parts for every major make
               and model, with fast shipping and a dedicated support team.
             </p>

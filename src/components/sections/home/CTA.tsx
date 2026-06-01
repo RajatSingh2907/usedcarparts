@@ -4,7 +4,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function CTA() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-24 border-t border-white/5">
+    <section className="relative overflow-hidden border-t border-slate-200 bg-white py-24 dark:border-white/5 dark:bg-slate-950">
       {/* Gradient orbs */}
       <div className="pointer-events-none absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-cyan-600/12 blur-[120px]" />
       <div className="pointer-events-none absolute -right-32 bottom-0 h-[500px] w-[500px] rounded-full bg-amber-600/8 blur-[120px]" />
@@ -21,7 +21,7 @@ export default function CTA() {
 
       <Container className="relative z-10">
         <Reveal>
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800/60 p-10 shadow-2xl shadow-black/60 sm:p-14 relative overflow-hidden">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-10 shadow-2xl shadow-slate-900/10 sm:p-14 dark:border-white/10 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800/60 dark:shadow-black/60">
             {/* Inner glow top */}
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
             {/* Inner glow bottom */}
@@ -41,13 +41,13 @@ export default function CTA() {
                 </span>
               </div>
 
-              <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl leading-tight">
+              <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-4xl lg:text-5xl dark:text-white">
                 Find the Right OEM Part{" "}
                 <span className="bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
                   Without the Guesswork
                 </span>
               </h2>
-              <p className="mt-5 text-base leading-8 text-slate-400 sm:text-lg max-w-xl">
+              <p className="mt-5 max-w-xl text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-400">
                 Talk to our team for quick compatibility checks, transparent quotes, and delivery timelines you can count on.
               </p>
 
@@ -63,7 +63,7 @@ export default function CTA() {
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 h-13 rounded-xl border border-white/15 bg-white/5 px-8 text-base font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/10 hover:border-white/25 hover:-translate-y-0.5 active:scale-[0.98]"
+                  className="inline-flex h-13 items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-8 text-base font-semibold text-slate-900 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50 active:scale-[0.98] dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:border-white/25 dark:hover:bg-white/10"
                 >
                   Request a Quote
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">

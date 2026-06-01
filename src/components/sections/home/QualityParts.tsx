@@ -110,7 +110,7 @@ const cardStyles = [
 
 export default function QualityParts() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-24 text-white sm:py-32">
+    <section className="relative overflow-hidden bg-white py-24 text-slate-950 dark:bg-slate-950 dark:text-white sm:py-32">
       
       {/* PREMIUM BACKGROUND */}
       <div className="absolute inset-0 overflow-hidden">
@@ -132,7 +132,7 @@ export default function QualityParts() {
           <div className="mx-auto max-w-5xl text-center">
             
             {/* TOP BADGE */}
-            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-300/20 bg-white/5 px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-red-600 backdrop-blur-xl">
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-50 px-5 py-2 text-xs font-bold uppercase tracking-[0.3em] text-red-600 backdrop-blur-xl dark:border-cyan-300/20 dark:bg-white/5">
               <span className="h-2 w-2 rounded-full bg-green-600 shadow-[0_0_25px_rgba(125,249,255,1)]" />
               Premium OEM Components
             </div>
@@ -149,8 +149,7 @@ export default function QualityParts() {
               }
               description="Professionally sourced and inspected OEM components with fast nationwide shipping, warranty-backed confidence, and premium reliability."
               align="center"
-              theme="dark"
-              className="max-w-5xl [&_h2]:text-5xl [&_h2]:font-black [&_h2]:leading-[0.95] [&_h2]:tracking-[-0.04em] sm:[&_h2]:text-6xl lg:[&_h2]:text-7xl [&_p]:mx-auto [&_p]:mt-8 [&_p]:max-w-3xl [&_p]:text-lg [&_p]:leading-8 [&_p]:text-slate-300"
+              className="max-w-5xl [&_h2]:text-5xl [&_h2]:font-black [&_h2]:leading-[0.95] [&_h2]:tracking-[-0.04em] sm:[&_h2]:text-6xl lg:[&_h2]:text-7xl [&_p]:mx-auto [&_p]:mt-8 [&_p]:max-w-3xl [&_p]:text-lg [&_p]:leading-8 [&_p]:text-slate-600 dark:[&_p]:text-slate-300"
             />
           </div>
         </Reveal>
@@ -176,7 +175,7 @@ export default function QualityParts() {
                   <div className="absolute -inset-[1px] rounded-[34px] bg-gradient-to-br from-cyan-400/30 via-white/5 to-transparent opacity-0 blur-xl transition-all duration-700 group-hover:opacity-100" />
 
                   {/* CARD */}
-                  <article className="relative flex h-full flex-col overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.06] p-5 backdrop-blur-2xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-3 group-hover:border-cyan-300/30 group-hover:bg-white/[0.08]">
+                  <article className="relative flex h-full flex-col overflow-hidden rounded-[34px] border border-slate-200 bg-white p-5 shadow-xl shadow-slate-900/8 backdrop-blur-2xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-3 group-hover:border-cyan-300/60 group-hover:bg-slate-50 dark:border-white/10 dark:bg-white/[0.06] dark:shadow-none dark:group-hover:border-cyan-300/30 dark:group-hover:bg-white/[0.08]">
                     
                     {/* LIGHT SWEEP */}
                     <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
@@ -195,14 +194,14 @@ export default function QualityParts() {
                         {part.badge}
                       </div>
 
-                      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-cyan-100 transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:border-cyan-300/40 group-hover:bg-cyan-400/10">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-cyan-700 transition-all duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:border-cyan-300/60 group-hover:bg-cyan-50 dark:border-white/10 dark:bg-white/5 dark:text-cyan-100 dark:group-hover:border-cyan-300/40 dark:group-hover:bg-cyan-400/10">
                         →
                       </div>
                     </div>
 
                     {/* IMAGE CONTAINER */}
                     <div
-                      className={`relative mt-6 overflow-hidden rounded-[28px] border border-white/10 bg-slate-900 ${style.image}`}
+                      className={`relative mt-6 overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 ${style.image}`}
                     >
                       
                       {/* IMAGE LIGHTING */}
@@ -230,7 +229,7 @@ export default function QualityParts() {
                         {part.specs.map((spec) => (
                           <span
                             key={spec}
-                            className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold text-slate-200 backdrop-blur-xl"
+                            className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[11px] font-semibold text-slate-600 backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:text-slate-200"
                           >
                             {spec}
                           </span>
@@ -239,13 +238,13 @@ export default function QualityParts() {
 
                       {/* TITLE */}
                       <h3
-                        className={`${style.title} font-black leading-[1] tracking-[-0.03em] text-white`}
+                        className={`${style.title} font-black leading-[1] tracking-[-0.03em] text-slate-950 dark:text-white`}
                       >
                         {part.title}
                       </h3>
 
                       {/* DESCRIPTION */}
-                      <p className="mt-4 max-w-[90%] text-sm leading-7 text-slate-300">
+                      <p className="mt-4 max-w-[90%] text-sm leading-7 text-slate-600 dark:text-slate-300">
                         {part.description}
                       </p>
 
@@ -253,7 +252,7 @@ export default function QualityParts() {
                       <div className="mt-auto pt-8">
                         <div className="flex items-center justify-between">
                           
-                          <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-cyan-200 transition-all duration-300 group-hover:gap-4 group-hover:text-white">
+                          <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-cyan-700 transition-all duration-300 group-hover:gap-4 group-hover:text-slate-950 dark:text-cyan-200 dark:group-hover:text-white">
                             View Details
                             <span className="transition-transform duration-300 group-hover:translate-x-2">
                               →

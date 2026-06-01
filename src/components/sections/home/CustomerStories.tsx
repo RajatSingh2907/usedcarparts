@@ -73,32 +73,32 @@ export default function CustomerStories() {
   }, [currentIndex]);
 
   return (
-    <section className="bg-slate-950 py-24 border-t border-white/5">
+    <section className="border-t border-slate-200 bg-slate-50 py-24 dark:border-white/5 dark:bg-slate-950">
       <Container>
         <Reveal>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-300 mb-4">
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
                 Customer Stories
               </span>
-              <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl max-w-lg">
+              <h2 className="max-w-lg text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
                 Trusted by Thousands of Car Owners
               </h2>
-              <p className="mt-3 text-base text-slate-400 max-w-md">
+              <p className="mt-3 max-w-md text-base text-slate-600 dark:text-slate-400">
                 Real feedback from customers who found exactly what they needed.
               </p>
             </div>
 
             {/* Navigation controls */}
             <div className="flex items-center gap-3 shrink-0">
-              <span className="text-sm text-slate-500">
+              <span className="text-sm text-slate-500 dark:text-slate-500">
                 {currentIndex + 1} / {total}
               </span>
               <button
                 type="button"
                 aria-label="Previous testimonial"
                 onClick={() => setCurrentIndex((i) => (i - 1 + total) % total)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-400 transition-all duration-200 hover:bg-white/10 hover:text-white hover:border-white/20"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 transition-all duration-200 hover:border-slate-300 hover:bg-slate-100 hover:text-slate-950 dark:border-white/10 dark:bg-white/5 dark:text-slate-400 dark:hover:border-white/20 dark:hover:bg-white/10 dark:hover:text-white"
               >
                 <ArrowLeft size={16} />
               </button>
@@ -106,7 +106,7 @@ export default function CustomerStories() {
                 type="button"
                 aria-label="Next testimonial"
                 onClick={() => setCurrentIndex((i) => (i + 1) % total)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-400 transition-all duration-200 hover:bg-white/10 hover:text-white hover:border-white/20"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 transition-all duration-200 hover:border-slate-300 hover:bg-slate-100 hover:text-slate-950 dark:border-white/10 dark:bg-white/5 dark:text-slate-400 dark:hover:border-white/20 dark:hover:bg-white/10 dark:hover:text-white"
               >
                 <ArrowRight size={16} />
               </button>
@@ -127,8 +127,8 @@ export default function CustomerStories() {
               className={[
                 "min-w-[300px] max-w-[400px] snap-center rounded-2xl border p-7 flex flex-col gap-5 transition-all duration-300",
                 i === currentIndex
-                  ? "border-cyan-500/30 bg-slate-800/80 shadow-xl shadow-cyan-500/8"
-                  : "border-white/8 bg-slate-900/60 hover:-translate-y-0.5",
+                  ? "border-cyan-500/30 bg-white shadow-xl shadow-cyan-500/10 dark:bg-slate-800/80 dark:shadow-cyan-500/8"
+                  : "border-slate-200 bg-white/80 hover:-translate-y-0.5 dark:border-white/8 dark:bg-slate-900/60",
               ].join(" ")}
             >
               {/* Stars */}
@@ -138,17 +138,17 @@ export default function CustomerStories() {
                 ))}
               </div>
 
-              <blockquote className="flex-1 text-sm leading-7 text-slate-300">
+              <blockquote className="flex-1 text-sm leading-7 text-slate-600 dark:text-slate-300">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-white/8">
+              <div className="flex items-center gap-3 border-t border-slate-200 pt-4 dark:border-white/8">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-cyan-700 text-xs font-bold text-white">
                   {t.initials}
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">{t.name}</p>
+                  <p className="text-sm font-semibold text-slate-950 dark:text-white">{t.name}</p>
                   <p className="text-xs text-slate-500">{t.location}</p>
                 </div>
               </div>
@@ -166,7 +166,7 @@ export default function CustomerStories() {
               onClick={() => setCurrentIndex(i)}
               className={[
                 "h-1.5 rounded-full transition-all duration-300",
-                i === currentIndex ? "w-6 bg-cyan-500" : "w-1.5 bg-white/20 hover:bg-white/35",
+                i === currentIndex ? "w-6 bg-cyan-500" : "w-1.5 bg-slate-300 hover:bg-slate-400 dark:bg-white/20 dark:hover:bg-white/35",
               ].join(" ")}
             />
           ))}

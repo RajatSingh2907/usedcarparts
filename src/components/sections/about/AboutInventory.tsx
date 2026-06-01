@@ -94,11 +94,11 @@ export default function AboutInventory() {
                   </article>
                 ))}
               </div>
-              <div className="mt-4 rounded-md bg-secondary p-5 text-white">
+              <div className="mt-4 rounded-md border border-border bg-white p-5 text-slate-950 dark:border-transparent dark:bg-secondary dark:text-white">
                 <p className="text-sm font-semibold uppercase tracking-[0.16em] text-amber-300">
                   Used OEM Auto Parts
                 </p>
-                <p className="mt-2 text-sm leading-7 text-slate-200">
+                <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-200">
                   Engines, transmissions, modules, lighting, and more sourced with compatibility and
                   clear customer support in mind.
                 </p>

@@ -290,8 +290,8 @@ export default function ProductLandingTemplate({
       />
 
       {/* FINAL CTA */}
-      <section className="relative overflow-hidden bg-slate-950 py-20 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.2),transparent_50%)]" />
+      <section className="relative overflow-hidden bg-slate-50 py-20 text-slate-950 dark:bg-slate-950 dark:text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.12),transparent_50%)] dark:bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.2),transparent_50%)]" />
 
         <Container className="relative text-center">
           <motion.div
@@ -303,7 +303,7 @@ export default function ProductLandingTemplate({
               Ready To Find Your Perfect Part?
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
               Get started today with our expert support team and premium OEM
               inventory.
             </p>
