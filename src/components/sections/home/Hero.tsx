@@ -87,43 +87,43 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-10 dark:opacity-25"
+          className="object-cover opacity-30 dark:opacity-25"
         />
       </motion.div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50/95 to-cyan-50/60 dark:from-slate-950 dark:via-slate-950/95 dark:to-cyan-950/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-slate-50/82 to-cyan-50/55 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-cyan-950/30" />
 
       {/* Glow */}
       <div className="pointer-events-none absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[160px]" />
 
-      <Container className="relative z-10 py-16 sm:py-24 lg:py-28">
-        <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+      <Container className="relative z-10 py-10 sm:py-14 lg:flex lg:min-h-[calc(100svh-72px)] lg:items-center lg:py-8">
+        <div className="grid w-full gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
           {/* Left Side */}
           <motion.div
             style={{ y: yContent }}
             className="max-w-3xl"
           >
             {/* Trust Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-300">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-300">
               <span className="h-2 w-2 rounded-full bg-cyan-500" />
               Premium OEM Auto Parts
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl font-black leading-[1.05] text-slate-950 sm:text-5xl lg:text-7xl dark:text-white">
+            <h1 className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-4xl font-black leading-[1.05] text-transparent sm:text-5xl lg:text-6xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
               <SplitChars text={heading} />
             </h1>
 
             {/* Description */}
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            <p className="mt-4 max-w-2xl text-base leading-7 text-slate-700 dark:text-slate-200 sm:text-lg">
               Quality-tested OEM engines, transmissions, headlights,
               radiators and more. Fast nationwide shipping,
               transparent pricing and expert support.
             </p>
 
             {/* Trust Stats */}
-            <div className="mt-8 flex flex-wrap gap-6">
+            <div className="mt-6 flex flex-wrap gap-6">
               <div>
                 <div className="text-2xl font-black text-slate-950 dark:text-white">
                   50K+
@@ -153,7 +153,7 @@ export default function Hero() {
             </div>
 
             {/* Buttons */}
-            <div className="mt-10 hidden flex-wrap gap-4 lg:flex">
+            <div className="mt-7 hidden flex-wrap gap-4 lg:flex">
               {heroActions}
             </div>
           </motion.div>

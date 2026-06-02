@@ -131,19 +131,18 @@ function VehicleFormInner({ theme }: { theme: Theme }) {
       id="vehicle-selector-form"
       onSubmit={handleSubmit}
       className={cx(
-        "w-full max-w-xl overflow-hidden rounded-[30px] border p-6 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-7",
+        "w-full max-w-xl overflow-hidden rounded-[30px] border p-5 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-6",
         isDark
           ? "border-white/10 bg-slate-900/90 text-white"
           : "border-slate-200 bg-white text-slate-900"
       )}
     >
-      <div className="mb-6 text-center">
+      <div className="mb-4 text-center">
        
 
         <h2
           className={cx(
-            "text-3xl font-black tracking-tight",
-            isDark ? "text-white" : "text-slate-900"
+            "bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-2xl font-black tracking-tight text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500 sm:text-3xl",
           )}
         >
           Find Your OEM Part
@@ -151,7 +150,7 @@ function VehicleFormInner({ theme }: { theme: Theme }) {
 
         <p
           className={cx(
-            "mt-3 text-sm",
+            "mt-2 text-sm",
             isDark ? "text-slate-400" : "text-slate-600"
           )}
         >
@@ -159,7 +158,7 @@ function VehicleFormInner({ theme }: { theme: Theme }) {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-2">
         <SelectField label="Year" name="year" options={years} theme={theme} />
         <SelectField label="Make" name="make" onChange={(make) => { setSelectedMake(make); setSelectedModel(make === "Select Make" ? "Select make first" : "Select Model"); }} options={makes} value={selectedMake} theme={theme} />
         <SelectField label="Model" name="model" onChange={setSelectedModel} options={modelOptions} value={selectedModel} theme={theme} />
@@ -175,7 +174,7 @@ function VehicleFormInner({ theme }: { theme: Theme }) {
       <button
         type="submit"
         disabled={isSending}
-        className="mt-6 flex h-14 w-full items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 text-base font-bold text-white shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-1 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 disabled:opacity-50"
+        className="mt-5 flex h-12 w-full items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 text-base font-bold text-white shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-1 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 disabled:opacity-50"
       >
         {isSending ? "Sending..." : "Find My Part"}
       </button>

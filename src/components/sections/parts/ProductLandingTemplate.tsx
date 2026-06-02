@@ -108,7 +108,7 @@ export default function ProductLandingTemplate({
       {/* HERO SECTION */}
       <section className="relative overflow-hidden bg-white text-slate-900 dark:bg-slate-950 dark:text-white">
         {/* Background Image */}
-        <div className="pointer-events-none absolute inset-0 opacity-20 dark:opacity-35">
+        <div className="pointer-events-none absolute inset-0 opacity-35 dark:opacity-35">
           <Image
             src={heroImage}
             alt={heroImageAlt}
@@ -121,13 +121,13 @@ export default function ProductLandingTemplate({
 
         {/* Overlay */}
         <div
-          className={`absolute inset-0 ${heroTintClass} opacity-70 dark:opacity-100`}
+          className={`absolute inset-0 ${heroTintClass} opacity-45 dark:opacity-100`}
         />
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.15),transparent_45%)]" />
 
-        <Container className="relative py-16 sm:py-20 lg:py-24">
-          <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <Container className="relative py-10 sm:py-14 lg:flex lg:min-h-[calc(100svh-72px)] lg:items-center lg:py-8">
+          <div className="grid w-full gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
             {/* LEFT CONTENT */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -143,16 +143,16 @@ export default function ProductLandingTemplate({
                 {title}
               </h1>
 
-              <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
+              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-700 dark:text-slate-200 sm:text-lg">
                 {subtitle}
               </p>
 
-              <div className="mt-8 hidden flex-col gap-4 sm:flex-row lg:flex">
+              <div className="mt-6 hidden flex-col gap-4 sm:flex-row lg:flex">
                 {heroActions}
               </div>
 
               {/* Highlights */}
-              <div className="mt-12 grid gap-4 sm:grid-cols-3">
+              <div className="mt-8 grid gap-3 sm:grid-cols-3">
                 {highlights.map((item, index) => {
                   const Icon = item.icon;
 
@@ -163,7 +163,7 @@ export default function ProductLandingTemplate({
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-lg backdrop-blur dark:border-white/10 dark:bg-slate-900/70"
+                      className="rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-lg backdrop-blur dark:border-white/10 dark:bg-slate-900/70"
                     >
                       <Icon className="h-8 w-8 text-cyan-500" />
 
