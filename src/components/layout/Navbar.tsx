@@ -44,14 +44,22 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="group flex h-14 shrink-0 items-center overflow-hidden rounded-xl bg-slate-950 px-3 shadow-sm shadow-slate-900/15 transition-all duration-200 hover:shadow-md dark:bg-transparent dark:px-0 dark:shadow-none"
+          className="group flex h-14 shrink-0 items-center overflow-hidden"
         >
+          <Image
+            src="/Logo/Logo%20(2).png"
+            alt="Parts Central logo"
+            width={260}
+            height={40}
+            className="h-10 w-[200px] object-contain transition-opacity duration-200 group-hover:opacity-90 dark:hidden"
+            priority
+          />
           <Image
             src="/navlogo%20(1).png"
             alt="Parts Central logo"
             width={200}
             height={44}
-            className="h-10 w-auto object-contain transition-opacity duration-200 group-hover:opacity-90"
+            className="hidden h-10 w-[200px] object-contain transition-opacity duration-200 group-hover:opacity-90 dark:block"
             priority
           />
         </Link>
