@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <header
       className={[
-        "sticky top-0 z-40 transition-all duration-300",
+        "sticky top-0 z-[80] transition-all duration-300",
         isScrolled
           ? "border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-900/10 backdrop-blur-xl dark:border-white/5 dark:bg-slate-950/90 dark:shadow-2xl dark:shadow-black/40"
           : "border-b border-slate-200 bg-white dark:border-white/8 dark:bg-slate-950",
@@ -53,7 +53,6 @@ export default function Navbar() {
             width={260}
             height={40}
             className="h-10 w-[200px] object-contain transition-opacity duration-200 group-hover:opacity-90 dark:hidden"
-            priority
           />
           <Image
             src="/navlogo%20(1).png"
@@ -61,7 +60,6 @@ export default function Navbar() {
             width={200}
             height={44}
             className="hidden h-10 w-[200px] object-contain transition-opacity duration-200 group-hover:opacity-90 dark:block"
-            priority
           />
         </Link>
 

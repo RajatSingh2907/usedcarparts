@@ -48,13 +48,14 @@ export default function Trust() {
   return (
     <section className="relative overflow-hidden bg-white py-24 dark:bg-slate-950">
       <Image
-        src="/bg_Images/joey-banks-YApiWyp0lqo-unsplash.jpg"
+        src="/optimized/bg-trust.webp"
         alt=""
         fill
         sizes="100vw"
-        className="pointer-events-none object-cover object-center opacity-88 dark:opacity-70"
+        quality={70}
+        className="pointer-events-none object-cover object-center opacity-55 dark:opacity-45"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/30 via-white/8 to-white/38 dark:from-slate-950/50 dark:via-slate-950/14 dark:to-slate-950/58" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/62 via-white/38 to-white/72 dark:from-slate-950/72 dark:via-slate-950/48 dark:to-slate-950/80" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.08),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_45%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.12),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.1),transparent_45%)]" />
 
       <Container className="relative z-10">

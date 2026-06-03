@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Used OEM Engines With Warranty & Fast Shipping | Parts Central of Georgia",
+    "Used OEM Engines With Warranty & Shipping Support | Parts Central of Georgia",
   description:
-    "Shop quality-tested used OEM engines for cars, trucks, and SUVs. Save thousands compared to dealership replacements with warranty-backed engines and nationwide shipping.",
+    "Shop used OEM engines for cars, trucks, and SUVs with fitment support, warranty terms confirmed before purchase, and shipping guidance.",
 };
 
 const features = [
   {
-    title: "Save Thousands Compared To New Engines",
-    body: "Get dependable OEM engine replacements at a fraction of dealership pricing without sacrificing reliability.",
+    title: "Affordable OEM Engine Options",
+    body: "Used OEM engines can provide a practical replacement option compared with many new engine alternatives.",
   },
   {
     title: "OEM Compatibility Verified",
@@ -23,11 +23,11 @@ const features = [
   },
   {
     title: "Warranty Included",
-    body: "Most engine assemblies include warranty coverage for additional peace of mind.",
+    body: "Warranty coverage is reviewed with your quote so you know the terms before purchase.",
   },
   {
-    title: "Fast Nationwide Shipping",
-    body: "Our sourcing and logistics network helps deliver replacement engines quickly across the United States.",
+    title: "Shipping Support",
+    body: "Freight and delivery details are confirmed during quoting, with free shipping available within the contiguous 48 states when applicable.",
   },
   {
     title: "Expert Assistance Throughout The Process",
@@ -39,9 +39,9 @@ export default function UsedEnginesPage() {
   return (
     <ProductLandingTemplate
       eyebrow="Used OEM Engines"
-      title="Quality Tested Used Engines With Warranty & Nationwide Shipping"
-      subtitle="Find dependable OEM engine replacements for cars, trucks, and SUVs. Every engine is inspected for quality, verified for compatibility, and backed by expert support to help get your vehicle back on the road quickly."
-      heroImage="/websiteImages/bg-3.jpg"
+      title="Premium Quality Used OEM Engines"
+      subtitle="Find used OEM engine replacement options for cars, trucks, and SUVs with fitment guidance, quote support, and warranty terms reviewed before purchase."
+      heroImage="/optimized/hero-engines.webp"
       heroImageAlt="Used OEM engine inventory"
 
       /* ✅ FIXED: LIGHT + DARK MODE SAFE OVERLAY */
@@ -62,11 +62,10 @@ export default function UsedEnginesPage() {
         )]
       "
 
-      sectionTitle="OEM Engine Replacements Without Dealership Pricing"
-      sectionLead="Whether you're replacing a failed engine, rebuilding a vehicle, or looking for a cost-effective alternative to a new powertrain, Parts Central helps you source quality-tested OEM engines backed by warranty coverage and expert compatibility verification."
+      sectionTitle="Used OEM Engine Replacements With Clear Quote Support"
+      sectionLead="Whether you are replacing a failed engine or planning a repair, Parts Central helps review available used OEM engine options, compatibility details, warranty terms, and delivery expectations."
       features={features}
       partLabel="used engines"
-      heroFormClassName="-mt-40 lg:-mt-56"
       showBrandImages
     />
   );

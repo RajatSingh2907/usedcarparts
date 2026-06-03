@@ -42,7 +42,7 @@ function SelectField({ label, name, options, value, onChange, theme }: { label: 
       <div className="relative">
         <select
           className={cx(
-            "h-10 w-full appearance-none rounded-lg border px-3 pr-8 text-sm outline-none transition-all duration-200",
+            "h-11 w-full appearance-none rounded-xl border px-3.5 pr-8 text-sm font-medium outline-none transition-all duration-200",
             isDark
               ? "border-white/10 bg-slate-800/70 text-white focus:border-cyan-500/60 focus:ring-2 focus:ring-cyan-500/20"
               : "border-slate-300 bg-white text-slate-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100",
@@ -66,7 +66,7 @@ function TextField({ label, name, placeholder, type = "text", theme }: { label: 
       <span className={cx("mb-1.5 block text-xs font-semibold uppercase tracking-wider", isDark ? "text-slate-300" : "text-slate-600")}>{label}</span>
       <input
         className={cx(
-          "h-10 w-full rounded-lg border px-3 text-sm outline-none transition-all duration-200",
+            "h-11 w-full rounded-xl border px-3.5 text-sm font-medium outline-none transition-all duration-200",
           isDark
             ? "border-white/10 bg-slate-800/70 text-white placeholder:text-slate-500 focus:border-cyan-500/60 focus:ring-2 focus:ring-cyan-500/20"
             : "border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100",
@@ -131,18 +131,20 @@ function VehicleFormInner({ theme, formId }: { theme: Theme; formId: string }) {
       id={formId}
       onSubmit={handleSubmit}
       className={cx(
-        "w-full max-w-xl overflow-hidden rounded-[30px] border p-5 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-6",
+        "w-full max-w-lg overflow-hidden rounded-[28px] border p-4 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-5",
         isDark
           ? "border-white/10 bg-slate-900/90 text-white"
           : "border-slate-200 bg-white text-slate-900"
       )}
     >
       <div className="mb-4 text-center">
-       
+        <div className={cx("mx-auto mb-3 inline-flex rounded-full border px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em]", isDark ? "border-cyan-300/20 bg-cyan-300/10 text-cyan-200" : "border-cyan-500/20 bg-cyan-50 text-cyan-700")}>
+          Free quote in minutes
+        </div>
 
         <h2
           className={cx(
-            "bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-2xl font-black tracking-tight text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500 sm:text-3xl",
+            "bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-2xl font-black tracking-tight text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500 sm:text-[1.65rem]",
           )}
         >
           Find Your OEM Part
@@ -150,15 +152,15 @@ function VehicleFormInner({ theme, formId }: { theme: Theme; formId: string }) {
 
         <p
           className={cx(
-            "mt-2 text-sm",
+            "mt-1.5 text-sm",
             isDark ? "text-slate-400" : "text-slate-600"
           )}
         >
-          Get pricing, availability and shipping details within minutes.
+          Request pricing, availability, and shipping details from our team.
         </p>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid gap-2.5 sm:grid-cols-2">
         <SelectField label="Year" name="year" options={years} theme={theme} />
         <SelectField label="Make" name="make" onChange={(make) => { setSelectedMake(make); setSelectedModel(make === "Select Make" ? "Select make first" : "Select Model"); }} options={makes} value={selectedMake} theme={theme} />
         <SelectField label="Model" name="model" onChange={setSelectedModel} options={modelOptions} value={selectedModel} theme={theme} />
@@ -174,7 +176,7 @@ function VehicleFormInner({ theme, formId }: { theme: Theme; formId: string }) {
       <button
         type="submit"
         disabled={isSending}
-        className="mt-5 flex h-12 w-full items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 text-base font-bold text-white shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-1 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 disabled:opacity-50"
+        className="mt-4 flex h-[52px] w-full items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 text-base font-black uppercase tracking-[0.08em] text-white shadow-[0_18px_42px_-18px_rgba(14,165,233,0.85)] transition-all duration-300 hover:-translate-y-1 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 disabled:opacity-50"
       >
         {isSending ? "Sending..." : "Find My Part"}
       </button>

@@ -14,7 +14,7 @@ export default function FaqHero() {
     <SubHero
       eyebrow="Frequently Asked Questions"
       title="Clear answers before you order used OEM parts."
-      description="Find quick guidance on fitment, part condition, ordering, nationwide shipping, warranty support, and returns from Parts Central of Georgia."
+      description="Find quick guidance on fitment, part condition, ordering, shipping, warranty support, and returns from Parts Central of Georgia."
       actions={
         <>
           <Button href="/contact" size="lg">Ask A Question</Button>

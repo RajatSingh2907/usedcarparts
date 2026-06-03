@@ -1,46 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import MagneticButton from "@/components/ui/MagneticButton";
 import VehicleSelectorForm from "@/components/forms/VehicleSelectorForm";
 import Container from "@/components/ui/Container";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
-const heading = "Reliable OEM Parts. Real Value. Real Fast";
-
-function SplitChars({ text }: { text: string }) {
-  return (
-    <span aria-label={text} role="text" className="inline-block">
-      {text.split("").map((ch, i) => (
-        <motion.span
-          key={`${ch}-${i}`}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: i * 0.018,
-            duration: 0.45,
-          }}
-          className="inline-block"
-        >
-          {ch === " " ? "\u00A0" : ch}
-        </motion.span>
-      ))}
-    </span>
-  );
-}
+const heading = "Premium Quality Used OEM Car Parts";
 
 export default function Hero() {
-  const ref = useRef<HTMLElement | null>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const yImage = useTransform(scrollYProgress, [0, 1], [0, 120]);
-  const yContent = useTransform(scrollYProgress, [0, 1], [0, -40]);
-
   const heroActions = (
     <>
       <MagneticButton
@@ -50,7 +15,7 @@ export default function Hero() {
 
       <a
         href="tel:7705984665"
-        className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border border-primary/20 bg-primary/10 px-7 text-sm font-bold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary/15"
+        className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/12 px-7 text-sm font-bold !text-white shadow-[0_18px_42px_-22px_rgba(255,255,255,0.5)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-200/50 hover:bg-white/18 [&_*]:!text-white"
       >
         <svg
           className="h-5 w-5"
@@ -73,23 +38,20 @@ export default function Hero() {
 
   return (
     <section
-      ref={ref}
       className="relative overflow-hidden bg-slate-50 dark:bg-slate-950"
     >
       {/* Background Image */}
-      <motion.div
-        style={{ y: yImage }}
-        className="absolute inset-0"
-      >
+      <div className="absolute inset-0">
         <Image
-          src="/bg_Images/archee-lal-AQuzzn6V6gE-unsplash.jpg"
+          src="/optimized/hero-home.webp"
           alt="OEM Used Auto Parts"
           fill
           priority
           sizes="100vw"
+          quality={72}
           className="object-cover opacity-95 dark:opacity-85"
         />
-      </motion.div>
+      </div>
 
       {/* Overlay */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-950/78 via-slate-950/48 to-slate-950/8 dark:from-slate-950/82 dark:via-slate-950/52 dark:to-slate-950/12" />
@@ -98,13 +60,10 @@ export default function Hero() {
       {/* Glow */}
       <div className="pointer-events-none absolute -left-20 top-1/2 h-[420px] w-[620px] -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[130px]" />
 
-      <Container className="relative z-10 py-10 sm:py-14 lg:flex lg:min-h-[calc(100svh-72px)] lg:items-center lg:py-8">
-        <div className="grid w-full gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+      <Container className="relative z-10 px-6 py-10 sm:py-12 lg:flex lg:min-h-[calc(100svh-72px)] lg:items-center lg:px-4 lg:py-7">
+        <div className="grid w-full gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           {/* Left Side */}
-          <motion.div
-            style={{ y: yContent }}
-            className="max-w-3xl"
-          >
+          <div className="max-w-4xl pt-10 sm:pt-6 lg:pt-0">
             {/* Trust Badge */}
             {/* <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-300">
               <span className="h-2 w-2 rounded-full bg-cyan-500" />
@@ -112,43 +71,47 @@ export default function Hero() {
             </div> */}
 
             {/* Heading */}
-            <h1 className="bg-gradient-to-r from-cyan-200 via-sky-300 to-blue-400 bg-clip-text text-4xl font-black leading-[1.05] text-transparent drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)] sm:text-5xl lg:text-6xl">
-              <SplitChars text={heading} />
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-cyan-100 shadow-lg shadow-black/20 backdrop-blur-md">
+              <span className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.9)]" />
+              Premium Used OEM Auto Parts
+            </div>
+
+            <h1 className="max-w-4xl bg-gradient-to-r from-white via-cyan-100 to-sky-300 bg-clip-text text-[44px] font-black leading-none tracking-[-0.05em] text-transparent drop-shadow-[0_4px_16px_rgba(0,0,0,0.98)] sm:text-6xl lg:text-7xl">
+              {heading}
             </h1>
 
             {/* Description */}
-            <p className="mt-4 max-w-2xl text-base font-medium leading-7 text-slate-100 drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)] sm:text-lg">
-              Quality-tested OEM engines, transmissions, headlights,
-              radiators and more. Fast nationwide shipping,
-              transparent pricing and expert support.
+            <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-slate-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)] sm:text-lg">
+              Affordable, trusted replacements for every make and model with
+              fitment support, clear quote details, and shipping guidance.
             </p>
 
             {/* Trust Stats */}
-            <div className="mt-6 flex flex-wrap gap-6">
+            <div className="mt-6 grid max-w-2xl grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:gap-6">
               <div>
-                <div className="text-2xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
-                  50K+
+                <div className="text-xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)] sm:text-2xl">
+                  OEM
                 </div>
-                <div className="text-sm font-medium text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
-                  Parts Available
+                <div className="text-xs font-semibold text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] sm:text-sm">
+                  Quality Parts
                 </div>
               </div>
 
               <div>
-                <div className="text-2xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
-                  60-Day
-                </div>
-                <div className="text-sm font-medium text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
+                <div className="text-xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)] sm:text-2xl">
                   Warranty
                 </div>
+                <div className="text-xs font-semibold text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] sm:text-sm">
+                  Terms Confirmed
+                </div>
               </div>
 
               <div>
-                <div className="text-2xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
-                  Fast
+                <div className="text-xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)] sm:text-2xl">
+                  Free
                 </div>
-                <div className="text-sm font-medium text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
-                  Nationwide Delivery
+                <div className="text-xs font-semibold text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] sm:text-sm">
+                  48-State Shipping
                 </div>
               </div>
             </div>
@@ -157,28 +120,22 @@ export default function Hero() {
             <div className="mt-7 hidden flex-wrap gap-4 lg:flex">
               {heroActions}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Side Form */}
-          <motion.div
+          <div
             id="vehicle-selector"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.7,
-              delay: 0.2,
-            }}
-            className="relative"
+            className="relative lg:ml-auto"
           >
             <div className="absolute inset-0 rounded-[32px] bg-cyan-500/20 blur-3xl" />
 
-            <div className="relative">
+            <div className="relative mx-auto max-w-lg">
               <VehicleSelectorForm theme="dark" />
             </div>
-          </motion.div>
+          </div>
 
           {/* Mobile Buttons */}
-          <div className="flex flex-col gap-4 lg:hidden">
+          <div className="flex flex-col gap-3 lg:hidden [&_a]:w-full">
             {heroActions}
           </div>
         </div>

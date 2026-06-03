@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Used OEM Auto Parts With Warranty & Fast Shipping | Parts Central of Georgia",
+    "Used OEM Auto Parts With Warranty & Shipping Support | Parts Central of Georgia",
   description:
-    "Find quality-tested used OEM auto parts for cars, trucks, and SUVs. Save up to 70% compared to dealership pricing with warranty-backed parts, expert fitment support, and fast nationwide shipping.",
+    "Find quality-tested used OEM auto parts for cars, trucks, and SUVs with warranty terms, expert fitment support, and free shipping within the contiguous 48 states when confirmed in your quote.",
 };
 
 const features = [
   {
-    title: "Up To 70% Less Than Dealership Pricing",
-    body: "Get dependable OEM replacement parts at a fraction of dealership costs without compromising on quality or reliability.",
+    title: "Affordable OEM Replacement Options",
+    body: "Used OEM parts can offer strong value compared with new replacement options while preserving factory fitment.",
   },
   {
     title: "OEM Fitment Verified",
@@ -19,11 +19,11 @@ const features = [
   },
   {
     title: "Warranty Included",
-    body: "Most parts include warranty coverage for added confidence and long-term peace of mind.",
+    body: "Warranty terms are reviewed before purchase so you know what is covered and how support works.",
   },
   {
-    title: "Fast Nationwide Shipping",
-    body: "We process and ship parts quickly across the United States to reduce vehicle downtime.",
+    title: "Free Shipping Support",
+    body: "Free shipping is available within the contiguous 48 states when confirmed in your quote or invoice.",
   },
   {
     title: "Access To Rare & Discontinued Parts",
@@ -40,11 +40,11 @@ export default function UsedAutoPartsPage() {
     <ProductLandingTemplate
       eyebrow="Used OEM Auto Parts"
 
-      title="Quality Tested Used OEM Parts With Warranty & Fast Nationwide Shipping"
+      title="Premium Quality Used OEM Auto Parts"
 
-      subtitle="Save money without sacrificing quality. We help drivers, repair shops, and dealerships source inspected OEM auto parts backed by warranty coverage, expert fitment verification, and fast delivery anywhere in the United States."
+      subtitle="Affordable, trusted replacements for every make and model. We help drivers, repair shops, and dealerships source used OEM parts with fitment support, clear quote details, and shipping guidance."
 
-      heroImage="/websiteImages/bg-1.jpg"
+      heroImage="/optimized/hero-auto-parts.webp"
       heroImageAlt="Used OEM auto parts inventory"
 
       heroTintClass="
@@ -57,15 +57,13 @@ rgba(255,255,255,0.20)_75%,
 rgba(255,255,255,0)_100%
 )]
 "
-      sectionTitle="OEM Quality Without Dealership Pricing"
+      sectionTitle="Used OEM Auto Parts You Can Trust"
 
-      sectionLead="Whether you're replacing a failed component, repairing collision damage, or restoring vehicle performance, Parts Central provides reliable OEM auto parts at competitive prices. Every inquiry is reviewed for compatibility so you can order with confidence."
+      sectionLead="When your car needs a replacement, you should not have to guess about quality or overpay. Parts Central of Georgia helps make buying used OEM auto parts simple, clear, and practical."
 
       features={features}
 
       partLabel="used auto parts"
-
-      heroFormClassName="-mt-40 lg:-mt-56"
 
       showBrandImages
     />

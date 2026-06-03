@@ -21,7 +21,7 @@ export default function AboutHero() {
     <SubHero
       eyebrow="About Parts Central"
       title="Quality used OEM auto parts with support you can count on."
-      description="Parts Central of Georgia helps drivers, repair shops, and vehicle owners find dependable used engines, transmissions, and auto parts without the guesswork."
+      description="Parts Central of Georgia helps drivers, repair shops, and vehicle owners find used engines, transmissions, and auto parts with clear quote and fitment support."
       actions={
         <>
           <Button href="/contact" variant="secondary" size="lg" className={secondaryCtaClass}>
@@ -36,12 +36,12 @@ export default function AboutHero() {
         <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-xl shadow-slate-300/25">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-xl bg-slate-50 p-5 text-slate-900">
-              <Image src="/parts/engine-assembly.svg" alt="Used engine assembly" width={150} height={150} className="mx-auto h-28 w-28" priority />
+              <Image src="/parts/engine-assembly.svg" alt="Used engine assembly" width={150} height={150} className="mx-auto h-28 w-28" />
               <h2 className="mt-4 text-xl font-bold">Used OEM Engines</h2>
               <p className="mt-2 text-sm leading-6 text-slate-600">Sourced for fit, condition, and dependable performance.</p>
             </div>
             <div className="rounded-xl bg-slate-50 p-5 text-slate-900">
-              <Image src="/parts/transmission.svg" alt="Used transmission" width={150} height={150} className="mx-auto h-28 w-28" priority />
+              <Image src="/parts/transmission.svg" alt="Used transmission" width={150} height={150} className="mx-auto h-28 w-28" />
               <h2 className="mt-4 text-xl font-bold">Used Transmissions</h2>
               <p className="mt-2 text-sm leading-6 text-slate-600">Matched to your vehicle and backed by clear support.</p>
             </div>

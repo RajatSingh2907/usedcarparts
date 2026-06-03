@@ -13,7 +13,7 @@ const parts = [
       "Complete OEM engine assemblies professionally inspected, tested, and ready for long-term performance.",
     image: "/parts/tyler-bZY2K525nao-unsplash.jpg",
     href: "/used-engines",
-    specs: ["OEM Certified", "Warranty Included", "Performance Tested"],
+    specs: ["OEM Fitment", "Warranty Terms", "Quality Reviewed"],
     badge: "Featured",
   },
   {
@@ -81,28 +81,28 @@ const cardStyles = [
   {
     // ABS MODULE
     grid: "",
-    image: "h-[170px]",
+    image: "h-[220px] sm:h-[240px]",
     title: "text-xl",
     glow: "from-indigo-400/20 via-cyan-400/10 to-transparent",
   },
   {
     // ABS SYSTEM
     grid: "",
-    image: "h-[170px]",
+    image: "h-[220px] sm:h-[240px]",
     title: "text-xl",
     glow: "from-cyan-300/20 via-sky-400/10 to-transparent",
   },
   {
     // SPINDLE
     grid: "",
-    image: "h-[170px]",
+    image: "h-[220px] sm:h-[240px]",
     title: "text-xl",
     glow: "from-slate-300/10 via-cyan-400/10 to-transparent",
   },
   {
     // HEADLIGHT WIDE CARD
     grid: "md:col-span-2",
-    image: "h-[190px] sm:h-[220px]",
+    image: "h-[230px] sm:h-[250px]",
     title: "text-2xl sm:text-3xl",
     glow: "from-cyan-400/30 via-blue-400/10 to-transparent",
   },
@@ -147,7 +147,7 @@ export default function QualityParts() {
                   </span>
                 </>
               }
-              description="Professionally sourced and inspected OEM components with fast nationwide shipping, warranty-backed confidence, and premium reliability."
+              description="Professionally sourced used OEM components with quote support, warranty terms, and shipping details reviewed before purchase."
               align="center"
               className="max-w-5xl [&_h2]:text-5xl [&_h2]:font-black [&_h2]:leading-[0.95] [&_h2]:tracking-[-0.04em] sm:[&_h2]:text-6xl lg:[&_h2]:text-7xl [&_p]:mx-auto [&_p]:mt-8 [&_p]:max-w-3xl [&_p]:text-lg [&_p]:leading-8 [&_p]:text-slate-600 dark:[&_p]:text-slate-300"
             />
@@ -172,10 +172,10 @@ export default function QualityParts() {
                 >
 
                   {/* OUTER GLOW */}
-                  <div className="absolute -inset-[1px] rounded-[34px] bg-gradient-to-br from-cyan-400/30 via-white/5 to-transparent opacity-0 blur-xl transition-all duration-700 group-hover:opacity-100" />
+                  <div className="absolute -inset-[1px] rounded-[34px] bg-gradient-to-br from-cyan-400/30 via-white/5 to-transparent opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100" />
 
                   {/* CARD */}
-                  <article className="relative flex h-full flex-col overflow-hidden rounded-[34px] border border-slate-200 bg-white p-5 shadow-xl shadow-slate-900/8 backdrop-blur-2xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-3 group-hover:border-cyan-300/60 group-hover:bg-slate-50 dark:border-white/10 dark:bg-white/[0.06] dark:shadow-none dark:group-hover:border-cyan-300/30 dark:group-hover:bg-white/[0.08]">
+                  <article className="relative flex h-full flex-col overflow-hidden rounded-[34px] border border-slate-200 bg-white p-5 shadow-[0_20px_50px_rgba(0,0,0,0.08)] backdrop-blur-2xl transition-all duration-300 ease-out group-hover:-translate-y-2 group-hover:border-cyan-300/60 group-hover:bg-slate-50 group-hover:shadow-[0_28px_70px_rgba(14,165,233,0.18)] dark:border-white/10 dark:bg-white/[0.06] dark:shadow-none dark:group-hover:border-cyan-300/30 dark:group-hover:bg-white/[0.08]">
 
                     {/* LIGHT SWEEP */}
                     <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
@@ -201,7 +201,7 @@ export default function QualityParts() {
 
                     {/* IMAGE CONTAINER */}
                     <div
-                      className={`relative mt-6 overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 ${style.image}`}
+                      className={`relative mt-6 overflow-hidden rounded-[28px] border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-cyan-50/50 dark:border-white/10 dark:bg-slate-900 dark:bg-none ${style.image}`}
                     >
 
                       {/* IMAGE LIGHTING */}
@@ -216,7 +216,9 @@ export default function QualityParts() {
                           src={part.image}
                           alt={part.title}
                           fill
-                          className="object-contain p-6 drop-shadow-[0_35px_45px_rgba(0,0,0,0.7)] transition-transform duration-700 group-hover:scale-110"
+                          sizes={index === 0 || index === 5 ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"}
+                          quality={72}
+                          className="object-contain p-3 drop-shadow-[0_35px_45px_rgba(0,0,0,0.7)] transition-transform duration-500 group-hover:scale-110 sm:p-4"
                         />
                       </div>
                     </div>

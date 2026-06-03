@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useSyncExternalStore } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -21,6 +22,11 @@ const navItems = [
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const pathname = usePathname();
+  const mounted = useSyncExternalStore(
+    () => () => undefined,
+    () => true,
+    () => false
+  );
 
   useEffect(() => {
     if (!isOpen) return;
@@ -44,12 +50,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     onClose();
   }, [onClose, pathname]);
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <>
       {/* Backdrop */}
       <div
         className={[
-          "fixed inset-0 z-[70] bg-black/70 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
+          "fixed inset-0 z-[90] bg-slate-950/80 backdrop-blur-md transition-opacity duration-300 lg:hidden",
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
         ].join(" ")}
         onClick={onClose}
@@ -59,7 +67,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Drawer */}
       <div
         className={[
-          "fixed inset-y-0 right-0 z-[71] flex h-dvh w-[86%] max-w-sm flex-col overflow-hidden border-l border-slate-200 bg-white shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:border-white/8 dark:bg-slate-950 dark:shadow-black/60 lg:hidden",
+          "fixed inset-0 z-[91] flex h-dvh w-screen max-w-none flex-col overflow-hidden bg-white shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:bg-slate-950 dark:shadow-black/60 lg:hidden",
           isOpen ? "translate-x-0" : "translate-x-full",
         ].join(" ")}
         aria-modal={isOpen}
@@ -132,6 +140,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </Link>
         </div>
       </div>
-    </>
+    </>,
+    document.body
   );
 }

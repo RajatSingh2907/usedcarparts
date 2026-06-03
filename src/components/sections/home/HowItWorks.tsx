@@ -6,9 +6,9 @@ import Reveal from "@/components/ui/Reveal";
 const steps = [
   {
     number: "01",
-    title: "Share Vehicle Details",
+    title: "Tell Us What You Need",
     description:
-      "Tell us your year, make, model, and the exact part you need using our quick form.",
+      "Share your year, make, model, and required part using our quick form.",
     icon: (
       <svg
         className="h-5 w-5"
@@ -28,9 +28,9 @@ const steps = [
   },
   {
     number: "02",
-    title: "Get an Exact Match",
+    title: "Get Quote Support",
     description:
-      "We verify our inventory and source the right OEM replacement for your vehicle.",
+      "Our team reviews fitment details and available OEM replacement options.",
     icon: (
       <svg
         className="h-5 w-5"
@@ -50,9 +50,9 @@ const steps = [
   },
   {
     number: "03",
-    title: "Approve Your Quote",
+    title: "Confirm Details",
     description:
-      "Receive transparent pricing and a delivery estimate before you commit to anything.",
+      "Review pricing, warranty terms, and delivery expectations before checkout.",
     icon: (
       <svg
         className="h-5 w-5"
@@ -72,9 +72,9 @@ const steps = [
   },
   {
     number: "04",
-    title: "Fast Delivery",
+    title: "Shipping & Peace of Mind",
     description:
-      "Your part ships quickly with nationwide coverage and expert support along the way.",
+      "Your order is prepared for delivery with clear support from quote to arrival.",
     icon: (
       <svg
         className="h-5 w-5"
@@ -98,10 +98,11 @@ export default function HowItWorks() {
   return (
     <section className="relative overflow-hidden border-t border-slate-200 bg-slate-50 py-24 dark:border-white/5 dark:bg-slate-900">
       <Image
-        src="/bg_Images/jon-koop-khYVyHiNZo0-unsplash.jpg"
+        src="/optimized/bg-process.webp"
         alt=""
         fill
         sizes="100vw"
+        quality={70}
         className="pointer-events-none object-cover object-center opacity-85 dark:opacity-70"
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/35 via-white/10 to-white/45 dark:from-slate-950/45 dark:via-slate-950/15 dark:to-slate-950/55" />
@@ -123,16 +124,16 @@ export default function HowItWorks() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-xl text-base text-slate-600 dark:text-slate-400">
-              From request to delivery — we keep everything transparent and
-              hassle-free.
+              From request to delivery, we keep the details clear and practical.
             </p>
           </div>
         </Reveal>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="relative grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="pointer-events-none absolute left-[12%] right-[12%] top-10 hidden h-px bg-gradient-to-r from-transparent via-cyan-400/45 to-transparent lg:block" />
           {steps.map((step, i) => (
             <Reveal key={step.number} delay={i * 0.08}>
-              <article className="group relative flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/25 hover:bg-slate-50 hover:shadow-xl hover:shadow-cyan-500/8 dark:border-white/8 dark:bg-slate-800/50 dark:hover:bg-slate-800/80">
+              <article className="group relative flex h-full flex-col rounded-3xl border border-slate-200 bg-white/92 p-6 shadow-lg shadow-slate-900/6 backdrop-blur transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan-500/35 hover:bg-white hover:shadow-2xl hover:shadow-cyan-500/12 dark:border-white/8 dark:bg-slate-800/74 dark:hover:bg-slate-800/90">
                 {/* Connector line (desktop only) */}
                 {i < steps.length - 1 && (
                   <div className="absolute -right-2.5 top-10 z-10 hidden h-px w-5 bg-gradient-to-r from-slate-300 to-transparent dark:from-white/20 lg:block" />
@@ -140,7 +141,7 @@ export default function HowItWorks() {
 
                 {/* Number badge */}
                 <div className="mb-5 flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 text-sm font-extrabold text-white shadow-lg shadow-cyan-500/25">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-500 to-sky-700 text-sm font-black text-white shadow-lg shadow-cyan-500/30 transition-transform duration-300 group-hover:scale-105">
                     {step.number}
                   </div>
 

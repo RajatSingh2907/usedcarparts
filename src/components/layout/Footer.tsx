@@ -35,17 +35,17 @@ export default function Footer() {
               Atlanta, GA 30350, USA
             </p>
             <p className="mt-4 text-sm leading-7">
-              Your trusted source for high-quality used OEM auto parts — warranty-backed, nationwide shipping.
+              Your trusted source for high-quality used OEM auto parts with warranty terms and shipping support.
             </p>
             {/* Trust badges */}
             <div className="mt-6 flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                60-Day Warranty
+                Warranty Included
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
                 <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
-                Free Shipping
+                48-State Shipping
               </span>
             </div>
           </div>

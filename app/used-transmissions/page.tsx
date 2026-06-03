@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 title:
-"Used OEM Transmissions With Warranty & Fast Shipping | Parts Central of Georgia",
+"Used OEM Transmissions With Warranty & Shipping Support | Parts Central of Georgia",
 description:
-"Shop quality-tested used OEM transmissions for cars, trucks, and SUVs. Save thousands compared to dealership replacement costs with warranty-backed units and nationwide shipping.",
+"Shop used OEM transmissions for cars, trucks, and SUVs with compatibility support, warranty terms confirmed before purchase, and shipping guidance.",
 };
 
 const features = [
 {
-title: "Save Thousands Compared To New Replacements",
-body: "Used OEM transmissions offer a cost-effective alternative to expensive dealership replacements while maintaining dependable performance.",
+title: "Affordable OEM Transmission Options",
+body: "Used OEM transmissions can offer a practical alternative to many new replacement options while maintaining factory fitment.",
 },
 {
 title: "OEM Compatibility Verified",
@@ -23,11 +23,11 @@ body: "Every transmission is screened and inspected to help ensure reliable oper
 },
 {
 title: "Warranty Included",
-body: "Most transmission assemblies include warranty coverage for additional confidence and peace of mind.",
+body: "Warranty coverage is reviewed before purchase so expectations are clear.",
 },
 {
-title: "Fast Nationwide Shipping",
-body: "Our logistics network helps get your replacement transmission delivered quickly anywhere in the United States.",
+title: "Shipping Support",
+body: "Shipping options and delivery expectations are confirmed during quote review.",
 },
 {
 title: "Expert Support From Real Specialists",
@@ -41,11 +41,11 @@ return (
 eyebrow="Used OEM Transmissions"
 
 
-  title="Quality Tested Used Transmissions With Warranty & Nationwide Shipping"
+  title="Premium Quality Used OEM Transmissions"
 
-  subtitle="Find dependable OEM transmission replacements for cars, trucks, and SUVs. Every unit is inspected for quality, verified for compatibility, and backed by expert support so you can get back on the road with confidence."
+  subtitle="Find used OEM transmission replacement options for cars, trucks, and SUVs with compatibility guidance, quote support, and warranty terms reviewed before purchase."
 
-  heroImage="/websiteImages/bg-2.jpg"
+  heroImage="/optimized/hero-transmissions.webp"
   heroImageAlt="Used OEM transmission inventory"
 
   heroTintClass="
@@ -59,17 +59,13 @@ eyebrow="Used OEM Transmissions"
   )]
   "
 
-  heroContentClassName="-translate-y-2 sm:-translate-y-4"
+  sectionTitle="Used OEM Transmission Replacements With Clear Support"
 
-  sectionTitle="OEM Transmission Replacements Without Dealership Pricing"
-
-  sectionLead="Whether your transmission has failed completely or you're planning a replacement before major damage occurs, Parts Central helps you source quality-tested OEM transmissions with transparent pricing, warranty protection, and expert compatibility verification."
+  sectionLead="Whether your transmission has failed completely or you are planning a replacement, Parts Central helps review available used OEM transmission options, fitment details, pricing, warranty terms, and delivery expectations."
 
   features={features}
 
   partLabel="used transmissions"
-
-  heroFormClassName="-mt-40 lg:-mt-56"
 
 showBrandImages />
 );

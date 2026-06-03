@@ -6,7 +6,6 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import FloatingCallButton from "@/components/layout/FloatingCallButton";
 import Footer from "@/components/layout/Footer";
-import CustomCursor from "@/components/ui/CustomCursor";
 import DelayedQuoteModal from "@/components/layout/DelayedQuoteModal";
 
 const manrope = Manrope({
@@ -24,7 +23,7 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "Parts Central | Quality OEM Used Auto Parts",
   description:
-    "Affordable, trusted used OEM engines, transmissions, and auto parts with nationwide shipping and warranty-backed support.",
+    "Affordable, trusted used OEM engines, transmissions, and auto parts with fitment help, warranty terms, and shipping support.",
   keywords: [
     "used auto parts",
     "used oem parts",
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Parts Central | Quality OEM Used Auto Parts",
     description:
-      "Find reliable used OEM auto parts with fast shipping, fair pricing, and expert support.",
+      "Find reliable used OEM auto parts with clear quote details, fitment help, and shipping support.",
     type: "website",
   },
 };
@@ -70,7 +69,6 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <CustomCursor />
         <Navbar />
         <FloatingCallButton />
         <DelayedQuoteModal />

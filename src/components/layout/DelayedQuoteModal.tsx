@@ -1,11 +1,21 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useCallback, useEffect, useState } from "react";
 import { X } from "lucide-react";
 
-import VehicleSelectorForm from "@/components/forms/VehicleSelectorForm";
-
 const storageKey = "parts-central-quote-modal-dismissed";
+
+const VehicleSelectorForm = dynamic(
+  () => import("@/components/forms/VehicleSelectorForm"),
+  {
+    loading: () => (
+      <div className="w-full rounded-[28px] border border-white/10 bg-slate-900/90 p-8 text-center text-sm font-semibold text-slate-300 shadow-2xl">
+        Loading quote form...
+      </div>
+    ),
+  }
+);
 
 export default function DelayedQuoteModal() {
   const [isOpen, setIsOpen] = useState(false);

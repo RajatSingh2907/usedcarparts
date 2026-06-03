@@ -20,7 +20,7 @@ export default function ContactHero() {
     <SubHero
       eyebrow="Contact Parts Central"
       title="Need the right used OEM part? Talk to our team."
-      description="Send your vehicle details, call for fast help, or email us for compatibility checks, pricing, warranty support, and shipping timelines."
+      description="Send your vehicle details, call for quote help, or email us for compatibility checks, pricing, warranty terms, and shipping timelines."
       actions={
         <>
           <Button href="tel:7705984665" size="lg" className={primaryCtaClass}>

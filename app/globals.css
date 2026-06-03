@@ -59,6 +59,7 @@ html.light {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -121,12 +122,6 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display), var(--font-sans), sans-serif;
-}
-
-@media (pointer: fine) {
-  body {
-    cursor: none;
-  }
 }
 
 * {
@@ -233,10 +228,12 @@ a {
 .marquee-track {
   display: flex;
   width: max-content;
+  transform: translateZ(0);
   animation: marquee-left 32s linear infinite;
 }
 
 .marquee-reverse {
+  transform: translateZ(0);
   animation-name: marquee-right;
 }
 
@@ -257,6 +254,12 @@ a {
 
   to {
     transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
   }
 }
 

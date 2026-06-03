@@ -82,12 +82,12 @@ const faqGroups = [
       {
         question: "Do you ship nationwide?",
         answer:
-          "Yes. Parts Central of Georgia supports nationwide delivery across the United States, with shipping options depending on part size, weight, destination, and carrier availability.",
+          "Parts Central of Georgia supports shipping options based on part size, weight, destination, and carrier availability. Free shipping may apply within the 48 contiguous United States when confirmed in your quote.",
       },
       {
         question: "How long does delivery take?",
         answer:
-          "Most delivery estimates are shared during quoting. Timelines vary by part type and destination, and larger freight items such as engines or transmissions can require additional handling time.",
+          "Most delivery estimates are shared during quoting. Many orders arrive within seven to eight business days after processing, but timelines vary by part type, destination, carrier scheduling, and freight requirements.",
       },
       {
         question: "Will I receive tracking information?",

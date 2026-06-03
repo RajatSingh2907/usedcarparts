@@ -1,4 +1,8 @@
 import Hero from "@/components/sections/home/Hero";
+import HeroTrustStrip from "@/components/sections/home/HeroTrustStrip";
+import AuthorityStats from "@/components/sections/home/AuthorityStats";
+import MiniAuthorityStrip from "@/components/sections/home/MiniAuthorityStrip";
+import SectionDivider from "@/components/sections/home/SectionDivider";
 import QualityParts from "@/components/sections/home/QualityParts";
 import Trust from "@/components/sections/home/Trust";
 import Services from "@/components/sections/home/Services";
@@ -11,12 +15,18 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <HeroTrustStrip />
       <QualityParts />
+      <SectionDivider />
       <Brands />
+      <SectionDivider />
       <Trust />
       <Services />
-      <CustomerStories />
+      <AuthorityStats />
       <HowItWorks />
+      <SectionDivider />
+      <MiniAuthorityStrip />
+      <CustomerStories />
       <CTA />
     </>
   );
