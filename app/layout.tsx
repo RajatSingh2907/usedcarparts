@@ -7,6 +7,7 @@ import Navbar from "@/components/layout/Navbar";
 import FloatingCallButton from "@/components/layout/FloatingCallButton";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
+import DelayedQuoteModal from "@/components/layout/DelayedQuoteModal";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -72,6 +73,7 @@ export default function RootLayout({
         <CustomCursor />
         <Navbar />
         <FloatingCallButton />
+        <DelayedQuoteModal />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

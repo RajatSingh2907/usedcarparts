@@ -1,4 +1,5 @@
 import { ShieldCheck, Truck, Search } from "lucide-react";
+import Image from "next/image";
 
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
@@ -49,21 +50,30 @@ const services = [
 export default function Services() {
   return (
     <section className="relative overflow-hidden border-t border-slate-200 bg-slate-50 py-24 dark:border-white/8 dark:bg-slate-950">
+      <Image
+        src="/bg_Images/grahame-jenkins-p7tai9P7H-s-unsplash.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-cover object-center opacity-85 dark:opacity-68"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/28 via-white/8 to-white/38 dark:from-slate-950/48 dark:via-slate-950/14 dark:to-slate-950/58" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.08),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.08),transparent_40%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.1),transparent_40%)]" />
 
       <Container className="relative">
         <Reveal>
-          <SectionHeading
-            eyebrow="Our Services"
-            title={
-              <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
-                Benefits Built for Speed, Trust, and Fitment Confidence
-              </span>
-            }
-            description="Everything from sourcing to delivery is designed to reduce uncertainty and move your repair forward faster."
-            align="center"
-            className="max-w-4xl"
-          />
+          <div className="mx-auto max-w-4xl rounded-3xl border border-white/70 bg-white/82 p-6 shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/78 dark:shadow-black/25">
+            <SectionHeading
+              eyebrow="Our Services"
+              title={
+                <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
+                  Benefits Built for Speed, Trust, and Fitment Confidence
+                </span>
+              }
+              description="Everything from sourcing to delivery is designed to reduce uncertainty and move your repair forward faster."
+              align="center"
+            />
+          </div>
         </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

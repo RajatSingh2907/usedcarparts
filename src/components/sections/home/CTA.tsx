@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
@@ -7,7 +8,14 @@ export default function CTA() {
     <section className="relative overflow-hidden py-24">
 
       {/* Background */}
-      <div className="absolute inset-0 bg-white dark:bg-slate-950" />
+      <Image
+        src="/bg_Images/josh-berquist-_4sWbzH5fp8-unsplash.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-cover object-center opacity-92 dark:opacity-78"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/35 via-white/5 to-white/18 dark:from-slate-950/58 dark:via-slate-950/12 dark:to-slate-950/35" />
 
       {/* Glow Effects */}
       <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/15 blur-[140px]" />
@@ -16,7 +24,7 @@ export default function CTA() {
       <Container className="relative z-10">
 
         <Reveal>
-          <div className="relative overflow-hidden rounded-[32px] border border-slate-200 bg-white/70 p-10 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.03] md:p-16">
+          <div className="relative overflow-hidden rounded-[32px] border border-white/75 bg-white/86 p-10 shadow-2xl shadow-slate-900/15 backdrop-blur-xl dark:border-white/12 dark:bg-slate-950/80 dark:shadow-black/30 md:p-16">
 
             <div className="mx-auto max-w-3xl text-center">
 

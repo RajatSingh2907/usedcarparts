@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowLeft, ArrowRight, Star } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import Container from "@/components/ui/Container";
@@ -73,10 +74,19 @@ export default function CustomerStories() {
   }, [currentIndex]);
 
   return (
-    <section className="border-t border-slate-200 bg-slate-50 py-24 dark:border-white/5 dark:bg-slate-950">
-      <Container>
+    <section className="relative overflow-hidden border-t border-slate-200 bg-slate-50 py-24 dark:border-white/5 dark:bg-slate-950">
+      <Image
+        src="/bg_Images/pexels-107932638-32828577.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-cover object-center opacity-90 dark:opacity-72"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/48 via-white/12 to-white/28 dark:from-slate-950/65 dark:via-slate-950/18 dark:to-slate-950/45" />
+
+      <Container className="relative z-10">
         <Reveal>
-          <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="mb-12 flex flex-col gap-6 rounded-3xl border border-white/70 bg-white/82 p-6 shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/78 dark:shadow-black/25 md:flex-row md:items-end md:justify-between">
             <div>
               <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
                 Customer Stories

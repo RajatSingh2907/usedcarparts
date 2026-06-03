@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useCallback, useState, useEffect } from "react";
 
 import Container from "@/components/ui/Container";
 import MobileMenu from "@/components/layout/MobileMenu";
@@ -21,6 +21,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const closeMenu = useCallback(() => setIsOpen(false), []);
 
   useEffect(() => {
     function onScroll() {
@@ -122,7 +123,7 @@ export default function Navbar() {
         </div>
       </Container>
 
-      <MobileMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <MobileMenu isOpen={isOpen} onClose={closeMenu} />
     </header>
   );
 }

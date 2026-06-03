@@ -1,4 +1,5 @@
 import { ShieldCheck, Truck, Wrench, Headset } from "lucide-react";
+import Image from "next/image";
 
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
@@ -46,21 +47,30 @@ const trustItems = [
 export default function Trust() {
   return (
     <section className="relative overflow-hidden bg-white py-24 dark:bg-slate-950">
+      <Image
+        src="/bg_Images/joey-banks-YApiWyp0lqo-unsplash.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-cover object-center opacity-88 dark:opacity-70"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/30 via-white/8 to-white/38 dark:from-slate-950/50 dark:via-slate-950/14 dark:to-slate-950/58" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.08),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_45%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.12),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.1),transparent_45%)]" />
 
       <Container className="relative z-10">
         <Reveal>
-          <SectionHeading
-            eyebrow="Why Drivers Choose Us"
-            title={
-              <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
-                Trusted Source for Reliable Used OEM Parts
-              </span>
-            }
-            description="Built for value, precision, and post-purchase confidence at every stage of your repair journey."
-            align="center"
-            className="max-w-4xl"
-          />
+          <div className="mx-auto max-w-4xl rounded-3xl border border-white/70 bg-white/82 p-6 shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/78 dark:shadow-black/25">
+            <SectionHeading
+              eyebrow="Why Drivers Choose Us"
+              title={
+                <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
+                  Trusted Source for Reliable Used OEM Parts
+                </span>
+              }
+              description="Built for value, precision, and post-purchase confidence at every stage of your repair journey."
+              align="center"
+            />
+          </div>
         </Reveal>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

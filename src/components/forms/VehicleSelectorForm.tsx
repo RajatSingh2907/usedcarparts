@@ -80,7 +80,7 @@ function TextField({ label, name, placeholder, type = "text", theme }: { label: 
   );
 }
 
-function VehicleFormInner({ theme }: { theme: Theme }) {
+function VehicleFormInner({ theme, formId }: { theme: Theme; formId: string }) {
   const searchParams = useSearchParams();
   const paramMake = searchParams.get("make") ?? "";
   const paramPart = searchParams.get("part") ?? "";
@@ -128,7 +128,7 @@ function VehicleFormInner({ theme }: { theme: Theme }) {
 
   return (
     <form
-      id="vehicle-selector-form"
+      id={formId}
       onSubmit={handleSubmit}
       className={cx(
         "w-full max-w-xl overflow-hidden rounded-[30px] border p-5 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-6",
@@ -214,12 +214,12 @@ function useSelectedTheme(fallback: Theme): Theme {
   return selectedTheme;
 }
 
-export default function VehicleSelectorForm({ theme }: { theme?: Theme }) {
+export default function VehicleSelectorForm({ theme, formId = "vehicle-selector-form" }: { theme?: Theme; formId?: string }) {
   const selectedTheme = useSelectedTheme(theme ?? "light");
 
   return (
     <Suspense fallback={<div className="w-full max-w-xl rounded-2xl border border-slate-200 bg-white p-6 text-center text-sm text-slate-500">Loading form...</div>}>
-      <VehicleFormInner theme={selectedTheme} />
+      <VehicleFormInner theme={selectedTheme} formId={formId} />
     </Suspense>
   );
 }

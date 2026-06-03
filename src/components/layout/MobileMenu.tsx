@@ -26,15 +26,30 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     if (!isOpen) return;
     const original = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = original; };
-  }, [isOpen]);
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = original;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  useEffect(() => {
+    onClose();
+  }, [onClose, pathname]);
 
   return (
     <>
       {/* Backdrop */}
       <div
         className={[
-          "fixed inset-0 z-50 bg-black/70 backdrop-blur-sm lg:hidden transition-opacity duration-300",
+          "fixed inset-0 z-[70] bg-black/70 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
         ].join(" ")}
         onClick={onClose}
@@ -44,7 +59,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Drawer */}
       <div
         className={[
-          "fixed right-0 top-0 z-50 flex h-full w-[82%] max-w-sm flex-col border-l border-slate-200 bg-white shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:border-white/8 dark:bg-slate-950 dark:shadow-black/60 lg:hidden",
+          "fixed inset-y-0 right-0 z-[71] flex h-dvh w-[86%] max-w-sm flex-col overflow-hidden border-l border-slate-200 bg-white shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:border-white/8 dark:bg-slate-950 dark:shadow-black/60 lg:hidden",
           isOpen ? "translate-x-0" : "translate-x-full",
         ].join(" ")}
         aria-modal={isOpen}

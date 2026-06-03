@@ -108,7 +108,7 @@ export default function ProductLandingTemplate({
       {/* HERO SECTION */}
       <section className="relative overflow-hidden bg-white text-slate-900 dark:bg-slate-950 dark:text-white">
         {/* Background Image */}
-        <div className="pointer-events-none absolute inset-0 opacity-35 dark:opacity-35">
+        <div className="pointer-events-none absolute inset-0 opacity-65 dark:opacity-55">
           <Image
             src={heroImage}
             alt={heroImageAlt}
@@ -121,7 +121,7 @@ export default function ProductLandingTemplate({
 
         {/* Overlay */}
         <div
-          className={`absolute inset-0 ${heroTintClass} opacity-45 dark:opacity-100`}
+          className={`absolute inset-0 ${heroTintClass} opacity-20 dark:opacity-45`}
         />
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.15),transparent_45%)]" />
@@ -133,7 +133,7 @@ export default function ProductLandingTemplate({
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className={heroContentClassName}
+              className={`rounded-[28px] border border-white/70 bg-white/78 p-6 shadow-2xl shadow-slate-900/10 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/72 dark:shadow-black/30 sm:p-7 ${heroContentClassName}`}
             >
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-cyan-500">
                 {eyebrow}

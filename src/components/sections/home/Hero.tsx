@@ -82,20 +82,21 @@ export default function Hero() {
         className="absolute inset-0"
       >
         <Image
-          src="/websiteImages/bg-4.jpg"
+          src="/bg_Images/archee-lal-AQuzzn6V6gE-unsplash.jpg"
           alt="OEM Used Auto Parts"
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-30 dark:opacity-25"
+          className="object-cover opacity-95 dark:opacity-85"
         />
       </motion.div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/92 via-slate-50/82 to-cyan-50/55 dark:from-slate-950/95 dark:via-slate-950/90 dark:to-cyan-950/30" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-950/78 via-slate-950/48 to-slate-950/8 dark:from-slate-950/82 dark:via-slate-950/52 dark:to-slate-950/12" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-[72%] bg-[radial-gradient(ellipse_at_left,rgba(8,47,73,0.42),transparent_72%)]" />
 
       {/* Glow */}
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[160px]" />
+      <div className="pointer-events-none absolute -left-20 top-1/2 h-[420px] w-[620px] -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[130px]" />
 
       <Container className="relative z-10 py-10 sm:py-14 lg:flex lg:min-h-[calc(100svh-72px)] lg:items-center lg:py-8">
         <div className="grid w-full gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
@@ -105,18 +106,18 @@ export default function Hero() {
             className="max-w-3xl"
           >
             {/* Trust Badge */}
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-300">
+            {/* <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-300">
               <span className="h-2 w-2 rounded-full bg-cyan-500" />
               Premium OEM Auto Parts
-            </div>
+            </div> */}
 
             {/* Heading */}
-            <h1 className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-4xl font-black leading-[1.05] text-transparent sm:text-5xl lg:text-6xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
+            <h1 className="bg-gradient-to-r from-cyan-200 via-sky-300 to-blue-400 bg-clip-text text-4xl font-black leading-[1.05] text-transparent drop-shadow-[0_3px_12px_rgba(0,0,0,0.95)] sm:text-5xl lg:text-6xl">
               <SplitChars text={heading} />
             </h1>
 
             {/* Description */}
-            <p className="mt-4 max-w-2xl text-base leading-7 text-slate-700 dark:text-slate-200 sm:text-lg">
+            <p className="mt-4 max-w-2xl text-base font-medium leading-7 text-slate-100 drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)] sm:text-lg">
               Quality-tested OEM engines, transmissions, headlights,
               radiators and more. Fast nationwide shipping,
               transparent pricing and expert support.
@@ -125,28 +126,28 @@ export default function Hero() {
             {/* Trust Stats */}
             <div className="mt-6 flex flex-wrap gap-6">
               <div>
-                <div className="text-2xl font-black text-slate-950 dark:text-white">
+                <div className="text-2xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
                   50K+
                 </div>
-                <div className="text-sm text-slate-500">
+                <div className="text-sm font-medium text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
                   Parts Available
                 </div>
               </div>
 
               <div>
-                <div className="text-2xl font-black text-slate-950 dark:text-white">
+                <div className="text-2xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
                   60-Day
                 </div>
-                <div className="text-sm text-slate-500">
+                <div className="text-sm font-medium text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
                   Warranty
                 </div>
               </div>
 
               <div>
-                <div className="text-2xl font-black text-slate-950 dark:text-white">
+                <div className="text-2xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
                   Fast
                 </div>
-                <div className="text-sm text-slate-500">
+                <div className="text-sm font-medium text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
                   Nationwide Delivery
                 </div>
               </div>

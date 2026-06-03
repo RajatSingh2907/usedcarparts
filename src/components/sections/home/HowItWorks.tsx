@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 
@@ -95,20 +97,21 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section className="relative overflow-hidden border-t border-slate-200 bg-slate-50 py-24 dark:border-white/5 dark:bg-slate-900">
-      {/* Background texture */}
-      <div
-        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-5"
-        style={{ backgroundImage: "url('/websiteImages/bg-6.jpg')" }}
+      <Image
+        src="/bg_Images/jon-koop-khYVyHiNZo0-unsplash.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-cover object-center opacity-85 dark:opacity-70"
       />
-
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/70 dark:from-slate-950/50 dark:to-slate-950/50" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/35 via-white/10 to-white/45 dark:from-slate-950/45 dark:via-slate-950/15 dark:to-slate-950/55" />
 
       {/* Ambient glow */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-600/5 blur-[120px]" />
 
       <Container className="relative z-10">
         <Reveal>
-          <div className="mb-14 text-center">
+          <div className="mx-auto mb-14 max-w-3xl rounded-3xl border border-white/70 bg-white/82 p-6 text-center shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/78 dark:shadow-black/25">
             <div className="mb-4 flex justify-center">
               <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
                 How It Works
