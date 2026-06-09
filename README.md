@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Parts Central (Used Auto Parts)
+
+Parts Central is a Next.js website for sourcing **quality OEM used auto parts** with an **inquiry/lead capture** flow. The homepage highlights parts categories and trust features, while users can submit a request through the site and receive email confirmation.
+
+## Live Features
+- Homepage built with reusable section components (Hero, Quality Parts, Brands, Trust, Services, Customer Stories, How it Works, CTA).
+- Global UI layout:
+  - Navbar
+  - Floating call button
+  - Footer
+  - Custom cursor
+- Theme initialization (light/dark) using the app layout.
+
+## Tech Stack
+- **Next.js** (App Router)
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **ESLint**
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js
 
+### Install
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run locally
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Then open: http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build
+```bash
+npm run build
+```
 
-## Learn More
+### Lint
+```bash
+npm run lint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## API: Submit Parts Inquiry
+The app exposes a server endpoint to send inquiry emails.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Endpoint
+`POST /api/inquiry`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Request Body
+```json
+{
+  "year": "string",
+  "make": "string",
+  "model": "string",
+  "part": "string",
+  "engineSize": "string",
+  "transmission": "string",
+  "fullName": "string",
+  "email": "string",
+  "zipCode": "string",
+  "phone": "string"
+}
+```
 
-## Deploy on Vercel
+### Validation
+- All fields are required.
+- Placeholder dropdown values (like `Select Year`, `Select Make`, etc.) are rejected.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Responses
+- **200**: `{ "message": "Request sent. Please check your email for confirmation." }`
+- **400**: missing/invalid fields
+- **500**: SMTP/email not configured or email sending failed
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Required Environment Variables
+Configure these on your hosting platform (or locally):
+
+- `SMTP_HOST`
+- `SMTP_PORT` (optional, default `587`)
+- `SMTP_USER`
+- `SMTP_PASS`
+- `MAIL_FROM` (optional, defaults to `SMTP_USER`)
+- `ADMIN_EMAIL` (email that receives the new request)
+
+## Repository Scripts
+From `package.json`:
+- `npm run dev` — Next dev server
+- `npm run build` — production build
+- `npm run start` — run production server
+- `npm run lint` — ESLint
+

@@ -1,4 +1,5 @@
 import { ShieldCheck, Truck, Search } from "lucide-react";
+import Image from "next/image";
 
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
@@ -6,12 +7,12 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 const services = [
   {
-    title: "60-Day Warranty",
+    title: "Warranty Included",
     description:
-      "Coverage on most eligible parts with clear support terms that protect your repair investment.",
+      "Warranty support is reviewed with your quote so you know what is covered before purchase.",
     bullets: [
-      "Warranty available on most quoted components",
-      "Extended options offered where applicable",
+      "Terms confirmed before checkout",
+      "Eligible parts backed by support",
     ],
     icon: ShieldCheck,
     badge: "Coverage",
@@ -23,8 +24,8 @@ const services = [
     description:
       "Reliable dispatch and nationwide delivery designed for speed, safety, and transparent updates.",
     bullets: [
-      "Free shipping across the contiguous 48 states",
-      "Full U.S. coverage with carrier coordination",
+      "Free shipping within the contiguous 48 states",
+      "Residential and commercial delivery coordination",
     ],
     icon: Truck,
     badge: "Nationwide",
@@ -49,17 +50,31 @@ const services = [
 export default function Services() {
   return (
     <section className="relative overflow-hidden border-t border-slate-200 bg-slate-50 py-24 dark:border-white/8 dark:bg-slate-950">
+      <Image
+        src="/optimized/bg-services.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        quality={70}
+        className="pointer-events-none object-cover object-center opacity-58 dark:opacity-46"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/60 via-white/36 to-white/70 dark:from-slate-950/70 dark:via-slate-950/46 dark:to-slate-950/78" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.08),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.08),transparent_40%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.1),transparent_40%)]" />
 
       <Container className="relative">
         <Reveal>
-          <SectionHeading
-            eyebrow="Our Services"
-            title="Benefits Built for Speed, Trust, and Fitment Confidence"
-            description="Everything from sourcing to delivery is designed to reduce uncertainty and move your repair forward faster."
-            align="center"
-            className="max-w-4xl"
-          />
+          <div className="mx-auto max-w-4xl rounded-3xl border border-white/70 bg-white/82 p-6 shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/78 dark:shadow-black/25">
+            <SectionHeading
+              eyebrow="Our Services"
+              title={
+                <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
+                  Benefits Built for Speed, Trust, and Fitment Confidence
+                </span>
+              }
+              description="Everything from sourcing to delivery is designed to reduce uncertainty and move your repair forward faster."
+              align="center"
+            />
+          </div>
         </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

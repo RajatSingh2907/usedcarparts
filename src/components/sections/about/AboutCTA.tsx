@@ -3,19 +3,19 @@ import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 
 const primaryCtaClass =
-  "h-14 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-white shadow-xl shadow-cyan-500/35 transition-transform duration-150 after:rounded-xl";
+  "h-14 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-white shadow-xl shadow-cyan-500/25 transition-transform duration-150 after:rounded-xl hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800";
 
 const secondaryCtaClass =
-  "h-14 items-center justify-center rounded-xl border border-primary bg-primary px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-white shadow-lg shadow-primary/20 transition-transform duration-150 hover:border-primary-dark hover:bg-primary-dark";
+  "h-14 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 px-9 text-center text-base font-semibold leading-none uppercase tracking-[0.08em] text-primary shadow-lg shadow-primary/10 transition-transform duration-150 hover:border-primary/30 hover:bg-primary/15 dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100";
 
 export default function AboutCTA() {
   return (
     <section className="relative overflow-hidden bg-white py-18 text-slate-900 sm:py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(239,68,68,0.12),transparent_40%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.10),transparent_40%)]" />
       <Container>
         <Reveal className="relative">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-red-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
               Ready To Find Your Part?
             </p>
             <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">

@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 type SubmitStatus = "idle" | "sending" | "success" | "error";
 type Theme = "dark" | "light";
 
-const years = ["Select Year", ...Array.from({ length: 64 }, (_, index) => String(2024 - index))];
+const years = ["Select Year", ...Array.from({ length: 66 }, (_, index) => String(new Date().getFullYear() - index))];
 const makes = [
   "Select Make", "AMC", "Acura", "Alfa", "Aston Martin", "Audi", "Bentley", "BMW", "Buick", "Cadillac", "Chevy", "Chrysler", "Citroen",
   "Daewoo", "Daihatsu", "Dodge", "Eagle", "Ferrari", "Fiat", "Ford", "Freightliner", "GMC", "Genesis", "Geo", "Honda", "Hummer", "Hyundai",
@@ -42,10 +42,10 @@ function SelectField({ label, name, options, value, onChange, theme }: { label: 
       <div className="relative">
         <select
           className={cx(
-            "h-10 w-full appearance-none rounded-lg border px-3 pr-8 text-sm outline-none transition-all duration-200",
+            "h-11 w-full appearance-none rounded-xl border px-3.5 pr-8 text-sm font-medium outline-none transition-all duration-200",
             isDark
               ? "border-white/10 bg-slate-800/70 text-white focus:border-cyan-500/60 focus:ring-2 focus:ring-cyan-500/20"
-              : "border-slate-300 bg-white text-slate-900 focus:border-red-500 focus:ring-2 focus:ring-red-100",
+              : "border-slate-300 bg-white text-slate-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100",
           )}
           name={name}
           onChange={(event) => onChange?.(event.target.value)}
@@ -66,10 +66,10 @@ function TextField({ label, name, placeholder, type = "text", theme }: { label: 
       <span className={cx("mb-1.5 block text-xs font-semibold uppercase tracking-wider", isDark ? "text-slate-300" : "text-slate-600")}>{label}</span>
       <input
         className={cx(
-          "h-10 w-full rounded-lg border px-3 text-sm outline-none transition-all duration-200",
+            "h-11 w-full rounded-xl border px-3.5 text-sm font-medium outline-none transition-all duration-200",
           isDark
             ? "border-white/10 bg-slate-800/70 text-white placeholder:text-slate-500 focus:border-cyan-500/60 focus:ring-2 focus:ring-cyan-500/20"
-            : "border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-red-500 focus:ring-2 focus:ring-red-100",
+            : "border-slate-300 bg-white text-slate-900 placeholder:text-slate-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100",
         )}
         name={name}
         placeholder={placeholder}
@@ -80,7 +80,7 @@ function TextField({ label, name, placeholder, type = "text", theme }: { label: 
   );
 }
 
-function VehicleFormInner({ theme }: { theme: Theme }) {
+function VehicleFormInner({ theme, formId }: { theme: Theme; formId: string }) {
   const searchParams = useSearchParams();
   const paramMake = searchParams.get("make") ?? "";
   const paramPart = searchParams.get("part") ?? "";
@@ -127,13 +127,40 @@ function VehicleFormInner({ theme }: { theme: Theme }) {
   }
 
   return (
-    <form className={cx("w-full max-w-lg rounded-2xl border p-4 shadow-2xl sm:p-5", isDark ? "border-white/10 bg-slate-900/90 text-white" : "border-slate-200 bg-white text-slate-900")} onSubmit={handleSubmit} id="vehicle-selector-form">
+    <form
+      id={formId}
+      onSubmit={handleSubmit}
+      className={cx(
+        "w-full max-w-lg overflow-hidden rounded-[28px] border p-4 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-5",
+        isDark
+          ? "border-white/10 bg-slate-900/90 text-white"
+          : "border-slate-200 bg-white text-slate-900"
+      )}
+    >
       <div className="mb-4 text-center">
-        <h2 className={cx("text-xl font-extrabold sm:text-2xl", isDark ? "text-white" : "text-slate-900")}>Find Your Part</h2>
-        <p className={cx("mt-1 text-sm", isDark ? "text-slate-400" : "text-slate-600")}>Fill in your vehicle details below</p>
+        <div className={cx("mx-auto mb-3 inline-flex rounded-full border px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em]", isDark ? "border-cyan-300/20 bg-cyan-300/10 text-cyan-200" : "border-cyan-500/20 bg-cyan-50 text-cyan-700")}>
+          Free quote in minutes
+        </div>
+
+        <h2
+          className={cx(
+            "bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-2xl font-black tracking-tight text-transparent dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500 sm:text-[1.65rem]",
+          )}
+        >
+          Find Your OEM Part
+        </h2>
+
+        <p
+          className={cx(
+            "mt-1.5 text-sm",
+            isDark ? "text-slate-400" : "text-slate-600"
+          )}
+        >
+          Request pricing, availability, and shipping details from our team.
+        </p>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="grid gap-2.5 sm:grid-cols-2">
         <SelectField label="Year" name="year" options={years} theme={theme} />
         <SelectField label="Make" name="make" onChange={(make) => { setSelectedMake(make); setSelectedModel(make === "Select Make" ? "Select make first" : "Select Model"); }} options={makes} value={selectedMake} theme={theme} />
         <SelectField label="Model" name="model" onChange={setSelectedModel} options={modelOptions} value={selectedModel} theme={theme} />
@@ -146,10 +173,25 @@ function VehicleFormInner({ theme }: { theme: Theme }) {
         <TextField label="Phone" name="phone" placeholder="(123) 456-7890" type="tel" theme={theme} />
       </div>
 
-      <button className="mt-4 flex h-11 w-full items-center justify-center rounded-xl bg-gradient-to-br from-red-500 to-red-700 px-4 text-sm font-bold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5" disabled={isSending} type="submit">
-        {isSending ? "Sending..." : "Find My Part Now"}
+      <button
+        type="submit"
+        disabled={isSending}
+        className="mt-4 flex h-[52px] w-full items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 text-base font-black uppercase tracking-[0.08em] text-white shadow-[0_18px_42px_-18px_rgba(14,165,233,0.85)] transition-all duration-300 hover:-translate-y-1 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 disabled:opacity-50"
+      >
+        {isSending ? "Sending..." : "Find My Part"}
       </button>
-      {submitMessage ? <div className={cx("mt-4 rounded-xl px-4 py-3 text-center text-sm font-semibold", submitStatus === "success" ? "bg-emerald-500/15 border border-emerald-500/20 text-emerald-500" : "bg-red-500/15 border border-red-500/20 text-red-500")}>{submitMessage}</div> : null}
+      {submitMessage && (
+        <div
+          className={cx(
+            "mt-5 rounded-xl border px-4 py-3 text-center text-sm font-medium",
+            submitStatus === "success"
+              ? "border-emerald-500/20 bg-emerald-500/10 text-emerald-400"
+              : "border-red-500/20 bg-red-500/10 text-red-400"
+          )}
+        >
+          {submitMessage}
+        </div>
+      )}
     </form>
   );
 }
@@ -174,12 +216,12 @@ function useSelectedTheme(fallback: Theme): Theme {
   return selectedTheme;
 }
 
-export default function VehicleSelectorForm({ theme }: { theme?: Theme }) {
+export default function VehicleSelectorForm({ theme, formId = "vehicle-selector-form" }: { theme?: Theme; formId?: string }) {
   const selectedTheme = useSelectedTheme(theme ?? "light");
 
   return (
     <Suspense fallback={<div className="w-full max-w-xl rounded-2xl border border-slate-200 bg-white p-6 text-center text-sm text-slate-500">Loading form...</div>}>
-      <VehicleFormInner theme={selectedTheme} />
+      <VehicleFormInner theme={selectedTheme} formId={formId} />
     </Suspense>
   );
 }

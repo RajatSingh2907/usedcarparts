@@ -59,6 +59,7 @@ html.light {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -123,12 +124,6 @@ h3 {
   font-family: var(--font-display), var(--font-sans), sans-serif;
 }
 
-@media (pointer: fine) {
-  body {
-    cursor: none;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -144,8 +139,8 @@ a {
 }
 
 ::selection {
-  background: #fee2e2;
-  color: #7f1d1d;
+  background: rgba(14, 165, 233, 0.18);
+  color: #004260;
 }
 
 .animate-rise {
@@ -233,10 +228,12 @@ a {
 .marquee-track {
   display: flex;
   width: max-content;
+  transform: translateZ(0);
   animation: marquee-left 32s linear infinite;
 }
 
 .marquee-reverse {
+  transform: translateZ(0);
   animation-name: marquee-right;
 }
 
@@ -257,6 +254,12 @@ a {
 
   to {
     transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
   }
 }
 

@@ -12,7 +12,7 @@ const supportItems = [
   },
   {
     title: "Shipping Support",
-    description: "Get help with delivery options, tracking questions, and nationwide shipping timelines.",
+    description: "Get help with delivery options, tracking questions, and shipping timelines.",
     icon: Truck,
   },
   {

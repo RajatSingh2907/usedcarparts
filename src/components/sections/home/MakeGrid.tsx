@@ -34,13 +34,13 @@ type MakeGridProps = {
 
 export default function MakeGrid({ partLabel = "parts", showBrandImages = false }: MakeGridProps) {
   return (
-    <section className="bg-white py-16 sm:py-20">
+    <section className="bg-white py-16 dark:bg-slate-950 sm:py-20">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Shop By Brand</p>
-            <h2 className="mt-4 text-3xl font-extrabold text-secondary sm:text-4xl">Find {partLabel} For Major Makes</h2>
-            <p className="mt-4 text-base leading-7 text-muted">
+            <h2 className="mt-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">Find {partLabel} For Major Makes</h2>
+            <p className="mt-4 text-base leading-7 text-muted dark:text-slate-300">
               Select your brand and jump straight into a prefilled search for faster fitment matching.
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function MakeGrid({ partLabel = "parts", showBrandImages = false 
               <Link
                 href={`/used-auto-parts?make=${encodeURIComponent(brand.name)}#vehicle-selector`}
                 className={[
-                  "group flex rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm font-semibold text-slate-800 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-white hover:text-primary hover:shadow-lg",
+                  "group flex rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm font-semibold text-slate-800 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-white hover:text-primary hover:shadow-lg dark:border-white/10 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-cyan-300/30 dark:hover:bg-slate-800 dark:hover:text-cyan-300",
                   showBrandImages ? "h-20 items-center gap-3" : "h-14 items-center justify-center text-center",
                 ].join(" ")}
               >

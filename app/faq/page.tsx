@@ -7,7 +7,7 @@ import FaqHero from "@/components/sections/faq/FaqHero";
 export const metadata: Metadata = {
   title: "FAQ | Parts Central of Georgia Used OEM Auto Parts",
   description:
-    "Answers to common questions about used OEM auto parts, fitment, ordering, nationwide shipping, warranty support, and returns from Parts Central of Georgia.",
+    "Answers to common questions about used OEM auto parts, fitment, ordering, shipping, warranty support, and returns from Parts Central of Georgia.",
 };
 
 export default function FaqPage() {

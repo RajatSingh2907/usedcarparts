@@ -68,10 +68,12 @@ export default function Brands() {
       <Container>
         <Reveal>
           <div className="text-center mb-12">
-              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
-                Search by Brand
-              </span>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
+              Search by Brand
+            </span>
+            <h2
+              className="bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500"
+            >
               OEM Parts for Every Major Make
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-base text-slate-600 dark:text-slate-400">
@@ -90,18 +92,29 @@ export default function Brands() {
 
         {/* View all CTA */}
         <Reveal>
-          <div className="mt-10 text-center">
-            <Link
-              href="/used-auto-parts"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group"
-            >
-              Browse all makes & models
-              <svg className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </Reveal>
+  <div className="mt-10 flex justify-center">
+    <Link
+      href="/used-auto-parts"
+      className="group relative inline-flex items-center gap-3 rounded-full border border-cyan-300/20 bg-white/5 px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-cyan-700 shadow-md backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-cyan-50 dark:border-white/10 dark:bg-white/5 dark:text-cyan-200 dark:hover:bg-white/10 dark:hover:text-white"
+    >
+      Browse all makes & models
+
+      <svg
+        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+        aria-hidden="true"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+
+      {/* hover shine effect (same style as your premium buttons) */}
+      <span className="absolute inset-0 -translate-x-full bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.25),transparent)] opacity-0 transition-all duration-700 group-hover:translate-x-full group-hover:opacity-100" />
+    </Link>
+  </div>
+</Reveal>
       </Container>
     </section>
   );

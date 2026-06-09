@@ -1,114 +1,143 @@
-"use client";
-
 import Image from "next/image";
 import MagneticButton from "@/components/ui/MagneticButton";
 import VehicleSelectorForm from "@/components/forms/VehicleSelectorForm";
 import Container from "@/components/ui/Container";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
-const heading = "Reliable OEM Parts. Real Value. Real Fast";
-
-function SplitChars({ text }: { text: string }) {
-  return (
-    <span aria-label={text} role="text" className="inline-block">
-      {text.split("").map((ch, i) => (
-        <motion.span
-          key={`${ch}-${i}`}
-          initial={{ opacity: 0, y: 18, rotateX: -70 }}
-          animate={{ opacity: 1, y: 0, rotateX: 0 }}
-          transition={{
-            delay: i * 0.018,
-            duration: 0.45,
-            ease: [0.2, 1, 0.3, 1],
-          }}
-          className="inline-block"
-        >
-          {ch === " " ? "\u00A0" : ch}
-        </motion.span>
-      ))}
-    </span>
-  );
-}
+const heading = "Premium Quality Used OEM Car Parts";
 
 export default function Hero() {
-  const ref = useRef<HTMLElement | null>(null);
+  const heroActions = (
+    <>
+      <MagneticButton
+        href="#vehicle-selector"
+        label="Find A Part Now"
+      />
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
+      <a
+        href="tel:7705984665"
+        className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/12 px-7 text-sm font-bold !text-white shadow-[0_18px_42px_-22px_rgba(255,255,255,0.5)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-200/50 hover:bg-white/18 [&_*]:!text-white"
+      >
+        <svg
+          className="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          />
+        </svg>
 
-  const yImage = useTransform(scrollYProgress, [0, 1], [0, 120]);
-  const yCopy = useTransform(scrollYProgress, [0, 1], [0, -40]);
+        Call (770) 598-4665
+      </a>
+    </>
+  );
 
   return (
     <section
-      ref={ref}
-      className="relative min-h-[720px] overflow-hidden bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-white"
+      className="relative overflow-hidden bg-slate-50 dark:bg-slate-950"
     >
-      <motion.div
-        style={{ y: yImage }}
-        className="pointer-events-none absolute inset-0"
-      >
+      {/* Background Image */}
+      <div className="absolute inset-0">
         <Image
-          src="/websiteImages/bg-4.jpg"
-          alt="Premium used auto parts"
+          src="/optimized/hero-home.webp"
+          alt="OEM Used Auto Parts"
           fill
-          className="object-cover opacity-15 dark:opacity-30"
-          sizes="100vw"
           priority
+          sizes="100vw"
+          quality={72}
+          className="object-cover opacity-95 dark:opacity-85"
         />
-      </motion.div>
+      </div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(248,250,252,0.96),rgba(241,245,249,0.9),rgba(239,68,68,0.12))] dark:bg-[linear-gradient(110deg,rgba(2,6,23,0.95),rgba(2,6,23,0.85),rgba(239,68,68,0.2))]" />
+      {/* Overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-950/78 via-slate-950/48 to-slate-950/8 dark:from-slate-950/82 dark:via-slate-950/52 dark:to-slate-950/12" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-[72%] bg-[radial-gradient(ellipse_at_left,rgba(8,47,73,0.42),transparent_72%)]" />
 
-      <Container className="relative py-16 sm:py-24 lg:py-28">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <motion.div
-            style={{ y: yCopy }}
-            className="max-w-2xl"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-red-600 dark:text-red-300">
-              Premium Used OEM Parts
-            </p>
+      {/* Glow */}
+      <div className="pointer-events-none absolute -left-20 top-1/2 h-[420px] w-[620px] -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[130px]" />
 
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
-              <SplitChars text={heading} />
+      <Container className="relative z-10 px-6 py-10 sm:py-12 lg:flex lg:min-h-[calc(100svh-72px)] lg:items-center lg:px-4 lg:py-7">
+        <div className="grid w-full gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          {/* Left Side */}
+          <div className="max-w-4xl pt-10 sm:pt-6 lg:pt-0">
+            {/* Trust Badge */}
+            {/* <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-300">
+              <span className="h-2 w-2 rounded-full bg-cyan-500" />
+              Premium OEM Auto Parts
+            </div> */}
+
+            {/* Heading */}
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-cyan-100 shadow-lg shadow-black/20 backdrop-blur-md">
+              <span className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.9)]" />
+              Premium Used OEM Auto Parts
+            </div>
+
+            <h1 className="max-w-4xl bg-gradient-to-r from-white via-cyan-100 to-sky-300 bg-clip-text text-[44px] font-black leading-none tracking-[-0.05em] text-transparent drop-shadow-[0_4px_16px_rgba(0,0,0,0.98)] sm:text-6xl lg:text-7xl">
+              {heading}
             </h1>
 
-            <p className="mt-6 text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-200">
-              Quality-tested, perfectly matched used parts for every major make
-              and model, with fast shipping and a dedicated support team.
+            {/* Description */}
+            <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-slate-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.95)] sm:text-lg">
+              Affordable, trusted replacements for every make and model with
+              fitment support, clear quote details, and shipping guidance.
             </p>
 
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row lg:translate-x-6">
-              <MagneticButton
-                href="#vehicle-selector"
-                label="Find A Part Now"
-              />
+            {/* Trust Stats */}
+            <div className="mt-6 grid max-w-2xl grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:gap-6">
+              <div>
+                <div className="text-xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)] sm:text-2xl">
+                  OEM
+                </div>
+                <div className="text-xs font-semibold text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] sm:text-sm">
+                  Quality Parts
+                </div>
+              </div>
 
-              <MagneticButton
-                href="tel:7705984665"
-                label="Call (770) 598-4665"
-                variant="outline"
-              />
+              <div>
+                <div className="text-xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)] sm:text-2xl">
+                  Warranty
+                </div>
+                <div className="text-xs font-semibold text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] sm:text-sm">
+                  Terms Confirmed
+                </div>
+              </div>
+
+              <div>
+                <div className="text-xl font-black text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)] sm:text-2xl">
+                  Free
+                </div>
+                <div className="text-xs font-semibold text-slate-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] sm:text-sm">
+                  48-State Shipping
+                </div>
+              </div>
             </div>
-          </motion.div>
 
-          <motion.div
+            {/* Buttons */}
+            <div className="mt-7 hidden flex-wrap gap-4 lg:flex">
+              {heroActions}
+            </div>
+          </div>
+
+          {/* Right Side Form */}
+          <div
             id="vehicle-selector"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.65,
-              ease: [0.2, 1, 0.3, 1],
-              delay: 0.25,
-            }}
-            className="relative -top-10 lg:-top-20"
+            className="relative lg:ml-auto"
           >
-            <VehicleSelectorForm theme="dark" />
-          </motion.div>
+            <div className="absolute inset-0 rounded-[32px] bg-cyan-500/20 blur-3xl" />
+
+            <div className="relative mx-auto max-w-lg">
+              <VehicleSelectorForm theme="dark" />
+            </div>
+          </div>
+
+          {/* Mobile Buttons */}
+          <div className="flex flex-col gap-3 lg:hidden [&_a]:w-full">
+            {heroActions}
+          </div>
         </div>
       </Container>
     </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowLeft, ArrowRight, Star } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import Container from "@/components/ui/Container";
@@ -13,6 +14,7 @@ const testimonials = [
     name: "Alex M.",
     location: "Portland, OR",
     initials: "AM",
+    verified: true,
     stars: 5,
   },
   {
@@ -21,6 +23,7 @@ const testimonials = [
     name: "Mia R.",
     location: "Austin, TX",
     initials: "MR",
+    verified: true,
     stars: 5,
   },
   {
@@ -29,6 +32,7 @@ const testimonials = [
     name: "Carlos T.",
     location: "Jacksonville, FL",
     initials: "CT",
+    verified: true,
     stars: 5,
   },
   {
@@ -37,6 +41,7 @@ const testimonials = [
     name: "Sophie L.",
     location: "Nashville, TN",
     initials: "SL",
+    verified: true,
     stars: 5,
   },
   {
@@ -45,6 +50,7 @@ const testimonials = [
     name: "Derek H.",
     location: "Phoenix, AZ",
     initials: "DH",
+    verified: true,
     stars: 5,
   },
 ];
@@ -73,17 +79,29 @@ export default function CustomerStories() {
   }, [currentIndex]);
 
   return (
-    <section className="border-t border-slate-200 bg-slate-50 py-24 dark:border-white/5 dark:bg-slate-950">
-      <Container>
+    <section className="relative overflow-hidden border-t border-slate-200 bg-slate-50 py-24 dark:border-white/5 dark:bg-slate-950">
+      <Image
+        src="/optimized/bg-testimonials.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        quality={70}
+        className="pointer-events-none object-cover object-center opacity-58 dark:opacity-48"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/74 via-white/48 to-white/64 dark:from-slate-950/78 dark:via-slate-950/56 dark:to-slate-950/70" />
+
+      <Container className="relative z-10">
         <Reveal>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div className="mb-12 flex flex-col gap-6 rounded-3xl border border-white/70 bg-white/82 p-6 shadow-xl shadow-slate-900/10 backdrop-blur-md dark:border-white/10 dark:bg-slate-950/78 dark:shadow-black/25 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/8 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
                 Customer Stories
               </span>
-              <h2 className="max-w-lg text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
+
+              <h2 className="max-w-lg bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl dark:from-cyan-300 dark:via-blue-400 dark:to-sky-500">
                 Trusted by Thousands of Car Owners
               </h2>
+
               <p className="mt-3 max-w-md text-base text-slate-600 dark:text-slate-400">
                 Real feedback from customers who found exactly what they needed.
               </p>
@@ -94,6 +112,7 @@ export default function CustomerStories() {
               <span className="text-sm text-slate-500 dark:text-slate-500">
                 {currentIndex + 1} / {total}
               </span>
+
               <button
                 type="button"
                 aria-label="Previous testimonial"
@@ -102,6 +121,7 @@ export default function CustomerStories() {
               >
                 <ArrowLeft size={16} />
               </button>
+
               <button
                 type="button"
                 aria-label="Next testimonial"
@@ -125,31 +145,41 @@ export default function CustomerStories() {
             <article
               key={`${t.name}-${i}`}
               className={[
-                "min-w-[300px] max-w-[400px] snap-center rounded-2xl border p-7 flex flex-col gap-5 transition-all duration-300",
+                "relative min-w-[300px] max-w-[400px] snap-center overflow-hidden rounded-3xl border p-7 flex flex-col gap-5 transition-all duration-300",
                 i === currentIndex
-                  ? "border-cyan-500/30 bg-white shadow-xl shadow-cyan-500/10 dark:bg-slate-800/80 dark:shadow-cyan-500/8"
-                  : "border-slate-200 bg-white/80 hover:-translate-y-0.5 dark:border-white/8 dark:bg-slate-900/60",
+                  ? "border-cyan-500/35 bg-white shadow-2xl shadow-cyan-500/15 dark:bg-slate-800/88 dark:shadow-cyan-500/10"
+                  : "border-slate-200 bg-white/86 hover:-translate-y-1 hover:border-cyan-300/45 hover:shadow-xl hover:shadow-slate-900/8 dark:border-white/8 dark:bg-slate-900/70",
               ].join(" ")}
             >
+              <div className="pointer-events-none absolute -right-8 -top-8 text-[9rem] font-black leading-none text-cyan-500/[0.07] dark:text-cyan-300/[0.08]">
+                “
+              </div>
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-sky-700 opacity-70" />
+
               {/* Stars */}
-              <div className="flex gap-1">
+              <div className="relative flex gap-1">
                 {Array.from({ length: t.stars }).map((_, si) => (
                   <Star key={si} size={14} className="fill-amber-400 text-amber-400" />
                 ))}
               </div>
 
-              <blockquote className="flex-1 text-sm leading-7 text-slate-600 dark:text-slate-300">
+              <blockquote className="relative flex-1 text-sm font-medium leading-7 text-slate-700 dark:text-slate-200">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
 
               {/* Author */}
               <div className="flex items-center gap-3 border-t border-slate-200 pt-4 dark:border-white/8">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-cyan-700 text-xs font-bold text-white">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-sky-700 text-xs font-black text-white shadow-lg shadow-cyan-500/25">
                   {t.initials}
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-950 dark:text-white">{t.name}</p>
+                  <p className="text-sm font-bold text-slate-950 dark:text-white">{t.name}</p>
                   <p className="text-xs text-slate-500">{t.location}</p>
+                  {t.verified && (
+                    <p className="mt-1 text-[10px] font-black uppercase tracking-[0.16em] text-emerald-600 dark:text-emerald-300">
+                      ✓ Verified Customer
+                    </p>
+                  )}
                 </div>
               </div>
             </article>

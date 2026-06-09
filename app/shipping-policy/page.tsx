@@ -12,7 +12,7 @@ const sections = [
   {
     title: "Shipping Information",
     body: [
-      "Parts Central of Georgia ships used OEM auto parts across the United States. Shipping options depend on part size, weight, destination, carrier availability, and the delivery details confirmed during your quote.",
+      "Parts Central of Georgia ships used OEM auto parts with options depending on part size, weight, destination, carrier availability, and the delivery details confirmed during your quote.",
     ],
   },
   {
@@ -31,7 +31,7 @@ const sections = [
   {
     title: "Delivery Timing",
     body: [
-      "Estimated delivery is typically shared during quoting. Many orders arrive within seven to nine business days after processing, but timing may vary because of freight scheduling, carrier delays, distance, or special handling.",
+      "Estimated delivery is typically shared during quoting. Many orders arrive within seven to eight business days after processing, but timing may vary because of freight scheduling, carrier delays, distance, or special handling.",
     ],
   },
   {
