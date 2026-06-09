@@ -5,6 +5,7 @@ type SectionHeadingProps = {
   title: ReactNode;
   description?: ReactNode;
   align?: "left" | "center";
+  theme?: "light" | "dark";
   className?: string;
 };
 
@@ -17,18 +18,20 @@ export default function SectionHeading({
   title,
   description,
   align = "left",
+  theme = "light",
   className,
 }: SectionHeadingProps) {
   const alignClass = align === "center" ? "text-center mx-auto" : "text-left";
+  const isDark = theme === "dark";
 
   return (
     <div className={cx("max-w-3xl", alignClass, className)}>
       {eyebrow ? (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">{eyebrow}</p>
+        <p className={cx("mb-3 text-xs font-semibold uppercase tracking-[0.2em]", isDark ? "text-cyan-300" : "text-primary")}>{eyebrow}</p>
       ) : null}
-      <h2 className="text-2xl font-bold leading-tight text-secondary sm:text-3xl md:text-4xl">{title}</h2>
+      <h2 className={cx("text-2xl font-bold leading-tight sm:text-3xl md:text-4xl", isDark ? "text-white" : "text-secondary")}>{title}</h2>
       {description ? (
-        <p className="mt-4 text-sm leading-7 text-muted sm:text-base">{description}</p>
+        <p className={cx("mt-4 text-sm leading-7 sm:text-base", isDark ? "text-slate-300" : "text-muted")}>{description}</p>
       ) : null}
     </div>
   );

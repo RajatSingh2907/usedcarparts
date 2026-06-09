@@ -20,7 +20,7 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t border-white/6">
+    <footer className="border-t border-slate-200 bg-slate-50 text-slate-600 dark:border-white/6 dark:bg-slate-950 dark:text-slate-400">
       {/* Top gradient bar */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
 
@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <h3 className="text-base font-bold text-white">Parts Central of Georgia</h3>
+            <h3 className="text-base font-bold text-slate-950 dark:text-white">Parts Central of Georgia</h3>
             <p className="mt-3 text-sm leading-7">
               8735 Dunwoody Pl Ste R<br />
               Atlanta, GA 30350, USA
@@ -39,11 +39,11 @@ export default function Footer() {
             </p>
             {/* Trust badges */}
             <div className="mt-6 flex flex-wrap gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 60-Day Warranty
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
                 <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
                 Free Shipping
               </span>
@@ -52,7 +52,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-white/60 mb-4">Services</h4>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-white/60">Services</h4>
             <ul className="space-y-2.5">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Info Links */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-white/60 mb-4">Information</h4>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-white/60">Information</h4>
             <ul className="space-y-2.5">
               {infoLinks.map((link) => (
                 <li key={link.href}>
@@ -88,11 +88,11 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-white/60 mb-4">Contact Us</h4>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-white/60">Contact Us</h4>
             <p className="text-xs font-medium uppercase tracking-wider text-slate-500 mb-1.5">Phone</p>
             <a
               href="tel:7705984665"
-              className="text-xl font-bold text-white hover:text-cyan-400 transition-colors duration-200 block"
+              className="block text-xl font-bold text-slate-950 transition-colors duration-200 hover:text-cyan-600 dark:text-white dark:hover:text-cyan-400"
             >
               (770) 598-4665
             </a>
@@ -100,7 +100,7 @@ export default function Footer() {
             <p className="text-xs font-medium uppercase tracking-wider text-slate-500 mt-5 mb-1.5">Email</p>
             <a
               href="mailto:delpaenterprise@gmail.com"
-              className="text-sm text-slate-300 hover:text-cyan-400 transition-colors duration-200 break-all"
+              className="break-all text-sm text-slate-700 transition-colors duration-200 hover:text-cyan-600 dark:text-slate-300 dark:hover:text-cyan-400"
             >
               delpaenterprise@gmail.com
             </a>
@@ -120,12 +120,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 border-t border-white/6 pt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-500">
+        <div className="mt-14 flex flex-col gap-3 border-t border-slate-200 pt-7 text-xs text-slate-500 dark:border-white/6 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Parts Central of Georgia LLC. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors duration-200">Privacy</Link>
-            <Link href="/terms-and-conditions" className="hover:text-slate-300 transition-colors duration-200">Terms</Link>
-            <Link href="/cookie-policy" className="hover:text-slate-300 transition-colors duration-200">Cookies</Link>
+            <Link href="/privacy-policy" className="transition-colors duration-200 hover:text-slate-900 dark:hover:text-slate-300">Privacy</Link>
+            <Link href="/terms-and-conditions" className="transition-colors duration-200 hover:text-slate-900 dark:hover:text-slate-300">Terms</Link>
+            <Link href="/cookie-policy" className="transition-colors duration-200 hover:text-slate-900 dark:hover:text-slate-300">Cookies</Link>
           </div>
         </div>
       </Container>

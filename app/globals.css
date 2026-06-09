@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-primary: #004260;
   --color-primary-dark: #002e48;
@@ -25,6 +27,34 @@
 
 :root {
   color-scheme: light;
+  --theme-page: #ffffff;
+  --theme-surface: #f8fafc;
+  --theme-card: #ffffff;
+  --theme-card-muted: #f1f5f9;
+  --theme-text: #0f172a;
+  --theme-heading: #0b0f19;
+  --theme-muted: #64748b;
+  --theme-border: #cbd5e1;
+}
+
+html.dark {
+  color-scheme: dark;
+  --theme-page: #020617;
+  --theme-surface: #0f172a;
+  --theme-card: #111827;
+  --theme-card-muted: #1e293b;
+  --theme-text: #f8fafc;
+  --theme-heading: #ffffff;
+  --theme-muted: #cbd5e1;
+  --theme-border: #334155;
+  --color-secondary: #e5e7eb;
+  --color-surface: #111827;
+  --color-muted: #cbd5e1;
+  --color-border: #334155;
+}
+
+html.light {
+  color-scheme: light;
 }
 
 html {
@@ -33,12 +63,58 @@ html {
 
 body {
   margin: 0;
-  background-color: #ffffff;
-  color: #0f172a;
+  background-color: var(--theme-page);
+  color: var(--theme-text);
   font-family: var(--font-sans), sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html.dark body {
+  background-color: var(--theme-page);
+  color: var(--theme-text);
+}
+
+html.dark .bg-white {
+  background-color: var(--theme-card) !important;
+}
+
+html.dark .bg-surface {
+  background-color: var(--theme-surface) !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-slate-100,
+html.dark .bg-slate-200 {
+  background-color: var(--theme-surface) !important;
+}
+
+html.dark .bg-slate-900,
+html.dark .bg-slate-950,
+html.dark .bg-secondary {
+  background-color: var(--theme-page) !important;
+}
+
+html.dark .text-secondary,
+html.dark .text-slate-950,
+html.dark .text-slate-900,
+html.dark .text-slate-800 {
+  color: var(--theme-heading) !important;
+}
+
+html.dark .text-muted,
+html.dark .text-slate-700,
+html.dark .text-slate-600,
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: var(--theme-muted) !important;
+}
+
+html.dark .border-border,
+html.dark .border-slate-200,
+html.dark .border-slate-300 {
+  border-color: var(--theme-border) !important;
 }
 
 h1,
@@ -84,6 +160,10 @@ a {
   animation: rise-in 650ms ease 220ms both;
 }
 
+.animate-premium-float {
+  animation: premium-float 6s ease-in-out infinite;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -96,6 +176,17 @@ a {
   }
 }
 
+@keyframes premium-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -103,7 +194,8 @@ a {
 
   .animate-rise,
   .animate-rise-delay-1,
-  .animate-rise-delay-2 {
+  .animate-rise-delay-2,
+  .animate-premium-float {
     animation: none;
   }
 }
@@ -136,5 +228,35 @@ a {
   display: none;
   width: 0;
   height: 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 32s linear infinite;
+}
+
+.marquee-reverse {
+  animation-name: marquee-right;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 

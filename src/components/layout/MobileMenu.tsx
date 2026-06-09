@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import ThemeToggle from "@/components/ui/ThemeToggle";
+
 type MobileMenuProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -42,7 +44,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Drawer */}
       <div
         className={[
-          "fixed right-0 top-0 z-50 flex h-full w-[82%] max-w-sm flex-col bg-slate-950 border-l border-white/8 shadow-2xl shadow-black/60 lg:hidden transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          "fixed right-0 top-0 z-50 flex h-full w-[82%] max-w-sm flex-col border-l border-slate-200 bg-white shadow-2xl shadow-slate-900/20 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] dark:border-white/8 dark:bg-slate-950 dark:shadow-black/60 lg:hidden",
           isOpen ? "translate-x-0" : "translate-x-full",
         ].join(" ")}
         aria-modal={isOpen}
@@ -50,18 +52,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         aria-label="Navigation menu"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-white/8">
+        <div className="flex items-center justify-between border-b border-slate-200 px-6 py-5 dark:border-white/8">
           <span className="text-sm font-semibold tracking-widest uppercase text-slate-400">Navigation</span>
-          <button
-            type="button"
-            onClick={onClose}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white transition-all duration-200 hover:bg-white/12 hover:border-white/20"
-            aria-label="Close navigation menu"
-          >
-            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              type="button"
+              onClick={onClose}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-900 transition-all duration-200 hover:border-slate-300 hover:bg-slate-100 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:border-white/20 dark:hover:bg-white/12"
+              aria-label="Close navigation menu"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Nav Links */}
@@ -78,7 +83,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     "flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium transition-all duration-200",
                     isActive
                       ? "bg-cyan-500/15 text-cyan-400 border border-cyan-500/20"
-                      : "text-slate-300 hover:bg-white/6 hover:text-white border border-transparent",
+                      : "border border-transparent text-slate-700 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-white/6 dark:hover:text-white",
                   ].join(" ")}
                 >
                   {isActive && (
@@ -92,7 +97,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </nav>
 
         {/* CTA Footer */}
-        <div className="border-t border-white/8 px-4 pb-8 pt-6 space-y-3">
+        <div className="space-y-3 border-t border-slate-200 px-4 pb-8 pt-6 dark:border-white/8">
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 px-1">Need a part?</p>
           <a
             href="tel:7705984665"
@@ -106,7 +111,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <Link
             href="/contact"
             onClick={onClose}
-            className="flex items-center justify-center h-11 w-full rounded-xl border border-white/12 bg-white/5 text-slate-300 text-sm font-medium hover:bg-white/10 hover:text-white transition-all duration-200"
+            className="flex h-11 w-full items-center justify-center rounded-xl border border-slate-200 bg-white text-sm font-medium text-slate-700 transition-all duration-200 hover:bg-slate-100 hover:text-slate-950 dark:border-white/12 dark:bg-white/5 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white"
           >
             Request a Quote
           </Link>

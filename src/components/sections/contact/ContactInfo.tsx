@@ -76,19 +76,19 @@ export default function ContactInfo() {
           </Reveal>
 
           <Reveal delay={0.04}>
-            <div className="h-full rounded-lg border border-border bg-secondary p-6 text-white shadow-sm">
+            <div className="h-full rounded-lg border border-border bg-white p-6 text-slate-950 shadow-sm dark:bg-secondary dark:text-white">
               <div className="flex items-start gap-4">
                 <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-accent text-secondary">
                   <Clock size={22} />
                 </span>
                 <div>
                   <h3 className="text-xl font-bold">Support Hours</h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">
+                  <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
                     Monday to Friday: 9:00 AM - 6:00 PM
                     <br />
                     Saturday: 10:00 AM - 3:00 PM
                   </p>
-                  <p className="mt-4 text-sm leading-7 text-slate-300">
+                  <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
                     For urgent part requests, calling is the fastest way to reach us.
                   </p>
                 </div>

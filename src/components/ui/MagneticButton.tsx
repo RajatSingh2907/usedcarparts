@@ -29,7 +29,7 @@ export default function MagneticButton({ href, label, variant = "primary" }: Mag
   const classes =
     variant === "primary"
       ? "inline-flex h-14 items-center justify-center rounded-xl bg-gradient-to-br from-red-500 to-red-700 px-9 text-base font-semibold uppercase tracking-[0.08em] text-white shadow-xl shadow-red-500/35 transition-transform duration-150"
-      : "inline-flex h-14 items-center justify-center rounded-xl border border-white/25 bg-white/10 px-9 text-base font-semibold uppercase tracking-[0.08em] text-white backdrop-blur-sm transition-transform duration-150";
+      : "inline-flex h-14 items-center justify-center rounded-xl border border-slate-300 bg-white/70 px-9 text-base font-semibold uppercase tracking-[0.08em] text-slate-900 shadow-sm shadow-slate-900/10 backdrop-blur-sm transition-transform duration-150 dark:border-white/25 dark:bg-white/10 dark:text-white dark:shadow-none";
 
   return (
     <Link href={href} onMouseMove={onMove} onMouseLeave={onLeave} className={classes}>
