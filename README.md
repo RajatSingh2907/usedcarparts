@@ -46,13 +46,16 @@ npm run build
 npm run lint
 ```
 
-## API: Submit Parts Inquiry
+## APIs & External Endpoints (Documented)
+This project uses a single Next.js server API route for lead capture, plus a few external “links” (mailto/tel/maps) that are triggered from the client.
+
+### 1) Submit Parts Inquiry (Server API)
 The app exposes a server endpoint to send inquiry emails.
 
-### Endpoint
-`POST /api/inquiry`
+- **Endpoint:** `POST /api/inquiry`
+- **Implemented in:** `app/api/inquiry/route.ts`
 
-### Request Body
+#### Request Body
 ```json
 {
   "year": "string",
@@ -68,16 +71,36 @@ The app exposes a server endpoint to send inquiry emails.
 }
 ```
 
-### Validation
-- All fields are required.
-- Placeholder dropdown values (like `Select Year`, `Select Make`, etc.) are rejected.
+#### How the frontend calls it
+- `src/components/forms/VehicleSelectorForm.tsx`
+  - `fetch("/api/inquiry", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(...) })`
+- `src/components/layout/DelayedQuoteModal.tsx`
+  - Renders `VehicleSelectorForm` after a delay (this indirectly enables the API call flow).
 
-### Responses
+#### Validation
+- All fields are required.
+- Placeholder dropdown values (like `Select Year`, `Select Make`, `Select Part`, etc.) are rejected.
+
+#### Responses
 - **200**: `{ "message": "Request sent. Please check your email for confirmation." }`
 - **400**: missing/invalid fields
 - **500**: SMTP/email not configured or email sending failed
 
-## Required Environment Variables
+---
+
+### 2) Email delivery mechanism (SMTP via Node)
+This is performed inside `app/api/inquiry/route.ts` using raw SMTP over Node sockets.
+
+- Uses Node modules:
+  - `node:net`
+  - `node:tls`
+- Performs SMTP commands via a direct connection (no external email SDK).
+
+Two emails are sent per request:
+- Confirmation to the user (`to: data.email`, subject: `Your parts request was received`)
+- Notification to the admin (`to: ADMIN_EMAIL`, subject includes year/make/model)
+
+#### Required Environment Variables
 Configure these on your hosting platform (or locally):
 
 - `SMTP_HOST`
@@ -86,6 +109,21 @@ Configure these on your hosting platform (or locally):
 - `SMTP_PASS`
 - `MAIL_FROM` (optional, defaults to `SMTP_USER`)
 - `ADMIN_EMAIL` (email that receives the new request)
+
+---
+
+### 3) External link endpoints triggered from the client (not Next.js APIs)
+These are not server routes; they open external apps/services via browser navigation.
+
+- **Telephone links:**
+  - `tel:7705984665` (used in Contact hero, floating call button, and parts CTAs)
+
+- **Mail links:**
+  - `mailto:delpaenterprise@gmail.com` (Contact hero)
+  - `window.location.href = "mailto:..."` with encoded subject/body (Contact form: `src/components/sections/contact/ContactForm.tsx`)
+
+- **Google Maps search URL:**
+  - `https://www.google.com/maps/search/?api=1&query=...` (used in `src/components/sections/contact/ContactHero.tsx`)
 
 ## Repository Scripts
 From `package.json`:
