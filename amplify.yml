@@ -5,6 +5,14 @@ frontend:
       commands:
         - nvm use 20 || nvm install 20
         - npm ci
+        - printf "SMTP_HOST=%s\n" "$SMTP_HOST" >> .env.production
+        - printf "SMTP_PORT=%s\n" "$SMTP_PORT" >> .env.production
+        - printf "SMTP_USER=%s\n" "$SMTP_USER" >> .env.production
+        - printf "SMTP_PASS=%s\n" "$SMTP_PASS" >> .env.production
+        - printf "MAIL_FROM=%s\n" "$MAIL_FROM" >> .env.production
+        - printf "ADMIN_EMAIL=%s\n" "$ADMIN_EMAIL" >> .env.production
+        - printf "SMTP_FROM=%s\n" "$SMTP_FROM" >> .env.production
+        - printf "SMTP_TO=%s\n" "$SMTP_TO" >> .env.production
     build:
       commands:
         - npm run build
