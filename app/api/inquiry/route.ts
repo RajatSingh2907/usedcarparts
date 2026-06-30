@@ -313,19 +313,29 @@ export async function POST(request: Request) {
   const mailFrom = process.env.MAIL_FROM ?? process.env.SMTP_FROM ?? smtpUser;
   const adminEmail = process.env.ADMIN_EMAIL ?? process.env.SMTP_TO;
 
-  if (!smtpHost || !smtpUser || !smtpPass || !mailFrom || !adminEmail) {
+  const missingConfig = [
+    !smtpHost ? "SMTP_HOST" : "",
+    !smtpUser ? "SMTP_USER" : "",
+    !smtpPass ? "SMTP_PASS" : "",
+    !mailFrom ? "MAIL_FROM or SMTP_FROM" : "",
+    !adminEmail ? "ADMIN_EMAIL or SMTP_TO" : "",
+  ].filter(Boolean);
+
+  if (missingConfig.length > 0) {
     return NextResponse.json(
-      { message: "Email is not configured on the server yet." },
+      {
+        message: `Email is not configured on the server yet. Missing: ${missingConfig.join(", ")}`,
+      },
       { status: 500 },
     );
   }
 
   const config = {
-    from: mailFrom,
-    host: smtpHost,
-    pass: smtpPass,
+    from: mailFrom!,
+    host: smtpHost!,
+    pass: smtpPass!,
     port: smtpPort,
-    user: smtpUser,
+    user: smtpUser!,
   };
 
   try {
@@ -333,7 +343,7 @@ export async function POST(request: Request) {
       sendMail({
         config,
         html: buildHtml(data, "We received your parts request"),
-        replyTo: adminEmail,
+        replyTo: adminEmail!,
         subject: "Your parts request was received",
         text: buildText(data, "We received your parts request"),
         to: data.email,
@@ -344,7 +354,7 @@ export async function POST(request: Request) {
         replyTo: data.email,
         subject: `New parts request: ${data.year} ${data.make} ${data.model}`,
         text: buildText(data, "New vehicle parts request"),
-        to: adminEmail,
+        to: adminEmail!,
       }),
     ]);
   } catch (error) {
