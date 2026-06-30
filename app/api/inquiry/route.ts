@@ -310,8 +310,8 @@ export async function POST(request: Request) {
   const smtpPort = Number(process.env.SMTP_PORT ?? 587);
   const smtpUser = process.env.SMTP_USER;
   const smtpPass = process.env.SMTP_PASS?.replace(/\s/g, "");
-  const mailFrom = process.env.MAIL_FROM ?? smtpUser;
-  const adminEmail = process.env.ADMIN_EMAIL;
+  const mailFrom = process.env.MAIL_FROM ?? process.env.SMTP_FROM ?? smtpUser;
+  const adminEmail = process.env.ADMIN_EMAIL ?? process.env.SMTP_TO;
 
   if (!smtpHost || !smtpUser || !smtpPass || !mailFrom || !adminEmail) {
     return NextResponse.json(
