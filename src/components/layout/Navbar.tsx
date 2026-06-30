@@ -48,14 +48,14 @@ export default function Navbar() {
           className="group flex h-14 shrink-0 items-center overflow-hidden"
         >
           <Image
-            src="/Logo/Logo%20(2).png"
+            src="/logo-light.png"
             alt="Parts Central logo"
             width={260}
             height={40}
             className="h-10 w-[200px] object-contain transition-opacity duration-200 group-hover:opacity-90 dark:hidden"
           />
           <Image
-            src="/navlogo%20(1).png"
+            src="/logo-dark.png"
             alt="Parts Central logo"
             width={200}
             height={44}

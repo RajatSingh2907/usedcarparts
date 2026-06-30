@@ -1,7 +1,7 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
@@ -27,7 +27,19 @@ function applyTheme(theme: Theme) {
 }
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>(() => getPreferredTheme());
+  const [theme, setTheme] = useState<Theme>("light");
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      const preferredTheme = getPreferredTheme();
+      setTheme(preferredTheme);
+      applyTheme(preferredTheme);
+      setIsMounted(true);
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, []);
 
   function toggleTheme() {
     const currentTheme = getPreferredTheme();
@@ -37,7 +49,7 @@ export default function ThemeToggle() {
     window.localStorage.setItem(storageKey, nextTheme);
   }
 
-  const isDark = theme === "dark";
+  const isDark = isMounted && theme === "dark";
   const Icon = isDark ? Sun : Moon;
 
   return (
