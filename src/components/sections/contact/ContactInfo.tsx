@@ -60,12 +60,12 @@ export default function ContactInfo() {
                   <MapPinned size={22} />
                 </span>
                 <div>
-                  <h3 className="text-xl font-bold text-secondary">Parts Central of Georgia LLC</h3>
+                  <h3 className="text-xl font-bold text-secondary">Parts Central of Texas LLC</h3>
                   <p className="mt-3 text-sm leading-7 text-muted">
-                    8735 Dunwoody Pl Ste R Atlanta, GA 30350, USA
+                    11011 Richmond Ave Houston, TX 77042, USA
                   </p>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=8735+Dunwoody+Pl+Ste+R+Atlanta+GA+30350"
+                    href="https://www.google.com/maps/search/?api=1&query=11011+Richmond+Ave+Houston+TX+77042"
                     className="mt-4 inline-flex text-sm font-semibold text-primary hover:text-primary-dark"
                   >
                     Open address in maps

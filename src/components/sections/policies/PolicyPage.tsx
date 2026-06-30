@@ -86,7 +86,7 @@ export default function PolicyPage({
               <aside className="rounded-lg border border-border bg-white p-6 shadow-sm lg:sticky lg:top-28">
                 <h2 className="text-lg font-bold text-secondary">Need help?</h2>
                 <p className="mt-3 text-sm leading-7 text-muted">
-                  Contact Parts Central of Georgia for questions about orders, shipping, warranty,
+                  Contact Parts Central of Texas for questions about orders, shipping, warranty,
                   returns, or account information.
                 </p>
                 <div className="mt-5 space-y-3">
@@ -106,8 +106,8 @@ export default function PolicyPage({
                   </a>
                 </div>
                 <div className="mt-6 border-t border-border pt-5 text-sm leading-7 text-muted">
-                  <p className="font-semibold text-secondary">Parts Central of Georgia LLC</p>
-                  <p className="mt-2">8735 Dunwoody Pl Ste R Atlanta, GA 30350, USA</p>
+                  <p className="font-semibold text-secondary">Parts Central of Texas LLC</p>
+                  <p className="mt-2">11011 Richmond Ave Houston, TX 77042, USA</p>
                 </div>
               </aside>
             </Reveal>

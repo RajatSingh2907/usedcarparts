@@ -21,7 +21,7 @@ export default function AboutHero() {
     <SubHero
       eyebrow="About Parts Central"
       title="Quality used OEM auto parts with support you can count on."
-      description="Parts Central of Georgia helps drivers, repair shops, and vehicle owners find used engines, transmissions, and auto parts with clear quote and fitment support."
+      description="Parts Central of Texas helps drivers, repair shops, and vehicle owners find used engines, transmissions, and auto parts with clear quote and fitment support."
       actions={
         <>
           <Button href="/contact" variant="secondary" size="lg" className={secondaryCtaClass}>

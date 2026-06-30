@@ -29,10 +29,10 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <h3 className="text-base font-bold text-slate-950 dark:text-white">Parts Central of Georgia</h3>
+            <h3 className="text-base font-bold text-slate-950 dark:text-white">Parts Central of Texas</h3>
             <p className="mt-3 text-sm leading-7">
-              8735 Dunwoody Pl Ste R<br />
-              Atlanta, GA 30350, USA
+              11011 Richmond Ave<br />
+              Houston, TX 77042, USA
             </p>
             <p className="mt-4 text-sm leading-7">
               Your trusted source for high-quality used OEM auto parts with warranty terms and shipping support.
@@ -121,7 +121,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col gap-3 border-t border-slate-200 pt-7 text-xs text-slate-500 dark:border-white/6 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Parts Central of Georgia LLC. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Parts Central of Texas LLC. All Rights Reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="transition-colors duration-200 hover:text-slate-900 dark:hover:text-slate-300">Privacy</Link>
             <Link href="/terms-and-conditions" className="transition-colors duration-200 hover:text-slate-900 dark:hover:text-slate-300">Terms</Link>

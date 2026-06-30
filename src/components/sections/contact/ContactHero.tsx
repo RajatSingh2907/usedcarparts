@@ -6,7 +6,7 @@ import SubHero from "@/components/ui/SubHero";
 const quickActions = [
   { label: "Call our parts team", value: "(770) 598-4665", href: "tel:7705984665", icon: PhoneCall },
   { label: "Email support", value: "delpaenterprise@gmail.com", href: "mailto:delpaenterprise@gmail.com", icon: Mail },
-  { label: "Visit our office", value: "8735 Dunwoody Pl Ste R Atlanta, GA 30350, USA", href: "https://www.google.com/maps/search/?api=1&query=8735+Dunwoody+Pl+Ste+R+Atlanta+GA+30350", icon: MapPin },
+  { label: "Visit our office", value: "11011 Richmond Ave Houston, TX 77042, USA", href: "https://www.google.com/maps/search/?api=1&query=11011+Richmond+Ave+Houston+TX+77042", icon: MapPin },
 ];
 
 const primaryCtaClass =

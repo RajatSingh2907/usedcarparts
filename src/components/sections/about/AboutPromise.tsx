@@ -31,8 +31,8 @@ const promises = [
     icon: Gauge,
   },
   {
-    title: "Atlanta-Based Service",
-    description: "Parts Central of Georgia serves customers from our Atlanta office with nationwide reach.",
+    title: "Houston-Based Service",
+    description: "Parts Central of Texas serves customers from our Houston office with nationwide reach.",
     icon: MapPin,
   },
 ];

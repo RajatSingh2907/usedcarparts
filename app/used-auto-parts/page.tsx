@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Used OEM Auto Parts With Warranty & Shipping Support | Parts Central of Georgia",
+    "Used OEM Auto Parts With Warranty & Shipping Support | Parts Central of Texas",
   description:
     "Find quality-tested used OEM auto parts for cars, trucks, and SUVs with warranty terms, expert fitment support, and free shipping within the contiguous 48 states when confirmed in your quote.",
 };
@@ -59,7 +59,7 @@ rgba(255,255,255,0)_100%
 "
       sectionTitle="Used OEM Auto Parts You Can Trust"
 
-      sectionLead="When your car needs a replacement, you should not have to guess about quality or overpay. Parts Central of Georgia helps make buying used OEM auto parts simple, clear, and practical."
+      sectionLead="When your car needs a replacement, you should not have to guess about quality or overpay. Parts Central of Texas helps make buying used OEM auto parts simple, clear, and practical."
 
       features={features}
 

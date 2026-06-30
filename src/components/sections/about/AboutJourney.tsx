@@ -20,7 +20,7 @@ const milestones = [
   },
   {
     year: "2026",
-    title: "Parts Central of Georgia",
+    title: "Parts Central of Texas",
     description: "Continuing to serve customers with verified parts, clear quotes, and nationwide support.",
   },
 ];

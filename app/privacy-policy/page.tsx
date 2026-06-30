@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import PolicyPage from "@/components/sections/policies/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Parts Central of Georgia",
+  title: "Privacy Policy | Parts Central of Texas",
   description:
-    "Learn how Parts Central of Georgia collects, uses, protects, and shares customer information for used OEM auto parts orders and support.",
+    "Learn how Parts Central of Texas collects, uses, protects, and shares customer information for used OEM auto parts orders and support.",
 };
 
 const sections = [
   {
     title: "Overview",
     body: [
-      "Parts Central of Georgia is committed to protecting your privacy. This policy explains how information may be collected, used, and shared when you use our website, request a quote, place an order, or contact our team.",
+      "Parts Central of Texas is committed to protecting your privacy. This policy explains how information may be collected, used, and shared when you use our website, request a quote, place an order, or contact our team.",
       "Our services may include third-party support for payment processing, shipping, analytics, warranty programs, and customer communication. By using this site, you agree to the practices described here.",
     ],
   },

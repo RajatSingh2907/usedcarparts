@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import PolicyPage from "@/components/sections/policies/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Parts Central of Georgia",
+  title: "Cookie Policy | Parts Central of Texas",
   description:
-    "Learn how Parts Central of Georgia uses cookies, pixels, analytics, advertising tools, and browser preferences.",
+    "Learn how Parts Central of Texas uses cookies, pixels, analytics, advertising tools, and browser preferences.",
 };
 
 const sections = [
   {
     title: "Cookie Policy",
     body: [
-      "Parts Central of Georgia uses cookies and similar technologies to operate the website, understand visitor activity, improve performance, and support a more useful shopping experience.",
+      "Parts Central of Texas uses cookies and similar technologies to operate the website, understand visitor activity, improve performance, and support a more useful shopping experience.",
     ],
   },
   {

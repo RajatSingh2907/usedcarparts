@@ -82,7 +82,7 @@ const faqGroups = [
       {
         question: "Do you ship nationwide?",
         answer:
-          "Parts Central of Georgia supports shipping options based on part size, weight, destination, and carrier availability. Free shipping may apply within the 48 contiguous United States when confirmed in your quote.",
+          "Parts Central of Texas supports shipping options based on part size, weight, destination, and carrier availability. Free shipping may apply within the 48 contiguous United States when confirmed in your quote.",
       },
       {
         question: "How long does delivery take?",

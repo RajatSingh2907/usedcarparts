@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Used OEM Engines With Warranty & Shipping Support | Parts Central of Georgia",
+    "Used OEM Engines With Warranty & Shipping Support | Parts Central of Texas",
   description:
     "Shop used OEM engines for cars, trucks, and SUVs with fitment support, warranty terms confirmed before purchase, and shipping guidance.",
 };

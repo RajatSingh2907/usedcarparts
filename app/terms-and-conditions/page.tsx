@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import PolicyPage from "@/components/sections/policies/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Parts Central of Georgia",
+  title: "Terms and Conditions | Parts Central of Texas",
   description:
-    "Read the website, order, fitment, payment, shipping, warranty, and liability terms for Parts Central of Georgia.",
+    "Read the website, order, fitment, payment, shipping, warranty, and liability terms for Parts Central of Texas.",
 };
 
 const sections = [
   {
     title: "Agreement To Terms",
     body: [
-      "By accessing this website, requesting a quote, placing an order, or purchasing from Parts Central of Georgia, you agree to these Terms and Conditions. If you do not agree, please do not use the site or submit an order.",
+      "By accessing this website, requesting a quote, placing an order, or purchasing from Parts Central of Texas, you agree to these Terms and Conditions. If you do not agree, please do not use the site or submit an order.",
     ],
   },
   {
@@ -39,7 +39,7 @@ const sections = [
   {
     title: "Shipping And Delivery",
     body: [
-      "Delivery estimates are provided in good faith and may vary because of carrier timing, freight scheduling, weather, location, or special handling requirements. Parts Central of Georgia is not responsible for carrier delays outside our control.",
+      "Delivery estimates are provided in good faith and may vary because of carrier timing, freight scheduling, weather, location, or special handling requirements. Parts Central of Texas is not responsible for carrier delays outside our control.",
     ],
   },
   {
@@ -51,13 +51,13 @@ const sections = [
   {
     title: "Limitation Of Liability",
     body: [
-      "To the fullest extent permitted by law, Parts Central of Georgia is not liable for indirect, incidental, consequential, or labor-related costs arising from the purchase, installation, or use of any part.",
+      "To the fullest extent permitted by law, Parts Central of Texas is not liable for indirect, incidental, consequential, or labor-related costs arising from the purchase, installation, or use of any part.",
     ],
   },
   {
     title: "Intellectual Property",
     body: [
-      "Text, images, layout, logos, and other site materials belong to Parts Central of Georgia or its licensors and may not be copied, reproduced, or distributed without permission.",
+      "Text, images, layout, logos, and other site materials belong to Parts Central of Texas or its licensors and may not be copied, reproduced, or distributed without permission.",
     ],
   },
   {

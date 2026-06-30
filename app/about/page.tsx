@@ -8,9 +8,9 @@ import AboutService from "@/components/sections/about/AboutService";
 import AboutCTA from "@/components/sections/about/AboutCTA";
 
 export const metadata: Metadata = {
-  title: "About Parts Central of Georgia | Quality Used OEM Auto Parts",
+  title: "About Parts Central of Texas | Quality Used OEM Auto Parts",
   description:
-    "Learn about Parts Central of Georgia, a trusted source for quality used OEM auto parts, verified fitment, warranty support, and nationwide delivery.",
+    "Learn about Parts Central of Texas, a trusted source for quality used OEM auto parts, verified fitment, warranty support, and nationwide delivery.",
 };
 
 export default function AboutPage() {

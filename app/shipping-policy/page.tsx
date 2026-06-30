@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import PolicyPage from "@/components/sections/policies/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Shipping Policy | Parts Central of Georgia",
+  title: "Shipping Policy | Parts Central of Texas",
   description:
-    "Review Parts Central of Georgia shipping, delivery, freight, lift gate, and secure payment information.",
+    "Review Parts Central of Texas shipping, delivery, freight, lift gate, and secure payment information.",
 };
 
 const sections = [
   {
     title: "Shipping Information",
     body: [
-      "Parts Central of Georgia ships used OEM auto parts with options depending on part size, weight, destination, carrier availability, and the delivery details confirmed during your quote.",
+      "Parts Central of Texas ships used OEM auto parts with options depending on part size, weight, destination, carrier availability, and the delivery details confirmed during your quote.",
     ],
   },
   {

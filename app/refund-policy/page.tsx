@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import PolicyPage from "@/components/sections/policies/PolicyPage";
 
 export const metadata: Metadata = {
-  title: "Refund and Return Policy | Parts Central of Georgia",
+  title: "Refund and Return Policy | Parts Central of Texas",
   description:
-    "Review Parts Central of Georgia return, refund, warranty, damaged shipment, and fitment support guidelines.",
+    "Review Parts Central of Texas return, refund, warranty, damaged shipment, and fitment support guidelines.",
 };
 
 const sections = [
