@@ -52,7 +52,7 @@ const sections = [
   {
     title: "Need Help With Shipping Or Payment?",
     body: [
-      "For shipping, freight, tracking, or payment questions, contact delpaenterprise@gmail.com or call (770) 598-4665.",
+      "For shipping, freight, tracking, or payment questions, contact support@partscentral.us or call (888) 338-2540.",
     ],
   },
 ];

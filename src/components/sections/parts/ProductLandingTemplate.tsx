@@ -72,11 +72,11 @@ export default function ProductLandingTemplate({
       />
 
       <a
-        href="tel:7705984665"
+        href="tel:8883382540"
         className="inline-flex h-14 items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/12 px-7 text-sm font-bold text-white shadow-[0_18px_42px_-22px_rgba(255,255,255,0.5)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-200/50 hover:bg-white/18"
       >
         <PhoneCall size={18} />
-        Call (770) 598-4665
+        Call (888) 338-2540
       </a>
     </>
   );
@@ -240,7 +240,7 @@ export default function ProductLandingTemplate({
               />
 
               <MagneticButton
-                href="tel:7705984665"
+                href="tel:8883382540"
                 label="Call Now"
                 variant="outline"
               />

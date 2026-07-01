@@ -91,14 +91,14 @@ export default function PolicyPage({
                 </p>
                 <div className="mt-5 space-y-3">
                   <a
-                    href="tel:7705984665"
+                    href="tel:8883382540"
                     className="flex h-11 items-center justify-center gap-2 rounded-md bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-4 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800"
                   >
                     <PhoneCall size={17} />
                     Call Support
                   </a>
                   <a
-                    href="mailto:delpaenterprise@gmail.com"
+                    href="mailto:support@partscentral.us"
                     className="flex h-11 items-center justify-center gap-2 rounded-md border border-border bg-white px-4 text-sm font-semibold text-secondary shadow-sm transition hover:bg-slate-50"
                   >
                     <Mail size={17} />

@@ -67,7 +67,7 @@ const sections = [
   {
     title: "Contact Us",
     body: [
-      "For questions about cookies or tracking technologies, email delpaenterprise@gmail.com or call (770) 598-4665.",
+      "For questions about cookies or tracking technologies, email support@partscentral.us or call (888) 338-2540.",
     ],
   },
 ];

@@ -42,7 +42,7 @@ export default function ContactForm() {
     );
 
     setStatus("ready");
-    window.location.href = `mailto:delpaenterprise@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:support@partscentral.us?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -58,7 +58,7 @@ export default function ContactForm() {
 
             <div className="mt-8 space-y-4">
               <a
-                href="tel:7705984665"
+                href="tel:8883382540"
                 className="flex items-center gap-4 rounded-lg border border-primary/20 bg-primary/10 p-5 text-primary shadow-sm shadow-primary/10 transition hover:border-primary/30 hover:bg-primary/15 hover:shadow-md dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100 dark:shadow-cyan-950/30 dark:hover:bg-cyan-300/15"
               >
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary/15 text-primary">
@@ -66,11 +66,11 @@ export default function ContactForm() {
                 </span>
                 <span>
                   <span className="block text-sm text-primary/75 dark:text-cyan-100/75">Call now</span>
-                  <span className="block text-base font-bold text-primary dark:text-cyan-100">(770) 598-4665</span>
+                  <span className="block text-base font-bold text-primary dark:text-cyan-100">(888) 338-2540</span>
                 </span>
               </a>
               <a
-                href="mailto:delpaenterprise@gmail.com"
+                href="mailto:support@partscentral.us"
                 className="flex items-center gap-4 rounded-lg border border-border bg-white p-5 shadow-sm transition hover:border-primary/30 hover:shadow-md"
               >
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-accent/20 text-secondary">
@@ -79,7 +79,7 @@ export default function ContactForm() {
                 <span>
                   <span className="block text-sm text-muted">Email us</span>
                   <span className="block break-all text-base font-bold text-secondary">
-                    delpaenterprise@gmail.com
+                    support@partscentral.us
                   </span>
                 </span>
               </a>

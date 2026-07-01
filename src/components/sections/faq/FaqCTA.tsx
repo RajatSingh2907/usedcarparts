@@ -24,14 +24,14 @@ export default function FaqCTA() {
 
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
               <a
-                href="tel:7705984665"
+                href="tel:8883382540"
                 className="inline-flex h-13 items-center justify-center gap-2.5 rounded-xl border border-primary/20 bg-primary/10 px-8 text-base font-bold text-primary shadow-xl shadow-primary/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/15 active:scale-[0.98] dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100 dark:shadow-cyan-950/30 dark:hover:bg-cyan-300/15"
               >
                 <PhoneCall size={18} />
                 Call Now
               </a>
               <a
-                href="mailto:delpaenterprise@gmail.com"
+                href="mailto:support@partscentral.us"
                 className="inline-flex h-13 items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-8 text-base font-bold text-white shadow-lg shadow-cyan-500/25 transition-all duration-200 hover:-translate-y-0.5 hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800 hover:shadow-xl active:scale-[0.98]"
               >
                 <Mail size={18} />

@@ -116,10 +116,10 @@ Configure these on your hosting platform (or locally):
 These are not server routes; they open external apps/services via browser navigation.
 
 - **Telephone links:**
-  - `tel:7705984665` (used in Contact hero, floating call button, and parts CTAs)
+  - `tel:8883382540` (used in Contact hero, floating call button, and parts CTAs)
 
 - **Mail links:**
-  - `mailto:delpaenterprise@gmail.com` (Contact hero)
+  - `mailto:support@partscentral.us` (Contact hero)
   - `window.location.href = "mailto:..."` with encoded subject/body (Contact form: `src/components/sections/contact/ContactForm.tsx`)
 
 - **Google Maps search URL:**

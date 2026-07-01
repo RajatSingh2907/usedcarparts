@@ -27,8 +27,8 @@ export default function AboutHero() {
           <Button href="/contact" variant="secondary" size="lg" className={secondaryCtaClass}>
             <span className="flex h-full items-center justify-center leading-none">Request A Quote</span>
           </Button>
-          <Button href="tel:7705984665" size="lg" className={primaryCtaClass}>
-            <span className="flex h-full items-center justify-center leading-none">Call (770) 598-4665</span>
+          <Button href="tel:8883382540" size="lg" className={primaryCtaClass}>
+            <span className="flex h-full items-center justify-center leading-none">Call (888) 338-2540</span>
           </Button>
         </>
       }

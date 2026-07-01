@@ -70,7 +70,7 @@ const sections = [
   {
     title: "Contact",
     body: [
-      "For privacy questions, email delpaenterprise@gmail.com or call (770) 598-4665.",
+      "For privacy questions, email support@partscentral.us or call (888) 338-2540.",
     ],
   },
 ];

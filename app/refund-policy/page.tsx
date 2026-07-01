@@ -51,7 +51,7 @@ const sections = [
   {
     title: "Contact Support First",
     body: [
-      "Do not ship a part back without contacting support. For return or refund help, email delpaenterprise@gmail.com or call (770) 598-4665 with your order details.",
+      "Do not ship a part back without contacting support. For return or refund help, email support@partscentral.us or call (888) 338-2540 with your order details.",
     ],
   },
 ];
