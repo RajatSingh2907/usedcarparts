@@ -91,23 +91,23 @@ export default function Footer() {
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-white/60">Contact Us</h4>
             <p className="text-xs font-medium uppercase tracking-wider text-slate-500 mb-1.5">Phone</p>
             <a
-              href="tel:8883382540"
+              href="tel:8885283657"
               className="block text-xl font-bold text-slate-950 transition-colors duration-200 hover:text-cyan-600 dark:text-white dark:hover:text-cyan-400"
             >
-              (888) 338-2540
+              (888) 528-3657
             </a>
 
             <p className="text-xs font-medium uppercase tracking-wider text-slate-500 mt-5 mb-1.5">Email</p>
             <a
-              href="mailto:support@partscentral.us"
+              href="mailto:admin.tx@partscentral.us"
               className="break-all text-sm text-slate-700 transition-colors duration-200 hover:text-cyan-600 dark:text-slate-300 dark:hover:text-cyan-400"
             >
-              support@partscentral.us
+              admin.tx@partscentral.us
             </a>
 
             <div className="mt-7">
               <a
-                href="tel:8883382540"
+                href="tel:8885283657"
                 className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-primary/20 bg-primary/10 text-sm font-semibold text-primary shadow-lg shadow-primary/10 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/15 active:scale-[0.98] dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100 dark:shadow-cyan-950/30 dark:hover:bg-cyan-300/15"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">

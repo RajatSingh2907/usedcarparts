@@ -30,11 +30,11 @@ export default function AboutCTA() {
                 <span className="flex h-full items-center justify-center leading-none">Contact Us</span>
               </Button>
               <Button
-                href="tel:8883382540"
+                href="tel:8885283657"
                 size="lg"
                 className={primaryCtaClass}
               >
-                <span className="flex h-full items-center justify-center leading-none">Call (888) 338-2540</span>
+                <span className="flex h-full items-center justify-center leading-none">Call (888) 528-3657</span>
               </Button>
             </div>
           </div>

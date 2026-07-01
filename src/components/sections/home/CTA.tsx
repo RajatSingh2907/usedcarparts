@@ -54,10 +54,10 @@ export default function CTA() {
 
                 {/* CALL BUTTON */}
                 <a
-                  href="tel:8883382540"
+                  href="tel:8885283657"
                   className="inline-flex h-14 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-700 px-8 font-bold text-white shadow-lg shadow-cyan-500/25 transition hover:from-cyan-400 hover:via-blue-500 hover:to-sky-800"
                 >
-                  Call (888) 338-2540
+                  Call (888) 528-3657
                 </a>
 
                 {/* REQUEST QUOTE BUTTON */}

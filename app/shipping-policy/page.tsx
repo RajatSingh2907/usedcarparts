@@ -52,7 +52,7 @@ const sections = [
   {
     title: "Need Help With Shipping Or Payment?",
     body: [
-      "For shipping, freight, tracking, or payment questions, contact support@partscentral.us or call (888) 338-2540.",
+      "For shipping, freight, tracking, or payment questions, contact admin.tx@partscentral.us or call (888) 528-3657.",
     ],
   },
 ];

@@ -70,7 +70,7 @@ const sections = [
   {
     title: "Contact",
     body: [
-      "For privacy questions, email support@partscentral.us or call (888) 338-2540.",
+      "For privacy questions, email admin.tx@partscentral.us or call (888) 528-3657.",
     ],
   },
 ];

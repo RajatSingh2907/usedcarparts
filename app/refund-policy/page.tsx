@@ -51,7 +51,7 @@ const sections = [
   {
     title: "Contact Support First",
     body: [
-      "Do not ship a part back without contacting support. For return or refund help, email support@partscentral.us or call (888) 338-2540 with your order details.",
+      "Do not ship a part back without contacting support. For return or refund help, email admin.tx@partscentral.us or call (888) 528-3657 with your order details.",
     ],
   },
 ];

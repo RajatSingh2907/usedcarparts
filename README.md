@@ -74,8 +74,6 @@ The app exposes a server endpoint to send inquiry emails.
 #### How the frontend calls it
 - `src/components/forms/VehicleSelectorForm.tsx`
   - `fetch("/api/inquiry", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(...) })`
-- `src/components/layout/DelayedQuoteModal.tsx`
-  - Renders `VehicleSelectorForm` after a delay (this indirectly enables the API call flow).
 
 #### Validation
 - All fields are required.
@@ -116,10 +114,10 @@ Configure these on your hosting platform (or locally):
 These are not server routes; they open external apps/services via browser navigation.
 
 - **Telephone links:**
-  - `tel:8883382540` (used in Contact hero, floating call button, and parts CTAs)
+  - `tel:8885283657` (used in Contact hero, floating call button, and parts CTAs)
 
 - **Mail links:**
-  - `mailto:support@partscentral.us` (Contact hero)
+  - `mailto:admin.tx@partscentral.us` (Contact hero)
   - `window.location.href = "mailto:..."` with encoded subject/body (Contact form: `src/components/sections/contact/ContactForm.tsx`)
 
 - **Google Maps search URL:**

@@ -63,7 +63,7 @@ const sections = [
   {
     title: "Contact Us",
     body: [
-      "For questions about these terms, email support@partscentral.us or call (888) 338-2540.",
+      "For questions about these terms, email admin.tx@partscentral.us or call (888) 528-3657.",
     ],
   },
 ];

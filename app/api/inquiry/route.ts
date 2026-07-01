@@ -28,9 +28,9 @@ type SmtpConfig = {
 };
 
 const siteUrl = "https://www.partscentraloftexas.com";
-const supportEmail = "support@partscentral.us";
-const supportPhone = "(888) 338-2540";
-const supportPhoneHref = "tel:8883382540";
+const supportEmail = "admin.tx@partscentral.us";
+const supportPhone = "(888) 528-3657";
+const supportPhoneHref = "tel:8885283657";
 const leadsApiUrl = "https://partscentral.us/api/leads/manual";
 const leadSource = "W-PCTXS";
 
