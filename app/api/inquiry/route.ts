@@ -27,6 +27,13 @@ type SmtpConfig = {
   from: string;
 };
 
+const siteUrl = "https://www.partscentraloftexas.com";
+const supportEmail = "support@partscentral.us";
+const supportPhone = "(888) 338-2540";
+const supportPhoneHref = "tel:8883382540";
+const leadsApiUrl = "https://partscentral.us/api/leads/manual";
+const leadSource = "W-PCTXS";
+
 const placeholderValues = new Set([
   "Select Year",
   "Select Make",
@@ -92,12 +99,132 @@ function buildHtml(data: InquiryData, heading: string) {
   `;
 }
 
+function buildCustomerConfirmationHtml(data: InquiryData) {
+  const requestedPart = `${data.year} ${data.make} ${data.model} ${data.part}`;
+  const rows = [
+    ["Year", data.year],
+    ["Make", data.make],
+    ["Model", data.model],
+    ["Part Requested", data.part],
+    ["Engine Size", data.engineSize],
+    ["Transmission", data.transmission],
+    ["Zip Code", data.zipCode],
+  ]
+    .map(
+      ([label, value]) => `
+        <tr>
+          <td style="padding:10px 12px;border:1px solid #dbeafe;background:#f8fafc;font-weight:700;color:#0f172a;">${escapeHtml(label)}</td>
+          <td style="padding:10px 12px;border:1px solid #dbeafe;color:#1e293b;">${escapeHtml(value)}</td>
+        </tr>
+      `,
+    )
+    .join("");
+
+  return `
+    <div style="margin:0;background:#f3f4f6;padding:24px 12px;font-family:Arial,sans-serif;color:#0f172a;">
+      <div style="margin:0 auto;max-width:640px;overflow:hidden;border-radius:18px;background:#ffffff;border:1px solid #e2e8f0;">
+        <div style="background:#020617;padding:22px 28px;text-align:center;">
+          <div style="color:#ffffff;font-size:24px;font-weight:800;letter-spacing:0.04em;">Parts Central of Texas</div>
+          <div style="margin-top:6px;color:#67e8f9;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;">OEM Parts Request Received</div>
+        </div>
+
+        <div style="padding:28px;">
+          <h1 style="margin:0;color:#0369a1;font-size:24px;line-height:1.25;">Thanks, ${escapeHtml(data.fullName)}. We received your request.</h1>
+          <p style="margin:14px 0 0;color:#334155;font-size:15px;line-height:1.7;">
+            Our parts team will review availability, fitment, pricing, warranty terms, and shipping details for your requested part.
+          </p>
+          <p style="margin:12px 0 0;color:#334155;font-size:15px;line-height:1.7;">
+            This email confirms that your request was submitted. It is not a final order confirmation or payment confirmation.
+          </p>
+
+          <div style="margin:22px 0;padding:16px;border-radius:14px;background:#ecfeff;border:1px solid #bae6fd;text-align:center;">
+            <div style="font-size:12px;color:#0369a1;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;">Requested Part</div>
+            <div style="margin-top:6px;color:#0f172a;font-size:18px;font-weight:800;">${escapeHtml(requestedPart)}</div>
+          </div>
+
+          <table style="border-collapse:collapse;width:100%;font-size:14px;">
+            ${rows}
+          </table>
+
+          <div style="margin:24px 0 0;padding:18px;border-radius:14px;background:#f8fafc;border:1px solid #e2e8f0;">
+            <div style="font-weight:800;color:#0f172a;">What happens next?</div>
+            <ol style="margin:10px 0 0;padding-left:20px;color:#334155;line-height:1.7;">
+              <li>We check part availability and fitment details.</li>
+              <li>A specialist contacts you with quote and shipping information.</li>
+              <li>You review the details before any order is finalized.</li>
+            </ol>
+          </div>
+
+          <div style="margin-top:24px;text-align:center;">
+            <a href="${supportPhoneHref}" style="display:inline-block;border-radius:12px;background:#0284c7;color:#ffffff;padding:13px 20px;text-decoration:none;font-weight:800;">Call ${supportPhone}</a>
+            <div style="margin-top:12px;color:#475569;font-size:14px;">
+              Email: <a href="mailto:${supportEmail}" style="color:#0369a1;font-weight:700;">${supportEmail}</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#020617;padding:16px 24px;text-align:center;color:#94a3b8;font-size:12px;">
+          © ${new Date().getFullYear()} Parts Central of Texas LLC. All rights reserved.
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function buildText(data: InquiryData, heading: string) {
   return [
     heading,
     "",
     ...formatRequest(data).map(([label, value]) => `${label}: ${value}`),
   ].join("\n");
+}
+
+function buildCustomerConfirmationText(data: InquiryData) {
+  return [
+    `Thanks, ${data.fullName}. We received your parts request.`,
+    "",
+    "Our parts team will review availability, fitment, pricing, warranty terms, and shipping details.",
+    "This is not a final order confirmation or payment confirmation.",
+    "",
+    ...formatRequest(data).map(([label, value]) => `${label}: ${value}`),
+    "",
+    `Call: ${supportPhone}`,
+    `Email: ${supportEmail}`,
+    `Website: ${siteUrl}`,
+  ].join("\n");
+}
+
+async function sendLeadToDashboard(data: InquiryData) {
+  const createdDate = new Date().toISOString().slice(0, 10);
+  const leadPayload = {
+    lead_source: leadSource,
+    created_by: "System",
+    created_date: createdDate,
+    name: data.fullName,
+    email: data.email,
+    engine_Size: data.engineSize,
+    make: data.make,
+    mobile: data.phone,
+    model: data.model,
+    part: data.part,
+    status: "New",
+    trasmission: data.transmission,
+    year: data.year,
+    zipcode: data.zipCode,
+  };
+
+  const response = await fetch(leadsApiUrl, {
+    body: JSON.stringify(leadPayload),
+    headers: {
+      "Content-Type": "application/json",
+      Origin: siteUrl,
+    },
+    method: "POST",
+  });
+
+  if (!response.ok) {
+    throw new Error(`Lead dashboard API failed with status ${response.status}`);
+  }
 }
 
 function dotStuff(value: string) {
@@ -339,13 +466,19 @@ export async function POST(request: Request) {
   };
 
   try {
+    try {
+      await sendLeadToDashboard(data);
+    } catch (error) {
+      console.error("Lead dashboard sync failed:", error);
+    }
+
     await Promise.all([
       sendMail({
         config,
-        html: buildHtml(data, "We received your parts request"),
+        html: buildCustomerConfirmationHtml(data),
         replyTo: adminEmail!,
-        subject: "Your parts request was received",
-        text: buildText(data, "We received your parts request"),
+        subject: "We received your parts request - Parts Central of Texas",
+        text: buildCustomerConfirmationText(data),
         to: data.email,
       }),
       sendMail({
